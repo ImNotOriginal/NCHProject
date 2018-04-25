@@ -86,6 +86,7 @@
             this.end_TimeTextBox = new System.Windows.Forms.TextBox();
             this.date_TImeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cpt_codesListBox = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             appointment_TimeLabel1 = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
             patient_NumberLabel = new System.Windows.Forms.Label();
@@ -114,6 +115,87 @@
             appointment_TimeLabel1.Size = new System.Drawing.Size(126, 17);
             appointment_TimeLabel1.TabIndex = 70;
             appointment_TimeLabel1.Text = "Appointment Time:";
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(167, 193);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 74;
+            phoneLabel.Text = "Phone:";
+            // 
+            // patient_NumberLabel
+            // 
+            patient_NumberLabel.AutoSize = true;
+            patient_NumberLabel.Location = new System.Drawing.Point(21, 41);
+            patient_NumberLabel.Name = "patient_NumberLabel";
+            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
+            patient_NumberLabel.TabIndex = 75;
+            patient_NumberLabel.Text = "Patient Number:";
+            // 
+            // houseHold_NumberLabel
+            // 
+            houseHold_NumberLabel.AutoSize = true;
+            houseHold_NumberLabel.Location = new System.Drawing.Point(21, 77);
+            houseHold_NumberLabel.Name = "houseHold_NumberLabel";
+            houseHold_NumberLabel.Size = new System.Drawing.Size(140, 17);
+            houseHold_NumberLabel.TabIndex = 76;
+            houseHold_NumberLabel.Text = "House Hold Number:";
+            // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(173, 153);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 77;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // appointment_NumberLabel
+            // 
+            appointment_NumberLabel.AutoSize = true;
+            appointment_NumberLabel.Location = new System.Drawing.Point(292, 41);
+            appointment_NumberLabel.Name = "appointment_NumberLabel";
+            appointment_NumberLabel.Size = new System.Drawing.Size(145, 17);
+            appointment_NumberLabel.TabIndex = 78;
+            appointment_NumberLabel.Text = "Appointment Number:";
+            // 
+            // providerNameLabel
+            // 
+            providerNameLabel.AutoSize = true;
+            providerNameLabel.Location = new System.Drawing.Point(13, 128);
+            providerNameLabel.Name = "providerNameLabel";
+            providerNameLabel.Size = new System.Drawing.Size(106, 17);
+            providerNameLabel.TabIndex = 79;
+            providerNameLabel.Text = "Provider Name:";
+            // 
+            // end_TimeLabel
+            // 
+            end_TimeLabel.AutoSize = true;
+            end_TimeLabel.Location = new System.Drawing.Point(174, 269);
+            end_TimeLabel.Name = "end_TimeLabel";
+            end_TimeLabel.Size = new System.Drawing.Size(72, 17);
+            end_TimeLabel.TabIndex = 80;
+            end_TimeLabel.Text = "End Time:";
+            // 
+            // date_TImeLabel
+            // 
+            date_TImeLabel.AutoSize = true;
+            date_TImeLabel.Location = new System.Drawing.Point(292, 269);
+            date_TImeLabel.Name = "date_TImeLabel";
+            date_TImeLabel.Size = new System.Drawing.Size(42, 17);
+            date_TImeLabel.TabIndex = 81;
+            date_TImeLabel.Text = "Date:";
+            // 
+            // cpt_codesLabel
+            // 
+            cpt_codesLabel.AutoSize = true;
+            cpt_codesLabel.Location = new System.Drawing.Point(13, 340);
+            cpt_codesLabel.Name = "cpt_codesLabel";
+            cpt_codesLabel.Size = new System.Drawing.Size(75, 17);
+            cpt_codesLabel.TabIndex = 82;
+            cpt_codesLabel.Text = "Cpt codes:";
             // 
             // label12
             // 
@@ -378,15 +460,6 @@
             // 
             this.houseHoldTableAdapter.ClearBeforeFill = true;
             // 
-            // phoneLabel
-            // 
-            phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(167, 193);
-            phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(53, 17);
-            phoneLabel.TabIndex = 74;
-            phoneLabel.Text = "Phone:";
-            // 
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
@@ -400,15 +473,6 @@
             this.houseHoldBindingSource1.DataMember = "Appointment DataHouseHold";
             this.houseHoldBindingSource1.DataSource = this.appointmentDataBindingSource;
             // 
-            // patient_NumberLabel
-            // 
-            patient_NumberLabel.AutoSize = true;
-            patient_NumberLabel.Location = new System.Drawing.Point(21, 41);
-            patient_NumberLabel.Name = "patient_NumberLabel";
-            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
-            patient_NumberLabel.TabIndex = 75;
-            patient_NumberLabel.Text = "Patient Number:";
-            // 
             // patient_NumberTextBox
             // 
             this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource1, "Patient Number", true));
@@ -416,15 +480,6 @@
             this.patient_NumberTextBox.Name = "patient_NumberTextBox";
             this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.patient_NumberTextBox.TabIndex = 76;
-            // 
-            // houseHold_NumberLabel
-            // 
-            houseHold_NumberLabel.AutoSize = true;
-            houseHold_NumberLabel.Location = new System.Drawing.Point(21, 77);
-            houseHold_NumberLabel.Name = "houseHold_NumberLabel";
-            houseHold_NumberLabel.Size = new System.Drawing.Size(140, 17);
-            houseHold_NumberLabel.TabIndex = 76;
-            houseHold_NumberLabel.Text = "House Hold Number:";
             // 
             // houseHold_NumberTextBox
             // 
@@ -434,15 +489,6 @@
             this.houseHold_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.houseHold_NumberTextBox.TabIndex = 77;
             // 
-            // patient_NameLabel
-            // 
-            patient_NameLabel.AutoSize = true;
-            patient_NameLabel.Location = new System.Drawing.Point(173, 153);
-            patient_NameLabel.Name = "patient_NameLabel";
-            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
-            patient_NameLabel.TabIndex = 77;
-            patient_NameLabel.Text = "Patient Name:";
-            // 
             // patient_NameTextBox
             // 
             this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource1, "Patient Name", true));
@@ -450,15 +496,6 @@
             this.patient_NameTextBox.Name = "patient_NameTextBox";
             this.patient_NameTextBox.Size = new System.Drawing.Size(267, 22);
             this.patient_NameTextBox.TabIndex = 78;
-            // 
-            // appointment_NumberLabel
-            // 
-            appointment_NumberLabel.AutoSize = true;
-            appointment_NumberLabel.Location = new System.Drawing.Point(292, 41);
-            appointment_NumberLabel.Name = "appointment_NumberLabel";
-            appointment_NumberLabel.Size = new System.Drawing.Size(145, 17);
-            appointment_NumberLabel.TabIndex = 78;
-            appointment_NumberLabel.Text = "Appointment Number:";
             // 
             // appointment_NumberTextBox
             // 
@@ -472,15 +509,6 @@
             // 
             this.providersBindingSource.DataMember = "Providers";
             this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // providerNameLabel
-            // 
-            providerNameLabel.AutoSize = true;
-            providerNameLabel.Location = new System.Drawing.Point(13, 128);
-            providerNameLabel.Name = "providerNameLabel";
-            providerNameLabel.Size = new System.Drawing.Size(106, 17);
-            providerNameLabel.TabIndex = 79;
-            providerNameLabel.Text = "Provider Name:";
             // 
             // providerNameCheckedListBox
             // 
@@ -501,15 +529,6 @@
             this.providerNameCheckedListBox.Size = new System.Drawing.Size(154, 89);
             this.providerNameCheckedListBox.TabIndex = 80;
             // 
-            // end_TimeLabel
-            // 
-            end_TimeLabel.AutoSize = true;
-            end_TimeLabel.Location = new System.Drawing.Point(174, 269);
-            end_TimeLabel.Name = "end_TimeLabel";
-            end_TimeLabel.Size = new System.Drawing.Size(72, 17);
-            end_TimeLabel.TabIndex = 80;
-            end_TimeLabel.Text = "End Time:";
-            // 
             // end_TimeTextBox
             // 
             this.end_TimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "End Time", true));
@@ -518,15 +537,6 @@
             this.end_TimeTextBox.Size = new System.Drawing.Size(100, 22);
             this.end_TimeTextBox.TabIndex = 81;
             // 
-            // date_TImeLabel
-            // 
-            date_TImeLabel.AutoSize = true;
-            date_TImeLabel.Location = new System.Drawing.Point(292, 269);
-            date_TImeLabel.Name = "date_TImeLabel";
-            date_TImeLabel.Size = new System.Drawing.Size(42, 17);
-            date_TImeLabel.TabIndex = 81;
-            date_TImeLabel.Text = "Date:";
-            // 
             // date_TImeDateTimePicker
             // 
             this.date_TImeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.appointmentDataBindingSource, "Date/TIme", true));
@@ -534,15 +544,6 @@
             this.date_TImeDateTimePicker.Name = "date_TImeDateTimePicker";
             this.date_TImeDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.date_TImeDateTimePicker.TabIndex = 82;
-            // 
-            // cpt_codesLabel
-            // 
-            cpt_codesLabel.AutoSize = true;
-            cpt_codesLabel.Location = new System.Drawing.Point(13, 340);
-            cpt_codesLabel.Name = "cpt_codesLabel";
-            cpt_codesLabel.Size = new System.Drawing.Size(75, 17);
-            cpt_codesLabel.TabIndex = 82;
-            cpt_codesLabel.Text = "Cpt codes:";
             // 
             // cpt_codesListBox
             // 
@@ -564,9 +565,19 @@
             this.cpt_codesListBox.Size = new System.Drawing.Size(251, 84);
             this.cpt_codesListBox.TabIndex = 83;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(867, 420);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmApptInfo
             // 
             this.ClientSize = new System.Drawing.Size(1057, 519);
+            this.Controls.Add(this.button1);
             this.Controls.Add(cpt_codesLabel);
             this.Controls.Add(this.cpt_codesListBox);
             this.Controls.Add(date_TImeLabel);
@@ -668,6 +679,7 @@
         private System.Windows.Forms.TextBox end_TimeTextBox;
         private System.Windows.Forms.DateTimePicker date_TImeDateTimePicker;
         private System.Windows.Forms.ListBox cpt_codesListBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
