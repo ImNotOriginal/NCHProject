@@ -33,6 +33,7 @@
             this.systemsDataBase2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.appointment_DataTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
@@ -57,11 +58,21 @@
             // 
             this.appointment_DataTableAdapter.ClearBeforeFill = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(275, 69);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 36);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "GitHub Test";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 438);
+            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -77,5 +88,6 @@
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource appointmentDataBindingSource;
         private SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter appointment_DataTableAdapter;
+        private System.Windows.Forms.Button button1;
     }
 }

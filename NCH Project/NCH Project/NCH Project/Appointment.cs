@@ -33,6 +33,9 @@ namespace NCH_Project
         //Code used on the Forms Load
         private void frmApptInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.HouseHold' table. You can move, or remove it, as needed.
+            this.houseHoldTableAdapter.Fill(this.systemsDataBase2DataSet.HouseHold);
+
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
             this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Appointment_Data' table. You can move, or remove it, as needed.
@@ -162,5 +165,15 @@ namespace NCH_Project
         }
 
         
+
+        private void houseHold_NumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void providerNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

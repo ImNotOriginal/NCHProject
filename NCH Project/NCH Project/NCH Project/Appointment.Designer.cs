@@ -29,23 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label appointment_NumberLabel;
-            System.Windows.Forms.Label date_TImeLabel;
             System.Windows.Forms.Label appointment_TimeLabel1;
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtFName = new System.Windows.Forms.TextBox();
-            this.txtMInitial = new System.Windows.Forms.TextBox();
-            this.txtLName = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.Label phoneLabel;
+            System.Windows.Forms.Label patient_NumberLabel;
+            System.Windows.Forms.Label houseHold_NumberLabel;
+            System.Windows.Forms.Label patient_NameLabel;
+            System.Windows.Forms.Label appointment_NumberLabel;
+            System.Windows.Forms.Label providerNameLabel;
+            System.Windows.Forms.Label end_TimeLabel;
+            System.Windows.Forms.Label date_TImeLabel;
+            System.Windows.Forms.Label cpt_codesLabel;
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
@@ -66,8 +59,6 @@
             this.providerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtHouseID = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label17 = new System.Windows.Forms.Label();
@@ -81,185 +72,48 @@
             this.appointment_DataTableAdapter1 = new NCH_Project.SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter();
             this.appointment_DataTableAdapter2 = new NCH_Project.SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
-            this.appointment_NumberTextBox = new System.Windows.Forms.TextBox();
-            this.date_TImeTextBox = new System.Windows.Forms.TextBox();
             this.appointment_TimeTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            appointment_NumberLabel = new System.Windows.Forms.Label();
-            date_TImeLabel = new System.Windows.Forms.Label();
+            this.houseHoldBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.houseHoldTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.houseHoldBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.houseHold_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.patient_NameTextBox = new System.Windows.Forms.TextBox();
+            this.appointment_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.providerNameCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.end_TimeTextBox = new System.Windows.Forms.TextBox();
+            this.date_TImeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.cpt_codesListBox = new System.Windows.Forms.ListBox();
             appointment_TimeLabel1 = new System.Windows.Forms.Label();
+            phoneLabel = new System.Windows.Forms.Label();
+            patient_NumberLabel = new System.Windows.Forms.Label();
+            houseHold_NumberLabel = new System.Windows.Forms.Label();
+            patient_NameLabel = new System.Windows.Forms.Label();
+            appointment_NumberLabel = new System.Windows.Forms.Label();
+            providerNameLabel = new System.Windows.Forms.Label();
+            end_TimeLabel = new System.Windows.Forms.Label();
+            date_TImeLabel = new System.Windows.Forms.Label();
+            cpt_codesLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // appointment_NumberLabel
-            // 
-            appointment_NumberLabel.AutoSize = true;
-            appointment_NumberLabel.Location = new System.Drawing.Point(292, 41);
-            appointment_NumberLabel.Name = "appointment_NumberLabel";
-            appointment_NumberLabel.Size = new System.Drawing.Size(145, 17);
-            appointment_NumberLabel.TabIndex = 68;
-            appointment_NumberLabel.Text = "Appointment Number:";
-            // 
-            // date_TImeLabel
-            // 
-            date_TImeLabel.AutoSize = true;
-            date_TImeLabel.Location = new System.Drawing.Point(345, 218);
-            date_TImeLabel.Name = "date_TImeLabel";
-            date_TImeLabel.Size = new System.Drawing.Size(77, 17);
-            date_TImeLabel.TabIndex = 69;
-            date_TImeLabel.Text = "Date/TIme:";
             // 
             // appointment_TimeLabel1
             // 
             appointment_TimeLabel1.AutoSize = true;
-            appointment_TimeLabel1.Location = new System.Drawing.Point(13, 256);
+            appointment_TimeLabel1.Location = new System.Drawing.Point(13, 269);
             appointment_TimeLabel1.Name = "appointment_TimeLabel1";
             appointment_TimeLabel1.Size = new System.Drawing.Size(126, 17);
             appointment_TimeLabel1.TabIndex = 70;
             appointment_TimeLabel1.Text = "Appointment Time:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Patient ID:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(91, 36);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(143, 22);
-            this.textBox4.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(166, 133);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 17);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "First Name:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(425, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 17);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Last Name:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(292, 133);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 17);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Middle Initial:";
-            // 
-            // txtFName
-            // 
-            this.txtFName.Location = new System.Drawing.Point(169, 153);
-            this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(100, 22);
-            this.txtFName.TabIndex = 5;
-            // 
-            // txtMInitial
-            // 
-            this.txtMInitial.Location = new System.Drawing.Point(313, 153);
-            this.txtMInitial.Name = "txtMInitial";
-            this.txtMInitial.Size = new System.Drawing.Size(38, 22);
-            this.txtMInitial.TabIndex = 6;
-            // 
-            // txtLName
-            // 
-            this.txtLName.Location = new System.Drawing.Point(428, 153);
-            this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(100, 22);
-            this.txtLName.TabIndex = 7;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Items.AddRange(new object[] {
-            "Dr. Stacy Smith",
-            "Dr. Kacy Kepler",
-            "Dr. Steven Jackson",
-            "Justin Stalin",
-            "Mario Mussilini",
-            "Hitler McJager",
-            "Micheal Denner",
-            "Alex Blob",
-            "Hector Potter",
-            "Juan Baun",
-            "Austin Burbach"});
-            this.listBox1.Location = new System.Drawing.Point(16, 153);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(145, 84);
-            this.listBox1.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 133);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Provider";
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Items.AddRange(new object[] {
-            "       1  \tGeneral\t\t\t$  17.00",
-            "71045 \tX-Ray (Chest) \t\t$150.00",
-            "71046 \tX-Ray (2 View) \t\t$150.00",
-            "71047\tX-Ray (Chest 3 views)\t$ 298.00",
-            "71048\tX-Ray (Chest 4+)\t\t$ 448.00",
-            "74018\tRadiologic examination\t$ 298.00",
-            "\tAbdominal; 1 view",
-            "74019\tRadiologic Examination\t$ 298.00",
-            "\tAbdomen; 2 views\t\t"});
-            this.listBox2.Location = new System.Drawing.Point(0, 364);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(437, 84);
-            this.listBox2.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(0, 341);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Procedure";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(167, 195);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 17);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Phone";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(167, 215);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(131, 22);
-            this.textBox5.TabIndex = 13;
             // 
             // label12
             // 
@@ -275,7 +129,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 301);
+            this.label15.Location = new System.Drawing.Point(13, 314);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(51, 13);
             this.label15.TabIndex = 20;
@@ -283,7 +137,7 @@
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(12, 464);
+            this.btnAccept.Location = new System.Drawing.Point(16, 450);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(74, 35);
             this.btnAccept.TabIndex = 21;
@@ -292,7 +146,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(150, 466);
+            this.btnExit.Location = new System.Drawing.Point(153, 450);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(84, 31);
             this.btnExit.TabIndex = 22;
@@ -422,23 +276,6 @@
             this.postcardToolStripMenuItem.Text = "Postcard";
             this.postcardToolStripMenuItem.Click += new System.EventHandler(this.postcardToolStripMenuItem_Click);
             // 
-            // txtHouseID
-            // 
-            this.txtHouseID.Location = new System.Drawing.Point(115, 69);
-            this.txtHouseID.Name = "txtHouseID";
-            this.txtHouseID.ReadOnly = true;
-            this.txtHouseID.Size = new System.Drawing.Size(119, 22);
-            this.txtHouseID.TabIndex = 61;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 74);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 17);
-            this.label18.TabIndex = 60;
-            this.label18.Text = "Household ID:";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -524,70 +361,237 @@
             this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Visit_InfoTableAdapter = null;
             // 
-            // appointment_NumberTextBox
-            // 
-            this.appointment_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "Appointment Number", true));
-            this.appointment_NumberTextBox.Location = new System.Drawing.Point(443, 41);
-            this.appointment_NumberTextBox.Name = "appointment_NumberTextBox";
-            this.appointment_NumberTextBox.Size = new System.Drawing.Size(100, 22);
-            this.appointment_NumberTextBox.TabIndex = 69;
-            // 
-            // date_TImeTextBox
-            // 
-            this.date_TImeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "Date/TIme", true));
-            this.date_TImeTextBox.Location = new System.Drawing.Point(428, 215);
-            this.date_TImeTextBox.Name = "date_TImeTextBox";
-            this.date_TImeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.date_TImeTextBox.TabIndex = 70;
-            // 
             // appointment_TimeTextBox
             // 
             this.appointment_TimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "Appointment Time", true));
-            this.appointment_TimeTextBox.Location = new System.Drawing.Point(15, 276);
+            this.appointment_TimeTextBox.Location = new System.Drawing.Point(16, 289);
             this.appointment_TimeTextBox.Name = "appointment_TimeTextBox";
             this.appointment_TimeTextBox.Size = new System.Drawing.Size(100, 22);
             this.appointment_TimeTextBox.TabIndex = 71;
             // 
-            // button1
+            // houseHoldBindingSource
             // 
-            this.button1.Location = new System.Drawing.Point(700, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 72;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.houseHoldBindingSource.DataMember = "HouseHold";
+            this.houseHoldBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // houseHoldTableAdapter
+            // 
+            this.houseHoldTableAdapter.ClearBeforeFill = true;
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(167, 193);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 74;
+            phoneLabel.Text = "Phone:";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(170, 215);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneTextBox.TabIndex = 75;
+            // 
+            // houseHoldBindingSource1
+            // 
+            this.houseHoldBindingSource1.DataMember = "Appointment DataHouseHold";
+            this.houseHoldBindingSource1.DataSource = this.appointmentDataBindingSource;
+            // 
+            // patient_NumberLabel
+            // 
+            patient_NumberLabel.AutoSize = true;
+            patient_NumberLabel.Location = new System.Drawing.Point(21, 41);
+            patient_NumberLabel.Name = "patient_NumberLabel";
+            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
+            patient_NumberLabel.TabIndex = 75;
+            patient_NumberLabel.Text = "Patient Number:";
+            // 
+            // patient_NumberTextBox
+            // 
+            this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource1, "Patient Number", true));
+            this.patient_NumberTextBox.Location = new System.Drawing.Point(137, 38);
+            this.patient_NumberTextBox.Name = "patient_NumberTextBox";
+            this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.patient_NumberTextBox.TabIndex = 76;
+            // 
+            // houseHold_NumberLabel
+            // 
+            houseHold_NumberLabel.AutoSize = true;
+            houseHold_NumberLabel.Location = new System.Drawing.Point(21, 77);
+            houseHold_NumberLabel.Name = "houseHold_NumberLabel";
+            houseHold_NumberLabel.Size = new System.Drawing.Size(140, 17);
+            houseHold_NumberLabel.TabIndex = 76;
+            houseHold_NumberLabel.Text = "House Hold Number:";
+            // 
+            // houseHold_NumberTextBox
+            // 
+            this.houseHold_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource1, "HouseHold Number", true));
+            this.houseHold_NumberTextBox.Location = new System.Drawing.Point(167, 74);
+            this.houseHold_NumberTextBox.Name = "houseHold_NumberTextBox";
+            this.houseHold_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.houseHold_NumberTextBox.TabIndex = 77;
+            // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(173, 153);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 77;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // patient_NameTextBox
+            // 
+            this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource1, "Patient Name", true));
+            this.patient_NameTextBox.Location = new System.Drawing.Point(276, 150);
+            this.patient_NameTextBox.Name = "patient_NameTextBox";
+            this.patient_NameTextBox.Size = new System.Drawing.Size(267, 22);
+            this.patient_NameTextBox.TabIndex = 78;
+            // 
+            // appointment_NumberLabel
+            // 
+            appointment_NumberLabel.AutoSize = true;
+            appointment_NumberLabel.Location = new System.Drawing.Point(292, 41);
+            appointment_NumberLabel.Name = "appointment_NumberLabel";
+            appointment_NumberLabel.Size = new System.Drawing.Size(145, 17);
+            appointment_NumberLabel.TabIndex = 78;
+            appointment_NumberLabel.Text = "Appointment Number:";
+            // 
+            // appointment_NumberTextBox
+            // 
+            this.appointment_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "Appointment Number", true));
+            this.appointment_NumberTextBox.Location = new System.Drawing.Point(443, 38);
+            this.appointment_NumberTextBox.Name = "appointment_NumberTextBox";
+            this.appointment_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.appointment_NumberTextBox.TabIndex = 79;
+            // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataMember = "Providers";
+            this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // providerNameLabel
+            // 
+            providerNameLabel.AutoSize = true;
+            providerNameLabel.Location = new System.Drawing.Point(13, 128);
+            providerNameLabel.Name = "providerNameLabel";
+            providerNameLabel.Size = new System.Drawing.Size(106, 17);
+            providerNameLabel.TabIndex = 79;
+            providerNameLabel.Text = "Provider Name:";
+            // 
+            // providerNameCheckedListBox
+            // 
+            this.providerNameCheckedListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.providersBindingSource, "ProviderName", true));
+            this.providerNameCheckedListBox.FormattingEnabled = true;
+            this.providerNameCheckedListBox.Items.AddRange(new object[] {
+            "Stacy Smith",
+            "Kacy Kepler",
+            "Steven Jackson",
+            "Justin Stalin",
+            "Micheal Denner",
+            "Alex Blob",
+            "Hector Potter",
+            "Juan Jose",
+            "Austin Burbach"});
+            this.providerNameCheckedListBox.Location = new System.Drawing.Point(7, 153);
+            this.providerNameCheckedListBox.Name = "providerNameCheckedListBox";
+            this.providerNameCheckedListBox.Size = new System.Drawing.Size(154, 89);
+            this.providerNameCheckedListBox.TabIndex = 80;
+            // 
+            // end_TimeLabel
+            // 
+            end_TimeLabel.AutoSize = true;
+            end_TimeLabel.Location = new System.Drawing.Point(174, 269);
+            end_TimeLabel.Name = "end_TimeLabel";
+            end_TimeLabel.Size = new System.Drawing.Size(72, 17);
+            end_TimeLabel.TabIndex = 80;
+            end_TimeLabel.Text = "End Time:";
+            // 
+            // end_TimeTextBox
+            // 
+            this.end_TimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "End Time", true));
+            this.end_TimeTextBox.Location = new System.Drawing.Point(170, 289);
+            this.end_TimeTextBox.Name = "end_TimeTextBox";
+            this.end_TimeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.end_TimeTextBox.TabIndex = 81;
+            // 
+            // date_TImeLabel
+            // 
+            date_TImeLabel.AutoSize = true;
+            date_TImeLabel.Location = new System.Drawing.Point(292, 269);
+            date_TImeLabel.Name = "date_TImeLabel";
+            date_TImeLabel.Size = new System.Drawing.Size(42, 17);
+            date_TImeLabel.TabIndex = 81;
+            date_TImeLabel.Text = "Date:";
+            // 
+            // date_TImeDateTimePicker
+            // 
+            this.date_TImeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.appointmentDataBindingSource, "Date/TIme", true));
+            this.date_TImeDateTimePicker.Location = new System.Drawing.Point(295, 289);
+            this.date_TImeDateTimePicker.Name = "date_TImeDateTimePicker";
+            this.date_TImeDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.date_TImeDateTimePicker.TabIndex = 82;
+            // 
+            // cpt_codesLabel
+            // 
+            cpt_codesLabel.AutoSize = true;
+            cpt_codesLabel.Location = new System.Drawing.Point(13, 340);
+            cpt_codesLabel.Name = "cpt_codesLabel";
+            cpt_codesLabel.Size = new System.Drawing.Size(75, 17);
+            cpt_codesLabel.TabIndex = 82;
+            cpt_codesLabel.Text = "Cpt codes:";
+            // 
+            // cpt_codesListBox
+            // 
+            this.cpt_codesListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.providersBindingSource, "Cpt codes", true));
+            this.cpt_codesListBox.FormattingEnabled = true;
+            this.cpt_codesListBox.ItemHeight = 16;
+            this.cpt_codesListBox.Items.AddRange(new object[] {
+            "       1  \tGeneral\t\t\t$  17.00",
+            "71045 \tX-Ray (Chest) \t\t$150.00",
+            "71046 \tX-Ray (2 View) \t\t$150.00",
+            "71047\tX-Ray (Chest 3 views)\t$ 298.00",
+            "71048\tX-Ray (Chest 4+)\t\t$ 448.00",
+            "74018\tRadiologic examination\t$ 298.00",
+            "\tAbdominal; 1 view",
+            "74019\tRadiologic Examination\t$ 298.00",
+            "\tAbdomen; 2 views\t\t"});
+            this.cpt_codesListBox.Location = new System.Drawing.Point(16, 360);
+            this.cpt_codesListBox.Name = "cpt_codesListBox";
+            this.cpt_codesListBox.Size = new System.Drawing.Size(251, 84);
+            this.cpt_codesListBox.TabIndex = 83;
             // 
             // frmApptInfo
             // 
             this.ClientSize = new System.Drawing.Size(1057, 519);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(appointment_TimeLabel1);
-            this.Controls.Add(this.appointment_TimeTextBox);
+            this.Controls.Add(cpt_codesLabel);
+            this.Controls.Add(this.cpt_codesListBox);
             this.Controls.Add(date_TImeLabel);
-            this.Controls.Add(this.date_TImeTextBox);
+            this.Controls.Add(this.date_TImeDateTimePicker);
+            this.Controls.Add(end_TimeLabel);
+            this.Controls.Add(this.end_TimeTextBox);
+            this.Controls.Add(providerNameLabel);
+            this.Controls.Add(this.providerNameCheckedListBox);
             this.Controls.Add(appointment_NumberLabel);
             this.Controls.Add(this.appointment_NumberTextBox);
+            this.Controls.Add(patient_NameLabel);
+            this.Controls.Add(this.patient_NameTextBox);
+            this.Controls.Add(houseHold_NumberLabel);
+            this.Controls.Add(this.houseHold_NumberTextBox);
+            this.Controls.Add(patient_NumberLabel);
+            this.Controls.Add(this.patient_NumberTextBox);
+            this.Controls.Add(phoneLabel);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(appointment_TimeLabel1);
+            this.Controls.Add(this.appointment_TimeTextBox);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtHouseID);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.txtLName);
-            this.Controls.Add(this.txtMInitial);
-            this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmApptInfo";
@@ -599,6 +603,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,20 +621,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtFName;
-        private System.Windows.Forms.TextBox txtMInitial;
-        private System.Windows.Forms.TextBox txtLName;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnAccept;
@@ -648,8 +641,6 @@
         private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtHouseID;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.Label label17;
@@ -663,10 +654,20 @@
         private SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter appointment_DataTableAdapter1;
         private SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter appointment_DataTableAdapter2;
         private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox appointment_NumberTextBox;
-        private System.Windows.Forms.TextBox date_TImeTextBox;
         private System.Windows.Forms.TextBox appointment_TimeTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource houseHoldBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter houseHoldTableAdapter;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.BindingSource houseHoldBindingSource1;
+        private System.Windows.Forms.TextBox patient_NumberTextBox;
+        private System.Windows.Forms.TextBox houseHold_NumberTextBox;
+        private System.Windows.Forms.TextBox patient_NameTextBox;
+        private System.Windows.Forms.TextBox appointment_NumberTextBox;
+        private System.Windows.Forms.BindingSource providersBindingSource;
+        private System.Windows.Forms.CheckedListBox providerNameCheckedListBox;
+        private System.Windows.Forms.TextBox end_TimeTextBox;
+        private System.Windows.Forms.DateTimePicker date_TImeDateTimePicker;
+        private System.Windows.Forms.ListBox cpt_codesListBox;
     }
 }
 
