@@ -86,7 +86,6 @@
             this.end_TimeTextBox = new System.Windows.Forms.TextBox();
             this.date_TImeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cpt_codesListBox = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             appointment_TimeLabel1 = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
             patient_NumberLabel = new System.Windows.Forms.Label();
@@ -369,7 +368,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1057, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(605, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -565,19 +564,9 @@
             this.cpt_codesListBox.Size = new System.Drawing.Size(251, 84);
             this.cpt_codesListBox.TabIndex = 83;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(867, 420);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // frmApptInfo
             // 
-            this.ClientSize = new System.Drawing.Size(1057, 519);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(605, 519);
             this.Controls.Add(cpt_codesLabel);
             this.Controls.Add(this.cpt_codesListBox);
             this.Controls.Add(date_TImeLabel);
@@ -679,7 +668,6 @@
         private System.Windows.Forms.TextBox end_TimeTextBox;
         private System.Windows.Forms.DateTimePicker date_TImeDateTimePicker;
         private System.Windows.Forms.ListBox cpt_codesListBox;
-        private System.Windows.Forms.Button button1;
     }
 }
 

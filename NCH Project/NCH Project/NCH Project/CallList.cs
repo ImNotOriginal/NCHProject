@@ -30,8 +30,10 @@ namespace NCH_Project
 
         private void frmCallList_Load(object sender, EventArgs e)
         {
-           
-            
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
+
+
             // Used to change from Form to Form
             Patient = new frmPatientInfo();
             Appointment = new frmApptInfo();
@@ -135,6 +137,14 @@ namespace NCH_Project
             this.Hide();
             AList.ShowDialog();
             this.Close();
+        }
+
+        private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.patientsBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+
         }
     }
 }
