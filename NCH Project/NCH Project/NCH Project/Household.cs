@@ -33,6 +33,8 @@ namespace NCH_Project
         //Code used on the Forms Load
         private void frmHousehold_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.HouseHold' table. You can move, or remove it, as needed.
+            this.houseHoldTableAdapter.Fill(this.systemsDataBase2DataSet.HouseHold);
             //ToolStrip - FormLoad
             Appointment = new frmApptInfo();
             Patient = new frmPatientInfo();
@@ -145,6 +147,19 @@ namespace NCH_Project
             this.Hide();
             AList.ShowDialog();
             this.Close();
+        }
+
+        private void houseHoldBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.houseHoldBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+
+        }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

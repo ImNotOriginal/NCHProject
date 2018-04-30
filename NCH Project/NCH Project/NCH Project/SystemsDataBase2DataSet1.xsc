@@ -30,12 +30,18 @@
         </ColumnUISetting>
       </ColumnUISettings>
     </TableUISetting>
+<<<<<<< HEAD
     <TableUISetting Name="MTDPayments">
       <ColumnUISettings>
         <ColumnUISetting Name="HouseHold Number">
+=======
+    <TableUISetting Name="HouseHold">
+      <ColumnUISettings>
+        <ColumnUISetting Name="Patient Name">
+>>>>>>> 41a6ef526189a670049580abf37960739c727ccf
           <ControlSettings>
             <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-              <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+              <BindableControlInfo Name="ListBox" Type="System.Windows.Forms.ListBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
             </ControlSetting>
           </ControlSettings>
         </ColumnUISetting>
