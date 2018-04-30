@@ -368,7 +368,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1057, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(605, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -566,7 +566,11 @@
             // 
             // frmApptInfo
             // 
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1057, 519);
+=======
+            this.ClientSize = new System.Drawing.Size(605, 519);
+>>>>>>> 48d6d8503c1f9874e231562399dd7fd0bcaa162e
             this.Controls.Add(cpt_codesLabel);
             this.Controls.Add(this.cpt_codesListBox);
             this.Controls.Add(date_TImeLabel);

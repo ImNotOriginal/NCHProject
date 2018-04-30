@@ -325,7 +325,7 @@
             // current_BalanceLabel
             // 
             current_BalanceLabel.AutoSize = true;
-            current_BalanceLabel.Location = new System.Drawing.Point(246, 141);
+            current_BalanceLabel.Location = new System.Drawing.Point(195, 141);
             current_BalanceLabel.Name = "current_BalanceLabel";
             current_BalanceLabel.Size = new System.Drawing.Size(114, 17);
             current_BalanceLabel.TabIndex = 65;
@@ -334,7 +334,7 @@
             // current_BalanceTextBox
             // 
             this.current_BalanceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mTDPaymentsBindingSource, "Current Balance", true));
-            this.current_BalanceTextBox.Location = new System.Drawing.Point(249, 161);
+            this.current_BalanceTextBox.Location = new System.Drawing.Point(198, 161);
             this.current_BalanceTextBox.Name = "current_BalanceTextBox";
             this.current_BalanceTextBox.Size = new System.Drawing.Size(100, 22);
             this.current_BalanceTextBox.TabIndex = 66;
