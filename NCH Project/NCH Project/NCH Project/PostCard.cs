@@ -30,6 +30,10 @@ namespace NCH_Project
 
         private void frmPostCard_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.PostCard' table. You can move, or remove it, as needed.
+            this.postCardTableAdapter.Fill(this.systemsDataBase2DataSet.PostCard);
             Patient = new frmPatientInfo();
             Apointment = new frmApptInfo();
             Home = new frmHomePage();
@@ -152,6 +156,14 @@ namespace NCH_Project
             this.Hide();
             AList.ShowDialog();
             this.Close();
+        }
+
+        private void postCardBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.postCardBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+
         }
     }
 }
