@@ -30,6 +30,12 @@ namespace NCH_Project
         }
         private void frmAccountsRevivable_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.HouseHold' table. You can move, or remove it, as needed.
+            this.houseHoldTableAdapter.Fill(this.systemsDataBase2DataSet.HouseHold);
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDPayments' table. You can move, or remove it, as needed.
+            this.mTDPaymentsTableAdapter.Fill(this.systemsDataBase2DataSet.MTDPayments);
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDCharges' table. You can move, or remove it, as needed.
+            this.mTDChargesTableAdapter.Fill(this.systemsDataBase2DataSet.MTDCharges);
             Patient = new frmPatientInfo();
             Appointment = new frmApptInfo();
             House = new frmHousehold();
@@ -131,6 +137,9 @@ namespace NCH_Project
             this.Close();
         }
 
-        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
