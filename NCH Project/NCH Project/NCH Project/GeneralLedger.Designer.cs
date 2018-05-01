@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeneralLedger));
+<<<<<<< HEAD
             System.Windows.Forms.Label patient_NumberLabel;
             System.Windows.Forms.Label patient_NameLabel;
             System.Windows.Forms.Label current_BalanceLabel;
+=======
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,20 +65,31 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.mTDChargesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mTDChargesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
             this.mTDChargesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+=======
+            this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+<<<<<<< HEAD
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+=======
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+<<<<<<< HEAD
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.mTDChargesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
@@ -98,6 +112,13 @@
             this.mTDChargesBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).BeginInit();
+=======
+            this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
+            this.patientsBindingNavigator.SuspendLayout();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -350,6 +371,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
             // systemsDataBase2DataSet
             // 
             this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
@@ -390,6 +412,15 @@
             this.mTDChargesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.mTDChargesBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mTDChargesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+=======
+            // patientsBindingNavigator
+            // 
+            this.patientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.patientsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.patientsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.patientsBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.patientsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -401,6 +432,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
+<<<<<<< HEAD
             this.mTDChargesBindingNavigatorSaveItem});
             this.mTDChargesBindingNavigator.Location = new System.Drawing.Point(0, 28);
             this.mTDChargesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -412,6 +444,44 @@
             this.mTDChargesBindingNavigator.Size = new System.Drawing.Size(663, 27);
             this.mTDChargesBindingNavigator.TabIndex = 69;
             this.mTDChargesBindingNavigator.Text = "bindingNavigator1";
+=======
+            this.patientsBindingNavigatorSaveItem});
+            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.patientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.patientsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.patientsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.patientsBindingNavigator.Name = "patientsBindingNavigator";
+            this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(663, 27);
+            this.patientsBindingNavigator.TabIndex = 69;
+            this.patientsBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -419,7 +489,11 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+<<<<<<< HEAD
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+=======
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -428,13 +502,21 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+<<<<<<< HEAD
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+=======
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+<<<<<<< HEAD
             this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+=======
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorPositionItem
             // 
@@ -445,6 +527,7 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+<<<<<<< HEAD
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -456,6 +539,12 @@
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+=======
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -477,6 +566,7 @@
             // 
             // bindingNavigatorSeparator2
             // 
+<<<<<<< HEAD
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
@@ -583,17 +673,33 @@
             this.paymentTextBox.Name = "paymentTextBox";
             this.paymentTextBox.Size = new System.Drawing.Size(100, 22);
             this.paymentTextBox.TabIndex = 14;
+=======
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // patientsBindingNavigatorSaveItem
+            // 
+            this.patientsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.patientsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("patientsBindingNavigatorSaveItem.Image")));
+            this.patientsBindingNavigatorSaveItem.Name = "patientsBindingNavigatorSaveItem";
+            this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.patientsBindingNavigatorSaveItem.Text = "Save Data";
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // frmGeneralLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 530);
+<<<<<<< HEAD
             this.Controls.Add(patient_NameLabel);
             this.Controls.Add(this.patient_NameTextBox);
             this.Controls.Add(patient_NumberLabel);
             this.Controls.Add(this.patient_NumberTextBox);
             this.Controls.Add(this.mTDChargesBindingNavigator);
+=======
+            this.Controls.Add(this.patientsBindingNavigator);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -604,6 +710,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingNavigator)).EndInit();
@@ -611,6 +718,11 @@
             this.mTDChargesBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
+            this.patientsBindingNavigator.ResumeLayout(false);
+            this.patientsBindingNavigator.PerformLayout();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,11 +759,15 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClose;
+<<<<<<< HEAD
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource mTDChargesBindingSource;
         private SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter mTDChargesTableAdapter;
         private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator mTDChargesBindingNavigator;
+=======
+        private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -663,6 +779,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripButton mTDChargesBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox patient_NumberTextBox;
         private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
@@ -672,5 +789,8 @@
         private System.Windows.Forms.BindingSource mTDPaymentsBindingSource;
         private System.Windows.Forms.TextBox paymentTextBox;
         private System.Windows.Forms.TextBox current_BalanceTextBox;
+=======
+        private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
     }
 }

@@ -143,5 +143,7 @@ namespace NCH_Project
             AList.ShowDialog();
             this.Close();
         }
+
+       
     }
 }

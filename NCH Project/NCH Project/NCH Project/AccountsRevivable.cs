@@ -30,6 +30,8 @@ namespace NCH_Project
         }
         private void frmAccountsRevivable_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Appointment_Data' table. You can move, or remove it, as needed.
+            this.appointment_DataTableAdapter.Fill(this.systemsDataBase2DataSet.Appointment_Data);
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.HouseHold' table. You can move, or remove it, as needed.
             this.houseHoldTableAdapter.Fill(this.systemsDataBase2DataSet.HouseHold);
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDPayments' table. You can move, or remove it, as needed.
