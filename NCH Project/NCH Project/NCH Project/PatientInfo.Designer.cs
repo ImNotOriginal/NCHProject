@@ -75,8 +75,6 @@
             this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
             this.rdoHispanic = new System.Windows.Forms.RadioButton();
             this.rdoWhite = new System.Windows.Forms.RadioButton();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.txtHouseHold = new System.Windows.Forms.TextBox();
@@ -523,24 +521,6 @@
             this.rdoWhite.Text = "White";
             this.rdoWhite.UseVisualStyleBackColor = true;
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(43, 474);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(79, 25);
-            this.btnAccept.TabIndex = 55;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(158, 474);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(79, 25);
-            this.btnClear.TabIndex = 56;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(284, 474);
@@ -581,7 +561,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(673, 28);
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // homeToolStripMenuItem
             // 
@@ -845,8 +824,6 @@
             this.Controls.Add(this.txtHouseHold);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label17);
@@ -942,8 +919,6 @@
         private System.Windows.Forms.RadioButton rdoAfricanAmerican;
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoWhite;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtHouseHold;

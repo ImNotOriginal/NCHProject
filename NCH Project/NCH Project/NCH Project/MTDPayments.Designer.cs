@@ -80,6 +80,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.btnClose = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
@@ -294,7 +295,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(15, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(662, 252);
+            this.groupBox1.Size = new System.Drawing.Size(687, 252);
             this.groupBox1.TabIndex = 69;
             this.groupBox1.TabStop = false;
             // 
@@ -517,11 +518,22 @@
             this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(280, 448);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 71;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmMTDPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 483);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.patientsBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtAdress);
@@ -598,5 +610,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+        private System.Windows.Forms.Button btnClose;
     }
 }
