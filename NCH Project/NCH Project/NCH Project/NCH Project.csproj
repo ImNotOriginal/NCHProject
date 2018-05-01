@@ -145,6 +145,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralLedger.resx">
       <DependentUpon>GeneralLedger.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>

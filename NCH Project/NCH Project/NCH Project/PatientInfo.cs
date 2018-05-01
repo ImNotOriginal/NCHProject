@@ -146,6 +146,9 @@ namespace NCH_Project
             this.Close();
         }
 
-       
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

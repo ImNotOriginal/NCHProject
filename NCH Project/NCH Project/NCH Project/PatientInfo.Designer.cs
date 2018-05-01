@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
             System.Windows.Forms.Label patient_NumberLabel;
             System.Windows.Forms.Label household_NumberLabel;
             System.Windows.Forms.Label patient_NameLabel;
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label phoneLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
+            System.Windows.Forms.Label emailLabel;
+            System.Windows.Forms.Label raceLabel;
             this.grpSex = new System.Windows.Forms.GroupBox();
             this.rdoF = new System.Windows.Forms.RadioButton();
             this.rdoM = new System.Windows.Forms.RadioButton();
@@ -47,15 +49,6 @@
             this.txtPolicyName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtInsComp = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdoOther = new System.Windows.Forms.RadioButton();
-            this.rdoAsain = new System.Windows.Forms.RadioButton();
-            this.rdoNativeAmerican = new System.Windows.Forms.RadioButton();
-            this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
-            this.rdoHispanic = new System.Windows.Forms.RadioButton();
-            this.rdoWhite = new System.Windows.Forms.RadioButton();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -99,20 +92,68 @@
             this.patient_NameTextBox = new System.Windows.Forms.TextBox();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.raceTextBox = new System.Windows.Forms.TextBox();
             patient_NumberLabel = new System.Windows.Forms.Label();
             household_NumberLabel = new System.Windows.Forms.Label();
             patient_NameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
+            emailLabel = new System.Windows.Forms.Label();
+            raceLabel = new System.Windows.Forms.Label();
             this.grpSex.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
             this.patientsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // patient_NumberLabel
+            // 
+            patient_NumberLabel.AutoSize = true;
+            patient_NumberLabel.Location = new System.Drawing.Point(18, 74);
+            patient_NumberLabel.Name = "patient_NumberLabel";
+            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
+            patient_NumberLabel.TabIndex = 61;
+            patient_NumberLabel.Text = "Patient Number:";
+            // 
+            // household_NumberLabel
+            // 
+            household_NumberLabel.AutoSize = true;
+            household_NumberLabel.Location = new System.Drawing.Point(245, 74);
+            household_NumberLabel.Name = "household_NumberLabel";
+            household_NumberLabel.Size = new System.Drawing.Size(134, 17);
+            household_NumberLabel.TabIndex = 62;
+            household_NumberLabel.Text = "Household Number:";
+            // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(18, 111);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 63;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(18, 151);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(64, 17);
+            addressLabel.TabIndex = 64;
+            addressLabel.Text = "Address:";
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(22, 205);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 65;
+            phoneLabel.Text = "Phone:";
             // 
             // grpSex
             // 
@@ -228,103 +269,6 @@
             this.txtInsComp.Size = new System.Drawing.Size(188, 22);
             this.txtInsComp.TabIndex = 0;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(22, 258);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 17);
-            this.label17.TabIndex = 52;
-            this.label17.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(25, 278);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(354, 22);
-            this.txtEmail.TabIndex = 53;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rdoOther);
-            this.groupBox3.Controls.Add(this.rdoAsain);
-            this.groupBox3.Controls.Add(this.rdoNativeAmerican);
-            this.groupBox3.Controls.Add(this.rdoAfricanAmerican);
-            this.groupBox3.Controls.Add(this.rdoHispanic);
-            this.groupBox3.Controls.Add(this.rdoWhite);
-            this.groupBox3.Location = new System.Drawing.Point(25, 328);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(354, 131);
-            this.groupBox3.TabIndex = 54;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = " ";
-            // 
-            // rdoOther
-            // 
-            this.rdoOther.AutoSize = true;
-            this.rdoOther.Location = new System.Drawing.Point(157, 79);
-            this.rdoOther.Name = "rdoOther";
-            this.rdoOther.Size = new System.Drawing.Size(65, 21);
-            this.rdoOther.TabIndex = 5;
-            this.rdoOther.TabStop = true;
-            this.rdoOther.Text = "Other";
-            this.rdoOther.UseVisualStyleBackColor = true;
-            // 
-            // rdoAsain
-            // 
-            this.rdoAsain.AutoSize = true;
-            this.rdoAsain.Location = new System.Drawing.Point(157, 47);
-            this.rdoAsain.Name = "rdoAsain";
-            this.rdoAsain.Size = new System.Drawing.Size(64, 21);
-            this.rdoAsain.TabIndex = 4;
-            this.rdoAsain.TabStop = true;
-            this.rdoAsain.Text = "Asian";
-            this.rdoAsain.UseVisualStyleBackColor = true;
-            // 
-            // rdoNativeAmerican
-            // 
-            this.rdoNativeAmerican.AutoSize = true;
-            this.rdoNativeAmerican.Location = new System.Drawing.Point(157, 21);
-            this.rdoNativeAmerican.Name = "rdoNativeAmerican";
-            this.rdoNativeAmerican.Size = new System.Drawing.Size(132, 21);
-            this.rdoNativeAmerican.TabIndex = 3;
-            this.rdoNativeAmerican.TabStop = true;
-            this.rdoNativeAmerican.Text = "Native American";
-            this.rdoNativeAmerican.UseVisualStyleBackColor = true;
-            // 
-            // rdoAfricanAmerican
-            // 
-            this.rdoAfricanAmerican.AutoSize = true;
-            this.rdoAfricanAmerican.Location = new System.Drawing.Point(0, 81);
-            this.rdoAfricanAmerican.Name = "rdoAfricanAmerican";
-            this.rdoAfricanAmerican.Size = new System.Drawing.Size(136, 21);
-            this.rdoAfricanAmerican.TabIndex = 2;
-            this.rdoAfricanAmerican.TabStop = true;
-            this.rdoAfricanAmerican.Text = "African American";
-            this.rdoAfricanAmerican.UseVisualStyleBackColor = true;
-            // 
-            // rdoHispanic
-            // 
-            this.rdoHispanic.AutoSize = true;
-            this.rdoHispanic.Location = new System.Drawing.Point(0, 49);
-            this.rdoHispanic.Name = "rdoHispanic";
-            this.rdoHispanic.Size = new System.Drawing.Size(83, 21);
-            this.rdoHispanic.TabIndex = 1;
-            this.rdoHispanic.TabStop = true;
-            this.rdoHispanic.Text = "Hispanic";
-            this.rdoHispanic.UseVisualStyleBackColor = true;
-            // 
-            // rdoWhite
-            // 
-            this.rdoWhite.AutoSize = true;
-            this.rdoWhite.Location = new System.Drawing.Point(0, 23);
-            this.rdoWhite.Name = "rdoWhite";
-            this.rdoWhite.Size = new System.Drawing.Size(65, 21);
-            this.rdoWhite.TabIndex = 0;
-            this.rdoWhite.TabStop = true;
-            this.rdoWhite.Text = "White";
-            this.rdoWhite.UseVisualStyleBackColor = true;
-            // 
             // btnAccept
             // 
             this.btnAccept.Location = new System.Drawing.Point(43, 474);
@@ -333,6 +277,7 @@
             this.btnAccept.TabIndex = 55;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnClear
             // 
@@ -367,7 +312,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(673, 28);
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // homeToolStripMenuItem
             // 
@@ -653,15 +597,6 @@
             this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Visit_InfoTableAdapter = null;
             // 
-            // patient_NumberLabel
-            // 
-            patient_NumberLabel.AutoSize = true;
-            patient_NumberLabel.Location = new System.Drawing.Point(18, 74);
-            patient_NumberLabel.Name = "patient_NumberLabel";
-            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
-            patient_NumberLabel.TabIndex = 61;
-            patient_NumberLabel.Text = "Patient Number:";
-            // 
             // patient_NumberTextBox
             // 
             this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Number", true));
@@ -669,15 +604,6 @@
             this.patient_NumberTextBox.Name = "patient_NumberTextBox";
             this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.patient_NumberTextBox.TabIndex = 62;
-            // 
-            // household_NumberLabel
-            // 
-            household_NumberLabel.AutoSize = true;
-            household_NumberLabel.Location = new System.Drawing.Point(245, 74);
-            household_NumberLabel.Name = "household_NumberLabel";
-            household_NumberLabel.Size = new System.Drawing.Size(134, 17);
-            household_NumberLabel.TabIndex = 62;
-            household_NumberLabel.Text = "Household Number:";
             // 
             // household_NumberTextBox
             // 
@@ -687,15 +613,6 @@
             this.household_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.household_NumberTextBox.TabIndex = 63;
             // 
-            // patient_NameLabel
-            // 
-            patient_NameLabel.AutoSize = true;
-            patient_NameLabel.Location = new System.Drawing.Point(18, 111);
-            patient_NameLabel.Name = "patient_NameLabel";
-            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
-            patient_NameLabel.TabIndex = 63;
-            patient_NameLabel.Text = "Patient Name:";
-            // 
             // patient_NameTextBox
             // 
             this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
@@ -703,15 +620,6 @@
             this.patient_NameTextBox.Name = "patient_NameTextBox";
             this.patient_NameTextBox.Size = new System.Drawing.Size(210, 22);
             this.patient_NameTextBox.TabIndex = 64;
-            // 
-            // addressLabel
-            // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(18, 151);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(64, 17);
-            addressLabel.TabIndex = 64;
-            addressLabel.Text = "Address:";
             // 
             // addressTextBox
             // 
@@ -721,15 +629,6 @@
             this.addressTextBox.Size = new System.Drawing.Size(274, 22);
             this.addressTextBox.TabIndex = 65;
             // 
-            // phoneLabel
-            // 
-            phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(22, 205);
-            phoneLabel.Name = "phoneLabel";
-            phoneLabel.Size = new System.Drawing.Size(53, 17);
-            phoneLabel.TabIndex = 65;
-            phoneLabel.Text = "Phone:";
-            // 
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
@@ -738,11 +637,49 @@
             this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
             this.phoneTextBox.TabIndex = 66;
             // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(20, 256);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(46, 17);
+            emailLabel.TabIndex = 66;
+            emailLabel.Text = "Email:";
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(25, 276);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(263, 22);
+            this.emailTextBox.TabIndex = 67;
+            // 
+            // raceLabel
+            // 
+            raceLabel.AutoSize = true;
+            raceLabel.Location = new System.Drawing.Point(22, 351);
+            raceLabel.Name = "raceLabel";
+            raceLabel.Size = new System.Drawing.Size(45, 17);
+            raceLabel.TabIndex = 67;
+            raceLabel.Text = "Race:";
+            // 
+            // raceTextBox
+            // 
+            this.raceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
+            this.raceTextBox.Location = new System.Drawing.Point(28, 371);
+            this.raceTextBox.Name = "raceTextBox";
+            this.raceTextBox.Size = new System.Drawing.Size(100, 22);
+            this.raceTextBox.TabIndex = 68;
+            // 
             // frmPatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 530);
+            this.Controls.Add(raceLabel);
+            this.Controls.Add(this.raceTextBox);
+            this.Controls.Add(emailLabel);
+            this.Controls.Add(this.emailTextBox);
             this.Controls.Add(phoneLabel);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(addressLabel);
@@ -758,9 +695,6 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAccept);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpSex);
             this.Name = "frmPatientInfo";
@@ -770,8 +704,6 @@
             this.grpSex.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
@@ -797,15 +729,6 @@
         private System.Windows.Forms.TextBox txtHolderSOC;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtHolderDOB;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton rdoOther;
-        private System.Windows.Forms.RadioButton rdoAsain;
-        private System.Windows.Forms.RadioButton rdoNativeAmerican;
-        private System.Windows.Forms.RadioButton rdoAfricanAmerican;
-        private System.Windows.Forms.RadioButton rdoHispanic;
-        private System.Windows.Forms.RadioButton rdoWhite;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
@@ -849,5 +772,7 @@
         private System.Windows.Forms.TextBox patient_NameTextBox;
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox raceTextBox;
     }
 }
