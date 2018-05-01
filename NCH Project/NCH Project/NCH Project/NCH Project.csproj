@@ -76,17 +76,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MTDPayments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MTDPayments.Designer.cs">
-      <DependentUpon>MTDPayments.cs</DependentUpon>
-    </Compile>
     <Compile Include="GeneralLedger.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GeneralLedger.Designer.cs">
       <DependentUpon>GeneralLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MTDPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTDPayments.Designer.cs">
+      <DependentUpon>MTDPayments.cs</DependentUpon>
     </Compile>
     <Compile Include="ProviderReport.cs">
       <SubType>Form</SubType>
@@ -140,12 +140,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MTDPayments.resx">
-      <DependentUpon>MTDPayments.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GeneralLedger.resx">
       <DependentUpon>GeneralLedger.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTDPayments.resx">
+      <DependentUpon>MTDPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
