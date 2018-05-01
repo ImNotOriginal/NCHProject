@@ -32,6 +32,12 @@ namespace NCH_Project
 
         private void frmGeneralLedger_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDPayments' table. You can move, or remove it, as needed.
+            this.mTDPaymentsTableAdapter.Fill(this.systemsDataBase2DataSet.MTDPayments);
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDCharges' table. You can move, or remove it, as needed.
+            this.mTDChargesTableAdapter.Fill(this.systemsDataBase2DataSet.MTDCharges);
             //ToolStrip - FormLoad
             Appointment = new frmApptInfo();
             Patient = new frmPatientInfo();
@@ -126,6 +132,14 @@ namespace NCH_Project
             this.Hide();
             AList.ShowDialog();
             this.Close();
+        }
+
+        private void mTDChargesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.mTDChargesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+
         }
     }
 }
