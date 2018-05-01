@@ -71,7 +71,6 @@
             this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
             this.patient_NameTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
             patient_NumberLabel = new System.Windows.Forms.Label();
             patient_NameLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
@@ -120,7 +119,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(489, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(751, 28);
             this.menuStrip1.TabIndex = 24;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -312,7 +311,7 @@
             this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patientsBindingNavigator.Name = "patientsBindingNavigator";
             this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patientsBindingNavigator.Size = new System.Drawing.Size(489, 27);
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(751, 27);
             this.patientsBindingNavigator.TabIndex = 25;
             this.patientsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -435,22 +434,11 @@
             this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
             this.phoneTextBox.TabIndex = 28;
             // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(147, 282);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(87, 28);
-            this.btnClose.TabIndex = 29;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // frmCallList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 343);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(751, 343);
             this.Controls.Add(phoneLabel);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(patient_NameLabel);
@@ -514,6 +502,5 @@
         private System.Windows.Forms.TextBox patient_NumberTextBox;
         private System.Windows.Forms.TextBox patient_NameTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.Button btnClose;
     }
 }

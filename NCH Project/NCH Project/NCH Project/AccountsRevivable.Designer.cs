@@ -65,6 +65,7 @@
             this.houseHold_NumberTextBox = new System.Windows.Forms.TextBox();
             this.paymentTextBox = new System.Windows.Forms.TextBox();
             this.current_BalanceTextBox = new System.Windows.Forms.TextBox();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.houseHoldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.head_Of_HouseholdTextBox = new System.Windows.Forms.TextBox();
@@ -155,7 +156,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(431, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(562, 28);
             this.menuStrip1.TabIndex = 62;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -370,9 +371,18 @@
             this.current_BalanceTextBox.Size = new System.Drawing.Size(100, 22);
             this.current_BalanceTextBox.TabIndex = 66;
             // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(15, 326);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(78, 38);
+            this.btnAccept.TabIndex = 67;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(155, 315);
+            this.btnClose.Location = new System.Drawing.Point(134, 326);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(81, 38);
             this.btnClose.TabIndex = 68;
@@ -428,7 +438,7 @@
             this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patientsBindingNavigator.Name = "patientsBindingNavigator";
             this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patientsBindingNavigator.Size = new System.Drawing.Size(431, 27);
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(562, 27);
             this.patientsBindingNavigator.TabIndex = 70;
             this.patientsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -529,11 +539,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 397);
+            this.ClientSize = new System.Drawing.Size(562, 397);
             this.Controls.Add(this.patientsBindingNavigator);
             this.Controls.Add(head_Of_HouseholdLabel);
             this.Controls.Add(this.head_Of_HouseholdTextBox);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnAccept);
             this.Controls.Add(current_BalanceLabel);
             this.Controls.Add(this.current_BalanceTextBox);
             this.Controls.Add(paymentLabel);
@@ -593,6 +604,7 @@
         private System.Windows.Forms.TextBox houseHold_NumberTextBox;
         private System.Windows.Forms.TextBox paymentTextBox;
         private System.Windows.Forms.TextBox current_BalanceTextBox;
+        private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClose;
         private SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter houseHoldTableAdapter;
         private System.Windows.Forms.BindingSource houseHoldBindingSource;

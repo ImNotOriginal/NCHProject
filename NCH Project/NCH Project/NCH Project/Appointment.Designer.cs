@@ -42,6 +42,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApptInfo));
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.btnAccept = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEditPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -231,9 +232,18 @@
             this.label15.TabIndex = 20;
             this.label15.Text = "EX: 1500";
             // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(16, 450);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(74, 35);
+            this.btnAccept.TabIndex = 21;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
+            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(220, 459);
+            this.btnExit.Location = new System.Drawing.Point(153, 450);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(84, 31);
             this.btnExit.TabIndex = 22;
@@ -720,6 +730,7 @@
             this.Controls.Add(this.appointment_TimeTextBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.menuStrip1);
@@ -756,6 +767,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ToolStripMenuItem patientInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addEditPatientToolStripMenuItem;

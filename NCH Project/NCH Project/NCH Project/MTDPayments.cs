@@ -131,10 +131,5 @@ namespace NCH_Project
             AList.ShowDialog();
             this.Close();
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

@@ -165,10 +165,5 @@ namespace NCH_Project
             this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
 
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
