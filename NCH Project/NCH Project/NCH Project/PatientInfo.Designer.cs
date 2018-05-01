@@ -49,6 +49,18 @@
             this.txtPolicyName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtInsComp = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
+=======
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdoOther = new System.Windows.Forms.RadioButton();
+            this.rdoAsain = new System.Windows.Forms.RadioButton();
+            this.rdoNativeAmerican = new System.Windows.Forms.RadioButton();
+            this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
+            this.rdoHispanic = new System.Windows.Forms.RadioButton();
+            this.rdoWhite = new System.Windows.Forms.RadioButton();
+>>>>>>> parent of 26a1e1a... Delete and Accept
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -288,6 +300,24 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(43, 474);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(79, 25);
+            this.btnAccept.TabIndex = 55;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(158, 474);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(79, 25);
+            this.btnClear.TabIndex = 56;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(284, 474);
@@ -312,6 +342,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(673, 28);
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
+            
             // 
             // homeToolStripMenuItem
             // 
@@ -695,6 +726,12 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAccept);
+<<<<<<< HEAD
+=======
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label17);
+>>>>>>> parent of 26a1e1a... Delete and Accept
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpSex);
             this.Name = "frmPatientInfo";
@@ -729,6 +766,18 @@
         private System.Windows.Forms.TextBox txtHolderSOC;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtHolderDOB;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdoOther;
+        private System.Windows.Forms.RadioButton rdoAsain;
+        private System.Windows.Forms.RadioButton rdoNativeAmerican;
+        private System.Windows.Forms.RadioButton rdoAfricanAmerican;
+        private System.Windows.Forms.RadioButton rdoHispanic;
+        private System.Windows.Forms.RadioButton rdoWhite;
+>>>>>>> parent of 26a1e1a... Delete and Accept
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
