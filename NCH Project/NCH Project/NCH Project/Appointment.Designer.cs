@@ -566,11 +566,10 @@
             // 
             // frmApptInfo
             // 
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1057, 519);
-=======
+
             this.ClientSize = new System.Drawing.Size(605, 519);
->>>>>>> 48d6d8503c1f9874e231562399dd7fd0bcaa162e
+
             this.Controls.Add(cpt_codesLabel);
             this.Controls.Add(this.cpt_codesListBox);
             this.Controls.Add(date_TImeLabel);

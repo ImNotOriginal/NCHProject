@@ -146,5 +146,10 @@ namespace NCH_Project
             this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
 
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
