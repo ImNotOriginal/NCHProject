@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGeneralLedger));
+<<<<<<< HEAD
+            System.Windows.Forms.Label patient_NumberLabel;
+            System.Windows.Forms.Label patient_NameLabel;
+            System.Windows.Forms.Label current_BalanceLabel;
+=======
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,16 +54,9 @@
             this.providerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPatient = new System.Windows.Forms.TextBox();
-            this.txtPatiendID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAmountPaid = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCredit = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDebit = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,25 +64,61 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAccept = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
+            this.mTDChargesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mTDChargesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter();
+            this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+            this.mTDChargesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+=======
             this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+<<<<<<< HEAD
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+=======
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+<<<<<<< HEAD
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.mTDChargesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter();
+            this.patient_NameTextBox = new System.Windows.Forms.TextBox();
+            this.mTDPaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mTDPaymentsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.MTDPaymentsTableAdapter();
+            this.current_BalanceTextBox = new System.Windows.Forms.TextBox();
+            this.paymentTextBox = new System.Windows.Forms.TextBox();
+            patient_NumberLabel = new System.Windows.Forms.Label();
+            patient_NameLabel = new System.Windows.Forms.Label();
+            current_BalanceLabel = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingNavigator)).BeginInit();
+            this.mTDChargesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).BeginInit();
+=======
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
             this.patientsBindingNavigator.SuspendLayout();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -230,47 +265,13 @@
             this.postcardToolStripMenuItem.Text = "Postcard";
             this.postcardToolStripMenuItem.Click += new System.EventHandler(this.postcardToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 17);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Patient: ";
-            // 
-            // txtPatient
-            // 
-            this.txtPatient.Location = new System.Drawing.Point(93, 79);
-            this.txtPatient.Name = "txtPatient";
-            this.txtPatient.ReadOnly = true;
-            this.txtPatient.Size = new System.Drawing.Size(200, 22);
-            this.txtPatient.TabIndex = 63;
-            // 
-            // txtPatiendID
-            // 
-            this.txtPatiendID.Location = new System.Drawing.Point(93, 107);
-            this.txtPatiendID.Name = "txtPatiendID";
-            this.txtPatiendID.ReadOnly = true;
-            this.txtPatiendID.Size = new System.Drawing.Size(200, 22);
-            this.txtPatiendID.TabIndex = 65;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
-            this.label2.TabIndex = 64;
-            this.label2.Text = "Patient ID: ";
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.paymentTextBox);
+            this.groupBox1.Controls.Add(current_BalanceLabel);
+            this.groupBox1.Controls.Add(this.current_BalanceTextBox);
             this.groupBox1.Controls.Add(this.txtAmountPaid);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtBalance);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtCredit);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtDebit);
             this.groupBox1.Controls.Add(this.label5);
@@ -280,7 +281,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 135);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 260);
+            this.groupBox1.Size = new System.Drawing.Size(648, 265);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
             // 
@@ -300,31 +301,6 @@
             this.label8.Size = new System.Drawing.Size(128, 17);
             this.label8.TabIndex = 10;
             this.label8.Text = "Total Amount Paid:";
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Location = new System.Drawing.Point(18, 133);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.ReadOnly = true;
-            this.txtBalance.Size = new System.Drawing.Size(100, 22);
-            this.txtBalance.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Balance: ";
-            // 
-            // txtCredit
-            // 
-            this.txtCredit.Location = new System.Drawing.Point(498, 51);
-            this.txtCredit.Name = "txtCredit";
-            this.txtCredit.ReadOnly = true;
-            this.txtCredit.Size = new System.Drawing.Size(100, 22);
-            this.txtCredit.TabIndex = 7;
             // 
             // label6
             // 
@@ -386,15 +362,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Description: ";
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(30, 414);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(74, 33);
-            this.btnAccept.TabIndex = 67;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(171, 414);
@@ -404,6 +371,48 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+<<<<<<< HEAD
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mTDChargesBindingSource
+            // 
+            this.mTDChargesBindingSource.DataMember = "MTDCharges";
+            this.mTDChargesBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // mTDChargesTableAdapter
+            // 
+            this.mTDChargesTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.Appointment_DataTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
+            this.tableAdapterManager.Cpt_CodesTableAdapter = null;
+            this.tableAdapterManager.HouseHoldTableAdapter = null;
+            this.tableAdapterManager.InsurancecompaniesTableAdapter = null;
+            this.tableAdapterManager.MTDChargesTableAdapter = this.mTDChargesTableAdapter;
+            this.tableAdapterManager.MTDPaymentsTableAdapter = this.mTDPaymentsTableAdapter;
+            this.tableAdapterManager.PatientsTableAdapter = this.patientsTableAdapter;
+            this.tableAdapterManager.Pending_Insurance_ClaimsTableAdapter = null;
+            this.tableAdapterManager.PostCardTableAdapter = null;
+            this.tableAdapterManager.ProvidersTableAdapter = null;
+            this.tableAdapterManager.RacesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Visit_InfoTableAdapter = null;
+            // 
+            // mTDChargesBindingNavigator
+            // 
+            this.mTDChargesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.mTDChargesBindingNavigator.BindingSource = this.mTDChargesBindingSource;
+            this.mTDChargesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.mTDChargesBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.mTDChargesBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.mTDChargesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+=======
             // patientsBindingNavigator
             // 
             this.patientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -411,6 +420,7 @@
             this.patientsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.patientsBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.patientsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -422,6 +432,19 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
+<<<<<<< HEAD
+            this.mTDChargesBindingNavigatorSaveItem});
+            this.mTDChargesBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.mTDChargesBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.mTDChargesBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.mTDChargesBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.mTDChargesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.mTDChargesBindingNavigator.Name = "mTDChargesBindingNavigator";
+            this.mTDChargesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.mTDChargesBindingNavigator.Size = new System.Drawing.Size(663, 27);
+            this.mTDChargesBindingNavigator.TabIndex = 69;
+            this.mTDChargesBindingNavigator.Text = "bindingNavigator1";
+=======
             this.patientsBindingNavigatorSaveItem});
             this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 28);
             this.patientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -458,6 +481,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -465,7 +489,11 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+<<<<<<< HEAD
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+=======
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -474,13 +502,21 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+<<<<<<< HEAD
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+=======
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+<<<<<<< HEAD
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+=======
             this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorPositionItem
             // 
@@ -491,10 +527,24 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+<<<<<<< HEAD
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+=======
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -516,6 +566,114 @@
             // 
             // bindingNavigatorSeparator2
             // 
+<<<<<<< HEAD
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // mTDChargesBindingNavigatorSaveItem
+            // 
+            this.mTDChargesBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.mTDChargesBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("mTDChargesBindingNavigatorSaveItem.Image")));
+            this.mTDChargesBindingNavigatorSaveItem.Name = "mTDChargesBindingNavigatorSaveItem";
+            this.mTDChargesBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.mTDChargesBindingNavigatorSaveItem.Text = "Save Data";
+            this.mTDChargesBindingNavigatorSaveItem.Click += new System.EventHandler(this.mTDChargesBindingNavigatorSaveItem_Click);
+            // 
+            // patient_NumberLabel
+            // 
+            patient_NumberLabel.AutoSize = true;
+            patient_NumberLabel.Location = new System.Drawing.Point(30, 115);
+            patient_NumberLabel.Name = "patient_NumberLabel";
+            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
+            patient_NumberLabel.TabIndex = 69;
+            patient_NumberLabel.Text = "Patient Number:";
+            // 
+            // patient_NumberTextBox
+            // 
+            this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mTDChargesBindingSource, "Patient Number", true));
+            this.patient_NumberTextBox.Location = new System.Drawing.Point(146, 112);
+            this.patient_NumberTextBox.Name = "patient_NumberTextBox";
+            this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.patient_NumberTextBox.TabIndex = 70;
+            // 
+            // patientsBindingSource
+            // 
+            this.patientsBindingSource.DataMember = "Patients";
+            this.patientsBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // patientsTableAdapter
+            // 
+            this.patientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(30, 80);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 70;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // patient_NameTextBox
+            // 
+            this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
+            this.patient_NameTextBox.Location = new System.Drawing.Point(146, 77);
+            this.patient_NameTextBox.Name = "patient_NameTextBox";
+            this.patient_NameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.patient_NameTextBox.TabIndex = 71;
+            // 
+            // mTDPaymentsBindingSource
+            // 
+            this.mTDPaymentsBindingSource.DataMember = "MTDPayments";
+            this.mTDPaymentsBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // mTDPaymentsTableAdapter
+            // 
+            this.mTDPaymentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // current_BalanceLabel
+            // 
+            current_BalanceLabel.AutoSize = true;
+            current_BalanceLabel.Location = new System.Drawing.Point(28, 136);
+            current_BalanceLabel.Name = "current_BalanceLabel";
+            current_BalanceLabel.Size = new System.Drawing.Size(114, 17);
+            current_BalanceLabel.TabIndex = 12;
+            current_BalanceLabel.Text = "Current Balance:";
+            // 
+            // current_BalanceTextBox
+            // 
+            this.current_BalanceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mTDPaymentsBindingSource, "Current Balance", true));
+            this.current_BalanceTextBox.Location = new System.Drawing.Point(159, 133);
+            this.current_BalanceTextBox.Name = "current_BalanceTextBox";
+            this.current_BalanceTextBox.Size = new System.Drawing.Size(100, 22);
+            this.current_BalanceTextBox.TabIndex = 13;
+            // 
+            // paymentTextBox
+            // 
+            this.paymentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mTDPaymentsBindingSource, "Payment", true));
+            this.paymentTextBox.Location = new System.Drawing.Point(498, 51);
+            this.paymentTextBox.Name = "paymentTextBox";
+            this.paymentTextBox.Size = new System.Drawing.Size(100, 22);
+            this.paymentTextBox.TabIndex = 14;
+=======
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
@@ -526,20 +684,24 @@
             this.patientsBindingNavigatorSaveItem.Name = "patientsBindingNavigatorSaveItem";
             this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             // 
             // frmGeneralLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 530);
+<<<<<<< HEAD
+            this.Controls.Add(patient_NameLabel);
+            this.Controls.Add(this.patient_NameTextBox);
+            this.Controls.Add(patient_NumberLabel);
+            this.Controls.Add(this.patient_NumberTextBox);
+            this.Controls.Add(this.mTDChargesBindingNavigator);
+=======
             this.Controls.Add(this.patientsBindingNavigator);
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtPatiendID);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPatient);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmGeneralLedger";
             this.Text = "Genreal Ledger";
@@ -548,9 +710,19 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingNavigator)).EndInit();
+            this.mTDChargesBindingNavigator.ResumeLayout(false);
+            this.mTDChargesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).EndInit();
+=======
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
             this.patientsBindingNavigator.ResumeLayout(false);
             this.patientsBindingNavigator.PerformLayout();
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -576,16 +748,9 @@
         private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPatient;
-        private System.Windows.Forms.TextBox txtPatiendID;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtAmountPaid;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtBalance;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCredit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtDebit;
         private System.Windows.Forms.Label label5;
@@ -593,9 +758,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClose;
+<<<<<<< HEAD
+        private SystemsDataBase2DataSet systemsDataBase2DataSet;
+        private System.Windows.Forms.BindingSource mTDChargesBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter mTDChargesTableAdapter;
+        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator mTDChargesBindingNavigator;
+=======
         private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -607,6 +779,18 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripButton mTDChargesBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox patient_NumberTextBox;
+        private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private System.Windows.Forms.BindingSource patientsBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.MTDPaymentsTableAdapter mTDPaymentsTableAdapter;
+        private System.Windows.Forms.TextBox patient_NameTextBox;
+        private System.Windows.Forms.BindingSource mTDPaymentsBindingSource;
+        private System.Windows.Forms.TextBox paymentTextBox;
+        private System.Windows.Forms.TextBox current_BalanceTextBox;
+=======
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+>>>>>>> 26a1e1a541c11024efd694d168213a7ecc66aa44
     }
 }
