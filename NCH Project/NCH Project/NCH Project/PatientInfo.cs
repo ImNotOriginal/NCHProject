@@ -30,6 +30,8 @@ namespace NCH_Project
         }
         private void frmPatientInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
+            this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
             // Code NEEDED to change from form to form
             Patient = new frmPatientInfo();
             Appointment = new frmApptInfo();

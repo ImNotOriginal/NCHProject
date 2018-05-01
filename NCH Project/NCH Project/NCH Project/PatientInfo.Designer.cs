@@ -30,33 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPatientID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtFName = new System.Windows.Forms.TextBox();
-            this.txtMInitial = new System.Windows.Forms.TextBox();
-            this.txtLName = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.Label patient_NumberLabel;
+            System.Windows.Forms.Label household_NumberLabel;
+            System.Windows.Forms.Label patient_NameLabel;
+            System.Windows.Forms.Label addressLabel;
+            System.Windows.Forms.Label phoneLabel;
             this.grpSex = new System.Windows.Forms.GroupBox();
             this.rdoF = new System.Windows.Forms.RadioButton();
             this.rdoM = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtAptNum = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtST = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtZip = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtAltPhone = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtEMContact = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtHolderSOC = new System.Windows.Forms.TextBox();
@@ -76,8 +57,6 @@
             this.rdoHispanic = new System.Windows.Forms.RadioButton();
             this.rdoWhite = new System.Windows.Forms.RadioButton();
             this.btnExit = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtHouseHold = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,84 +88,35 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
+            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter();
+            this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+            this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.household_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.patient_NameTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            patient_NumberLabel = new System.Windows.Forms.Label();
+            household_NumberLabel = new System.Windows.Forms.Label();
+            patient_NameLabel = new System.Windows.Forms.Label();
+            addressLabel = new System.Windows.Forms.Label();
+            phoneLabel = new System.Windows.Forms.Label();
             this.grpSex.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
             this.patientsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Patient ID:";
-            // 
-            // txtPatientID
-            // 
-            this.txtPatientID.Location = new System.Drawing.Point(105, 71);
-            this.txtPatientID.Name = "txtPatientID";
-            this.txtPatientID.ReadOnly = true;
-            this.txtPatientID.Size = new System.Drawing.Size(100, 22);
-            this.txtPatientID.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "First Name:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(137, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 17);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Last Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(252, 101);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 17);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Middle Initial:";
-            // 
-            // txtFName
-            // 
-            this.txtFName.Location = new System.Drawing.Point(21, 121);
-            this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(100, 22);
-            this.txtFName.TabIndex = 31;
-            // 
-            // txtMInitial
-            // 
-            this.txtMInitial.Location = new System.Drawing.Point(266, 121);
-            this.txtMInitial.Name = "txtMInitial";
-            this.txtMInitial.Size = new System.Drawing.Size(35, 22);
-            this.txtMInitial.TabIndex = 32;
-            // 
-            // txtLName
-            // 
-            this.txtLName.Location = new System.Drawing.Point(140, 121);
-            this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(100, 22);
-            this.txtLName.TabIndex = 33;
             // 
             // grpSex
             // 
             this.grpSex.Controls.Add(this.rdoF);
             this.grpSex.Controls.Add(this.rdoM);
-            this.grpSex.Location = new System.Drawing.Point(365, 101);
+            this.grpSex.Location = new System.Drawing.Point(383, 108);
             this.grpSex.Name = "grpSex";
             this.grpSex.Size = new System.Drawing.Size(101, 42);
             this.grpSex.TabIndex = 34;
@@ -207,141 +137,13 @@
             // rdoM
             // 
             this.rdoM.AutoSize = true;
-            this.rdoM.Location = new System.Drawing.Point(6, 21);
+            this.rdoM.Location = new System.Drawing.Point(6, 15);
             this.rdoM.Name = "rdoM";
             this.rdoM.Size = new System.Drawing.Size(40, 21);
             this.rdoM.TabIndex = 0;
             this.rdoM.TabStop = true;
             this.rdoM.Text = "M";
             this.rdoM.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 146);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 17);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Address";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(23, 166);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(219, 22);
-            this.txtAddress.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(257, 146);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 17);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Appt. #";
-            // 
-            // txtAptNum
-            // 
-            this.txtAptNum.Location = new System.Drawing.Point(260, 166);
-            this.txtAptNum.Name = "txtAptNum";
-            this.txtAptNum.Size = new System.Drawing.Size(43, 22);
-            this.txtAptNum.TabIndex = 38;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(343, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 17);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "City";
-            // 
-            // txtCity
-            // 
-            this.txtCity.Location = new System.Drawing.Point(346, 166);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(100, 22);
-            this.txtCity.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(486, 145);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 17);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "State";
-            // 
-            // txtST
-            // 
-            this.txtST.Location = new System.Drawing.Point(489, 166);
-            this.txtST.Name = "txtST";
-            this.txtST.Size = new System.Drawing.Size(38, 22);
-            this.txtST.TabIndex = 42;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(570, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 17);
-            this.label9.TabIndex = 43;
-            this.label9.Text = "Zip";
-            // 
-            // txtZip
-            // 
-            this.txtZip.Location = new System.Drawing.Point(573, 166);
-            this.txtZip.Name = "txtZip";
-            this.txtZip.Size = new System.Drawing.Size(71, 22);
-            this.txtZip.TabIndex = 44;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(19, 205);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 17);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Phone";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(22, 225);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(100, 22);
-            this.txtPhone.TabIndex = 46;
-            // 
-            // txtAltPhone
-            // 
-            this.txtAltPhone.Location = new System.Drawing.Point(137, 225);
-            this.txtAltPhone.Name = "txtAltPhone";
-            this.txtAltPhone.Size = new System.Drawing.Size(100, 22);
-            this.txtAltPhone.TabIndex = 48;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(134, 205);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 17);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "Alt. Phone";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(249, 205);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(130, 17);
-            this.label12.TabIndex = 49;
-            this.label12.Text = "Emercency Contact";
-            // 
-            // txtEMContact
-            // 
-            this.txtEMContact.Location = new System.Drawing.Point(252, 225);
-            this.txtEMContact.Name = "txtEMContact";
-            this.txtEMContact.Size = new System.Drawing.Size(127, 22);
-            this.txtEMContact.TabIndex = 50;
             // 
             // groupBox2
             // 
@@ -530,22 +332,6 @@
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(258, 74);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 17);
-            this.label18.TabIndex = 58;
-            this.label18.Text = "Household ID:";
-            // 
-            // txtHouseHold
-            // 
-            this.txtHouseHold.Location = new System.Drawing.Point(361, 69);
-            this.txtHouseHold.Name = "txtHouseHold";
-            this.txtHouseHold.Size = new System.Drawing.Size(100, 22);
-            this.txtHouseHold.TabIndex = 59;
             // 
             // menuStrip1
             // 
@@ -814,45 +600,146 @@
             this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             // 
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // patientsBindingSource
+            // 
+            this.patientsBindingSource.DataMember = "Patients";
+            this.patientsBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // patientsTableAdapter
+            // 
+            this.patientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.Appointment_DataTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
+            this.tableAdapterManager.Cpt_CodesTableAdapter = null;
+            this.tableAdapterManager.HouseHoldTableAdapter = null;
+            this.tableAdapterManager.InsurancecompaniesTableAdapter = null;
+            this.tableAdapterManager.MTDChargesTableAdapter = null;
+            this.tableAdapterManager.MTDPaymentsTableAdapter = null;
+            this.tableAdapterManager.PatientsTableAdapter = this.patientsTableAdapter;
+            this.tableAdapterManager.Pending_Insurance_ClaimsTableAdapter = null;
+            this.tableAdapterManager.PostCardTableAdapter = null;
+            this.tableAdapterManager.ProvidersTableAdapter = null;
+            this.tableAdapterManager.RacesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Visit_InfoTableAdapter = null;
+            // 
+            // patient_NumberLabel
+            // 
+            patient_NumberLabel.AutoSize = true;
+            patient_NumberLabel.Location = new System.Drawing.Point(18, 74);
+            patient_NumberLabel.Name = "patient_NumberLabel";
+            patient_NumberLabel.Size = new System.Drawing.Size(110, 17);
+            patient_NumberLabel.TabIndex = 61;
+            patient_NumberLabel.Text = "Patient Number:";
+            // 
+            // patient_NumberTextBox
+            // 
+            this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Number", true));
+            this.patient_NumberTextBox.Location = new System.Drawing.Point(134, 71);
+            this.patient_NumberTextBox.Name = "patient_NumberTextBox";
+            this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.patient_NumberTextBox.TabIndex = 62;
+            // 
+            // household_NumberLabel
+            // 
+            household_NumberLabel.AutoSize = true;
+            household_NumberLabel.Location = new System.Drawing.Point(245, 74);
+            household_NumberLabel.Name = "household_NumberLabel";
+            household_NumberLabel.Size = new System.Drawing.Size(134, 17);
+            household_NumberLabel.TabIndex = 62;
+            household_NumberLabel.Text = "Household Number:";
+            // 
+            // household_NumberTextBox
+            // 
+            this.household_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Household Number", true));
+            this.household_NumberTextBox.Location = new System.Drawing.Point(384, 71);
+            this.household_NumberTextBox.Name = "household_NumberTextBox";
+            this.household_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.household_NumberTextBox.TabIndex = 63;
+            // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(18, 111);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 63;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // patient_NameTextBox
+            // 
+            this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
+            this.patient_NameTextBox.Location = new System.Drawing.Point(121, 108);
+            this.patient_NameTextBox.Name = "patient_NameTextBox";
+            this.patient_NameTextBox.Size = new System.Drawing.Size(210, 22);
+            this.patient_NameTextBox.TabIndex = 64;
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(18, 151);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(64, 17);
+            addressLabel.TabIndex = 64;
+            addressLabel.Text = "Address:";
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Address", true));
+            this.addressTextBox.Location = new System.Drawing.Point(88, 148);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(274, 22);
+            this.addressTextBox.TabIndex = 65;
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(22, 205);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 65;
+            phoneLabel.Text = "Phone:";
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(21, 225);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneTextBox.TabIndex = 66;
+            // 
             // frmPatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 530);
+            this.Controls.Add(phoneLabel);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(addressLabel);
+            this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(patient_NameLabel);
+            this.Controls.Add(this.patient_NameTextBox);
+            this.Controls.Add(household_NumberLabel);
+            this.Controls.Add(this.household_NumberTextBox);
+            this.Controls.Add(patient_NumberLabel);
+            this.Controls.Add(this.patient_NumberTextBox);
             this.Controls.Add(this.patientsBindingNavigator);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.txtHouseHold);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.txtEMContact);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtAltPhone);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtZip);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtST);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtAptNum);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.grpSex);
-            this.Controls.Add(this.txtLName);
-            this.Controls.Add(this.txtMInitial);
-            this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPatientID);
-            this.Controls.Add(this.label1);
             this.Name = "frmPatientInfo";
             this.Text = " PatientInfo";
             this.Load += new System.EventHandler(this.frmPatientInfo_Load);
@@ -867,40 +754,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
             this.patientsBindingNavigator.ResumeLayout(false);
             this.patientsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPatientID;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtFName;
-        private System.Windows.Forms.TextBox txtMInitial;
-        private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.GroupBox grpSex;
         private System.Windows.Forms.RadioButton rdoF;
         private System.Windows.Forms.RadioButton rdoM;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAptNum;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtST;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtZip;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtAltPhone;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtEMContact;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtPolicyName;
@@ -920,8 +784,6 @@
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoWhite;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtHouseHold;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientInfoToolStripMenuItem;
@@ -953,5 +815,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+        private SystemsDataBase2DataSet systemsDataBase2DataSet;
+        private System.Windows.Forms.BindingSource patientsBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox patient_NumberTextBox;
+        private System.Windows.Forms.TextBox household_NumberTextBox;
+        private System.Windows.Forms.TextBox patient_NameTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox phoneTextBox;
     }
 }
