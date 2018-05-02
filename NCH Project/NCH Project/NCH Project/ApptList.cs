@@ -143,9 +143,16 @@ namespace NCH_Project
 
         private void appointment_DataBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.appointment_DataBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+            if (MessageBox.Show("This will save the data, Any changes will be final! Are you sure?", "Save Data", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Validate();
+                this.appointment_DataBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+            }
+            else
+            {
+
+            }
 
         }
 

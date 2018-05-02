@@ -143,5 +143,19 @@ namespace NCH_Project
         {
             this.Close();
         }
+
+        private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This will save the data, Any changes will be final! Are you sure?", "Save Data", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Validate();
+                this.patientsBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+            }
+            else
+            {
+
+            }
+        }
     }
 }

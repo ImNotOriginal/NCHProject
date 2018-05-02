@@ -131,5 +131,12 @@ namespace NCH_Project
             AList.ShowDialog();
             this.Close();
         }
+
+        
+
+        private void patientsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

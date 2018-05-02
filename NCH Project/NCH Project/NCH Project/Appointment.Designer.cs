@@ -703,6 +703,7 @@
             this.patientsBindingNavigatorSaveItem.Name = "patientsBindingNavigatorSaveItem";
             this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
+            this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
             // frmApptInfo
             // 

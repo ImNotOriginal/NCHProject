@@ -34,12 +34,9 @@
             System.Windows.Forms.Label patient_NameLabel;
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label phoneLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
             System.Windows.Forms.Label emailLabel;
             System.Windows.Forms.Label raceLabel;
-            this.grpSex = new System.Windows.Forms.GroupBox();
-            this.rdoF = new System.Windows.Forms.RadioButton();
-            this.rdoM = new System.Windows.Forms.RadioButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtHolderSOC = new System.Windows.Forms.TextBox();
@@ -49,8 +46,6 @@
             this.txtPolicyName = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtInsComp = new System.Windows.Forms.TextBox();
-<<<<<<< HEAD
-=======
             this.label17 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -60,7 +55,6 @@
             this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
             this.rdoHispanic = new System.Windows.Forms.RadioButton();
             this.rdoWhite = new System.Windows.Forms.RadioButton();
->>>>>>> parent of 26a1e1a... Delete and Accept
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -82,6 +76,17 @@
             this.providerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
+            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter();
+            this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+            this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.household_NumberTextBox = new System.Windows.Forms.TextBox();
+            this.patient_NameTextBox = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.raceTextBox = new System.Windows.Forms.TextBox();
             this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -95,17 +100,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
-            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter();
-            this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
-            this.patient_NumberTextBox = new System.Windows.Forms.TextBox();
-            this.household_NumberTextBox = new System.Windows.Forms.TextBox();
-            this.patient_NameTextBox = new System.Windows.Forms.TextBox();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.raceTextBox = new System.Windows.Forms.TextBox();
             patient_NumberLabel = new System.Windows.Forms.Label();
             household_NumberLabel = new System.Windows.Forms.Label();
             patient_NameLabel = new System.Windows.Forms.Label();
@@ -113,13 +107,12 @@
             phoneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
             raceLabel = new System.Windows.Forms.Label();
-            this.grpSex.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
-            this.patientsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
+            this.patientsBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // patient_NumberLabel
@@ -161,44 +154,20 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(22, 205);
+            phoneLabel.Location = new System.Drawing.Point(22, 185);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(53, 17);
             phoneLabel.TabIndex = 65;
             phoneLabel.Text = "Phone:";
             // 
-            // grpSex
+            // emailLabel
             // 
-            this.grpSex.Controls.Add(this.rdoF);
-            this.grpSex.Controls.Add(this.rdoM);
-            this.grpSex.Location = new System.Drawing.Point(383, 108);
-            this.grpSex.Name = "grpSex";
-            this.grpSex.Size = new System.Drawing.Size(101, 42);
-            this.grpSex.TabIndex = 34;
-            this.grpSex.TabStop = false;
-            this.grpSex.Text = "Sex";
-            // 
-            // rdoF
-            // 
-            this.rdoF.AutoSize = true;
-            this.rdoF.Location = new System.Drawing.Point(63, 21);
-            this.rdoF.Name = "rdoF";
-            this.rdoF.Size = new System.Drawing.Size(37, 21);
-            this.rdoF.TabIndex = 1;
-            this.rdoF.TabStop = true;
-            this.rdoF.Text = "F";
-            this.rdoF.UseVisualStyleBackColor = true;
-            // 
-            // rdoM
-            // 
-            this.rdoM.AutoSize = true;
-            this.rdoM.Location = new System.Drawing.Point(6, 15);
-            this.rdoM.Name = "rdoM";
-            this.rdoM.Size = new System.Drawing.Size(40, 21);
-            this.rdoM.TabIndex = 0;
-            this.rdoM.TabStop = true;
-            this.rdoM.Text = "M";
-            this.rdoM.UseVisualStyleBackColor = true;
+            emailLabel.AutoSize = true;
+            emailLabel.Location = new System.Drawing.Point(129, 185);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new System.Drawing.Size(46, 17);
+            emailLabel.TabIndex = 66;
+            emailLabel.Text = "Email:";
             // 
             // groupBox2
             // 
@@ -281,6 +250,70 @@
             this.txtInsComp.Size = new System.Drawing.Size(188, 22);
             this.txtInsComp.TabIndex = 0;
             // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(0, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(100, 23);
+            this.label17.TabIndex = 71;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(0, 0);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 22);
+            this.txtEmail.TabIndex = 70;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 100);
+            this.groupBox3.TabIndex = 69;
+            this.groupBox3.TabStop = false;
+            // 
+            // rdoOther
+            // 
+            this.rdoOther.Location = new System.Drawing.Point(0, 0);
+            this.rdoOther.Name = "rdoOther";
+            this.rdoOther.Size = new System.Drawing.Size(104, 24);
+            this.rdoOther.TabIndex = 0;
+            // 
+            // rdoAsain
+            // 
+            this.rdoAsain.Location = new System.Drawing.Point(0, 0);
+            this.rdoAsain.Name = "rdoAsain";
+            this.rdoAsain.Size = new System.Drawing.Size(104, 24);
+            this.rdoAsain.TabIndex = 0;
+            // 
+            // rdoNativeAmerican
+            // 
+            this.rdoNativeAmerican.Location = new System.Drawing.Point(0, 0);
+            this.rdoNativeAmerican.Name = "rdoNativeAmerican";
+            this.rdoNativeAmerican.Size = new System.Drawing.Size(104, 24);
+            this.rdoNativeAmerican.TabIndex = 0;
+            // 
+            // rdoAfricanAmerican
+            // 
+            this.rdoAfricanAmerican.Location = new System.Drawing.Point(0, 0);
+            this.rdoAfricanAmerican.Name = "rdoAfricanAmerican";
+            this.rdoAfricanAmerican.Size = new System.Drawing.Size(104, 24);
+            this.rdoAfricanAmerican.TabIndex = 0;
+            // 
+            // rdoHispanic
+            // 
+            this.rdoHispanic.Location = new System.Drawing.Point(0, 0);
+            this.rdoHispanic.Name = "rdoHispanic";
+            this.rdoHispanic.Size = new System.Drawing.Size(104, 24);
+            this.rdoHispanic.TabIndex = 0;
+            // 
+            // rdoWhite
+            // 
+            this.rdoWhite.Location = new System.Drawing.Point(0, 0);
+            this.rdoWhite.Name = "rdoWhite";
+            this.rdoWhite.Size = new System.Drawing.Size(104, 24);
+            this.rdoWhite.TabIndex = 0;
+            // 
             // btnAccept
             // 
             this.btnAccept.Location = new System.Drawing.Point(43, 474);
@@ -290,24 +323,6 @@
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(158, 474);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(79, 25);
-            this.btnClear.TabIndex = 56;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(43, 474);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(79, 25);
-            this.btnAccept.TabIndex = 55;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
@@ -342,7 +357,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(673, 28);
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // homeToolStripMenuItem
             // 
@@ -473,9 +487,107 @@
             this.postcardToolStripMenuItem.Text = "Postcard";
             this.postcardToolStripMenuItem.Click += new System.EventHandler(this.postcardToolStripMenuItem_Click);
             // 
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // patientsBindingSource
+            // 
+            this.patientsBindingSource.DataMember = "Patients";
+            this.patientsBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // patientsTableAdapter
+            // 
+            this.patientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.Appointment_DataTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
+            this.tableAdapterManager.Cpt_CodesTableAdapter = null;
+            this.tableAdapterManager.HouseHoldTableAdapter = null;
+            this.tableAdapterManager.InsurancecompaniesTableAdapter = null;
+            this.tableAdapterManager.MTDChargesTableAdapter = null;
+            this.tableAdapterManager.MTDPaymentsTableAdapter = null;
+            this.tableAdapterManager.PatientsTableAdapter = this.patientsTableAdapter;
+            this.tableAdapterManager.Pending_Insurance_ClaimsTableAdapter = null;
+            this.tableAdapterManager.PostCardTableAdapter = null;
+            this.tableAdapterManager.ProvidersTableAdapter = null;
+            this.tableAdapterManager.RacesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.Visit_InfoTableAdapter = null;
+            // 
+            // patient_NumberTextBox
+            // 
+            this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Number", true));
+            this.patient_NumberTextBox.Location = new System.Drawing.Point(134, 71);
+            this.patient_NumberTextBox.Name = "patient_NumberTextBox";
+            this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.patient_NumberTextBox.TabIndex = 62;
+            // 
+            // household_NumberTextBox
+            // 
+            this.household_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Household Number", true));
+            this.household_NumberTextBox.Location = new System.Drawing.Point(384, 71);
+            this.household_NumberTextBox.Name = "household_NumberTextBox";
+            this.household_NumberTextBox.Size = new System.Drawing.Size(100, 22);
+            this.household_NumberTextBox.TabIndex = 63;
+            // 
+            // patient_NameTextBox
+            // 
+            this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
+            this.patient_NameTextBox.Location = new System.Drawing.Point(121, 108);
+            this.patient_NameTextBox.Name = "patient_NameTextBox";
+            this.patient_NameTextBox.Size = new System.Drawing.Size(210, 22);
+            this.patient_NameTextBox.TabIndex = 64;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Address", true));
+            this.addressTextBox.Location = new System.Drawing.Point(88, 148);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(274, 22);
+            this.addressTextBox.TabIndex = 65;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(21, 205);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneTextBox.TabIndex = 66;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(134, 205);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(263, 22);
+            this.emailTextBox.TabIndex = 67;
+            // 
+            // raceLabel
+            // 
+            raceLabel.AutoSize = true;
+            raceLabel.Location = new System.Drawing.Point(24, 256);
+            raceLabel.Name = "raceLabel";
+            raceLabel.Size = new System.Drawing.Size(45, 17);
+            raceLabel.TabIndex = 71;
+            raceLabel.Text = "Race:";
+            // 
+            // raceTextBox
+            // 
+            this.raceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
+            this.raceTextBox.Location = new System.Drawing.Point(75, 253);
+            this.raceTextBox.Name = "raceTextBox";
+            this.raceTextBox.Size = new System.Drawing.Size(100, 22);
+            this.raceTextBox.TabIndex = 72;
+            // 
             // patientsBindingNavigator
             // 
             this.patientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.patientsBindingNavigator.BindingSource = this.patientsBindingSource;
             this.patientsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.patientsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.patientsBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -500,7 +612,7 @@
             this.patientsBindingNavigator.Name = "patientsBindingNavigator";
             this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.patientsBindingNavigator.Size = new System.Drawing.Size(673, 27);
-            this.patientsBindingNavigator.TabIndex = 61;
+            this.patientsBindingNavigator.TabIndex = 73;
             this.patientsBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
@@ -595,118 +707,14 @@
             this.patientsBindingNavigatorSaveItem.Name = "patientsBindingNavigatorSaveItem";
             this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // systemsDataBase2DataSet
-            // 
-            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
-            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientsBindingSource
-            // 
-            this.patientsBindingSource.DataMember = "Patients";
-            this.patientsBindingSource.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // patientsTableAdapter
-            // 
-            this.patientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.Appointment_DataTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
-            this.tableAdapterManager.Cpt_CodesTableAdapter = null;
-            this.tableAdapterManager.HouseHoldTableAdapter = null;
-            this.tableAdapterManager.InsurancecompaniesTableAdapter = null;
-            this.tableAdapterManager.MTDChargesTableAdapter = null;
-            this.tableAdapterManager.MTDPaymentsTableAdapter = null;
-            this.tableAdapterManager.PatientsTableAdapter = this.patientsTableAdapter;
-            this.tableAdapterManager.Pending_Insurance_ClaimsTableAdapter = null;
-            this.tableAdapterManager.PostCardTableAdapter = null;
-            this.tableAdapterManager.ProvidersTableAdapter = null;
-            this.tableAdapterManager.RacesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.Visit_InfoTableAdapter = null;
-            // 
-            // patient_NumberTextBox
-            // 
-            this.patient_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Number", true));
-            this.patient_NumberTextBox.Location = new System.Drawing.Point(134, 71);
-            this.patient_NumberTextBox.Name = "patient_NumberTextBox";
-            this.patient_NumberTextBox.Size = new System.Drawing.Size(100, 22);
-            this.patient_NumberTextBox.TabIndex = 62;
-            // 
-            // household_NumberTextBox
-            // 
-            this.household_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Household Number", true));
-            this.household_NumberTextBox.Location = new System.Drawing.Point(384, 71);
-            this.household_NumberTextBox.Name = "household_NumberTextBox";
-            this.household_NumberTextBox.Size = new System.Drawing.Size(100, 22);
-            this.household_NumberTextBox.TabIndex = 63;
-            // 
-            // patient_NameTextBox
-            // 
-            this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
-            this.patient_NameTextBox.Location = new System.Drawing.Point(121, 108);
-            this.patient_NameTextBox.Name = "patient_NameTextBox";
-            this.patient_NameTextBox.Size = new System.Drawing.Size(210, 22);
-            this.patient_NameTextBox.TabIndex = 64;
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(88, 148);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(274, 22);
-            this.addressTextBox.TabIndex = 65;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(21, 225);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
-            this.phoneTextBox.TabIndex = 66;
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(20, 256);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new System.Drawing.Size(46, 17);
-            emailLabel.TabIndex = 66;
-            emailLabel.Text = "Email:";
-            // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(25, 276);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(263, 22);
-            this.emailTextBox.TabIndex = 67;
-            // 
-            // raceLabel
-            // 
-            raceLabel.AutoSize = true;
-            raceLabel.Location = new System.Drawing.Point(22, 351);
-            raceLabel.Name = "raceLabel";
-            raceLabel.Size = new System.Drawing.Size(45, 17);
-            raceLabel.TabIndex = 67;
-            raceLabel.Text = "Race:";
-            // 
-            // raceTextBox
-            // 
-            this.raceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
-            this.raceTextBox.Location = new System.Drawing.Point(28, 371);
-            this.raceTextBox.Name = "raceTextBox";
-            this.raceTextBox.Size = new System.Drawing.Size(100, 22);
-            this.raceTextBox.TabIndex = 68;
+            this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
             // frmPatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 530);
+            this.Controls.Add(this.patientsBindingNavigator);
             this.Controls.Add(raceLabel);
             this.Controls.Add(this.raceTextBox);
             this.Controls.Add(emailLabel);
@@ -721,42 +729,32 @@
             this.Controls.Add(this.household_NumberTextBox);
             this.Controls.Add(patient_NumberLabel);
             this.Controls.Add(this.patient_NumberTextBox);
-            this.Controls.Add(this.patientsBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAccept);
-<<<<<<< HEAD
-=======
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label17);
->>>>>>> parent of 26a1e1a... Delete and Accept
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.grpSex);
             this.Name = "frmPatientInfo";
             this.Text = " PatientInfo";
             this.Load += new System.EventHandler(this.frmPatientInfo_Load);
-            this.grpSex.ResumeLayout(false);
-            this.grpSex.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
             this.patientsBindingNavigator.ResumeLayout(false);
             this.patientsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox grpSex;
-        private System.Windows.Forms.RadioButton rdoF;
-        private System.Windows.Forms.RadioButton rdoM;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtPolicyName;
@@ -766,8 +764,7 @@
         private System.Windows.Forms.TextBox txtHolderSOC;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtHolderDOB;
-<<<<<<< HEAD
-=======
+
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -777,7 +774,7 @@
         private System.Windows.Forms.RadioButton rdoAfricanAmerican;
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoWhite;
->>>>>>> parent of 26a1e1a... Delete and Accept
+
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
@@ -799,6 +796,17 @@
         private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
+        private SystemsDataBase2DataSet systemsDataBase2DataSet;
+        private System.Windows.Forms.BindingSource patientsBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox patient_NumberTextBox;
+        private System.Windows.Forms.TextBox household_NumberTextBox;
+        private System.Windows.Forms.TextBox patient_NameTextBox;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox raceTextBox;
         private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -812,16 +820,5 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
-        private SystemsDataBase2DataSet systemsDataBase2DataSet;
-        private System.Windows.Forms.BindingSource patientsBindingSource;
-        private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
-        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox patient_NumberTextBox;
-        private System.Windows.Forms.TextBox household_NumberTextBox;
-        private System.Windows.Forms.TextBox patient_NameTextBox;
-        private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox raceTextBox;
     }
 }
