@@ -147,7 +147,7 @@ namespace NCH_Project
 
         private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void providerNumIDTextBox_TextChanged(object sender, EventArgs e)
