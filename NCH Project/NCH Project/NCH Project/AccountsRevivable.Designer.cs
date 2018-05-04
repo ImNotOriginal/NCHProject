@@ -379,7 +379,6 @@
             this.btnAccept.TabIndex = 67;
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = true;
-            
             // 
             // btnClose
             // 

@@ -30,10 +30,6 @@ namespace NCH_Project
         }
         private void frmPatientInfo_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.MTDPayments' table. You can move, or remove it, as needed.
-            this.mTDPaymentsTableAdapter.Fill(this.systemsDataBase2DataSet.MTDPayments);
-            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Insurancecompanies' table. You can move, or remove it, as needed.
-            this.insurancecompaniesTableAdapter.Fill(this.systemsDataBase2DataSet.Insurancecompanies);
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Patients' table. You can move, or remove it, as needed.
             this.patientsTableAdapter.Fill(this.systemsDataBase2DataSet.Patients);
             // Code NEEDED to change from form to form
@@ -168,16 +164,6 @@ namespace NCH_Project
                 
             }
             
-        }
-
-        private void companyAddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void companyAddressLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
