@@ -32,6 +32,8 @@ namespace NCH_Project
 
         private void frmProviderReport_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'systemsDataBase2DataSet.Providers' table. You can move, or remove it, as needed.
+            this.providersTableAdapter.Fill(this.systemsDataBase2DataSet.Providers);
             Patient = new frmPatientInfo();
             Appointment = new frmApptInfo();
             Home = new frmHomePage();
@@ -144,6 +146,11 @@ namespace NCH_Project
         }
 
         private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void providerNumIDTextBox_TextChanged(object sender, EventArgs e)
         {
             
         }
