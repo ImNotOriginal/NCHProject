@@ -145,7 +145,11 @@ namespace NCH_Project
 
         private void patientsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
           
+=======
+            
+>>>>>>> parent of af5820a... Working provider
         }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             System.Windows.Forms.Label providerNumIDLabel;
             System.Windows.Forms.Label providerNameLabel;
@@ -41,6 +42,9 @@
 =======
             System.Windows.Forms.Label phoneLabel;
 >>>>>>> parent of 4f428bb... abv
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProviderReport));
+>>>>>>> parent of af5820a... Working provider
 =======
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProviderReport));
 >>>>>>> parent of af5820a... Working provider
@@ -88,6 +92,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 4f428bb... abv
             this.providerNumIDTextBox = new System.Windows.Forms.TextBox();
@@ -163,11 +168,14 @@
             phoneLabel = new System.Windows.Forms.Label();
 =======
 >>>>>>> parent of af5820a... Working provider
+=======
+>>>>>>> parent of af5820a... Working provider
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
             this.patientsBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             // providerNumIDLabel
             // 
@@ -211,6 +219,8 @@
 >>>>>>> parent of 4f428bb... abv
 =======
 >>>>>>> parent of af5820a... Working provider
+=======
+>>>>>>> parent of af5820a... Working provider
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -223,7 +233,11 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(660, 28);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(532, 28);
+>>>>>>> parent of af5820a... Working provider
 =======
             this.menuStrip1.Size = new System.Drawing.Size(532, 28);
 >>>>>>> parent of af5820a... Working provider
@@ -426,7 +440,11 @@
             // btnClose
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnClose.Location = new System.Drawing.Point(542, 302);
+=======
+            this.btnClose.Location = new System.Drawing.Point(213, 271);
+>>>>>>> parent of af5820a... Working provider
 =======
             this.btnClose.Location = new System.Drawing.Point(213, 271);
 >>>>>>> parent of af5820a... Working provider
@@ -566,6 +584,7 @@
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 4f428bb... abv
             // providerNumIDTextBox
@@ -922,10 +941,13 @@
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
 =======
 >>>>>>> parent of af5820a... Working provider
+=======
+>>>>>>> parent of af5820a... Working provider
             // frmProviderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(660, 351);
@@ -944,6 +966,9 @@
 <<<<<<< HEAD
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
 =======
+=======
+            this.ClientSize = new System.Drawing.Size(532, 324);
+>>>>>>> parent of af5820a... Working provider
 =======
             this.ClientSize = new System.Drawing.Size(532, 324);
 >>>>>>> parent of af5820a... Working provider
@@ -988,10 +1013,13 @@
             this.patientsBindingNavigator.ResumeLayout(false);
             this.patientsBindingNavigator.PerformLayout();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
 >>>>>>> parent of 4f428bb... abv
+=======
+>>>>>>> parent of af5820a... Working provider
 =======
 >>>>>>> parent of af5820a... Working provider
             this.ResumeLayout(false);
@@ -1039,6 +1067,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+<<<<<<< HEAD
 <<<<<<< HEAD
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource providersBindingSource;
@@ -1098,6 +1127,8 @@
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
 =======
 >>>>>>> parent of 4f428bb... abv
+=======
+>>>>>>> parent of af5820a... Working provider
 =======
 >>>>>>> parent of af5820a... Working provider
     }
