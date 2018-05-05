@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHousehold));
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label houseHold_NumberLabel;
             System.Windows.Forms.Label head_Of_HouseholdLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHousehold));
+            System.Windows.Forms.Label patient_NameLabel;
+            this.btnAccept = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,70 +59,48 @@
             this.houseHoldTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
             this.houseHoldBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.houseHoldBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.houseHold_NumberTextBox = new System.Windows.Forms.TextBox();
             this.head_Of_HouseholdTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.houseHoldBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.houseHoldNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.headOfHouseholdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patient_NameListBox = new System.Windows.Forms.ListBox();
             addressLabel = new System.Windows.Forms.Label();
             houseHold_NumberLabel = new System.Windows.Forms.Label();
             head_Of_HouseholdLabel = new System.Windows.Forms.Label();
+            patient_NameLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingNavigator)).BeginInit();
             this.houseHoldBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // addressLabel
+            // btnAccept
             // 
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(30, 134);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(64, 17);
-            addressLabel.TabIndex = 43;
-            addressLabel.Text = "Address:";
-            // 
-            // houseHold_NumberLabel
-            // 
-            houseHold_NumberLabel.AutoSize = true;
-            houseHold_NumberLabel.Location = new System.Drawing.Point(30, 92);
-            houseHold_NumberLabel.Name = "houseHold_NumberLabel";
-            houseHold_NumberLabel.Size = new System.Drawing.Size(140, 17);
-            houseHold_NumberLabel.TabIndex = 44;
-            houseHold_NumberLabel.Text = "House Hold Number:";
-            // 
-            // head_Of_HouseholdLabel
-            // 
-            head_Of_HouseholdLabel.AutoSize = true;
-            head_Of_HouseholdLabel.Location = new System.Drawing.Point(296, 94);
-            head_Of_HouseholdLabel.Name = "head_Of_HouseholdLabel";
-            head_Of_HouseholdLabel.Size = new System.Drawing.Size(137, 17);
-            head_Of_HouseholdLabel.TabIndex = 45;
-            head_Of_HouseholdLabel.Text = "Head Of Household:";
+            this.btnAccept.Location = new System.Drawing.Point(41, 497);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(75, 23);
+            this.btnAccept.TabIndex = 37;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(468, 387);
+            this.btnExit.Location = new System.Drawing.Point(231, 497);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(91, 30);
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 38;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -333,38 +313,13 @@
             this.houseHoldBindingNavigator.TabIndex = 41;
             this.houseHoldBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -373,13 +328,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -390,10 +345,17 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -415,25 +377,61 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // houseHoldBindingNavigatorSaveItem
             // 
             this.houseHoldBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.houseHoldBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("houseHoldBindingNavigatorSaveItem.Image")));
             this.houseHoldBindingNavigatorSaveItem.Name = "houseHoldBindingNavigatorSaveItem";
-            this.houseHoldBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.houseHoldBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.houseHoldBindingNavigatorSaveItem.Text = "Save Data";
             this.houseHoldBindingNavigatorSaveItem.Click += new System.EventHandler(this.houseHoldBindingNavigatorSaveItem_Click);
+            // 
+            // addressLabel
+            // 
+            addressLabel.AutoSize = true;
+            addressLabel.Location = new System.Drawing.Point(30, 134);
+            addressLabel.Name = "addressLabel";
+            addressLabel.Size = new System.Drawing.Size(64, 17);
+            addressLabel.TabIndex = 43;
+            addressLabel.Text = "Address:";
             // 
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource, "Address", true));
             this.addressTextBox.Location = new System.Drawing.Point(100, 131);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(439, 22);
+            this.addressTextBox.Size = new System.Drawing.Size(429, 22);
             this.addressTextBox.TabIndex = 44;
+            // 
+            // houseHold_NumberLabel
+            // 
+            houseHold_NumberLabel.AutoSize = true;
+            houseHold_NumberLabel.Location = new System.Drawing.Point(30, 92);
+            houseHold_NumberLabel.Name = "houseHold_NumberLabel";
+            houseHold_NumberLabel.Size = new System.Drawing.Size(140, 17);
+            houseHold_NumberLabel.TabIndex = 44;
+            houseHold_NumberLabel.Text = "House Hold Number:";
             // 
             // houseHold_NumberTextBox
             // 
@@ -443,60 +441,49 @@
             this.houseHold_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.houseHold_NumberTextBox.TabIndex = 45;
             // 
+            // head_Of_HouseholdLabel
+            // 
+            head_Of_HouseholdLabel.AutoSize = true;
+            head_Of_HouseholdLabel.Location = new System.Drawing.Point(304, 94);
+            head_Of_HouseholdLabel.Name = "head_Of_HouseholdLabel";
+            head_Of_HouseholdLabel.Size = new System.Drawing.Size(137, 17);
+            head_Of_HouseholdLabel.TabIndex = 45;
+            head_Of_HouseholdLabel.Text = "Head Of Household:";
+            // 
             // head_Of_HouseholdTextBox
             // 
             this.head_Of_HouseholdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.houseHoldBindingSource, "Head Of Household", true));
-            this.head_Of_HouseholdTextBox.Location = new System.Drawing.Point(439, 89);
+            this.head_Of_HouseholdTextBox.Location = new System.Drawing.Point(447, 89);
             this.head_Of_HouseholdTextBox.Name = "head_Of_HouseholdTextBox";
             this.head_Of_HouseholdTextBox.Size = new System.Drawing.Size(100, 22);
             this.head_Of_HouseholdTextBox.TabIndex = 46;
             // 
-            // dataGridView1
+            // patient_NameLabel
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.houseHoldNumberDataGridViewTextBoxColumn,
-            this.headOfHouseholdDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.houseHoldBindingSource1;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(50, 169);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(479, 198);
-            this.dataGridView1.TabIndex = 47;
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(30, 193);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 46;
+            patient_NameLabel.Text = "Patient Name:";
             // 
-            // houseHoldBindingSource1
+            // patient_NameListBox
             // 
-            this.houseHoldBindingSource1.DataMember = "HouseHold";
-            this.houseHoldBindingSource1.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // houseHoldNumberDataGridViewTextBoxColumn
-            // 
-            this.houseHoldNumberDataGridViewTextBoxColumn.DataPropertyName = "HouseHold Number";
-            this.houseHoldNumberDataGridViewTextBoxColumn.HeaderText = "HouseHold Number";
-            this.houseHoldNumberDataGridViewTextBoxColumn.Name = "houseHoldNumberDataGridViewTextBoxColumn";
-            // 
-            // headOfHouseholdDataGridViewTextBoxColumn
-            // 
-            this.headOfHouseholdDataGridViewTextBoxColumn.DataPropertyName = "Head Of Household";
-            this.headOfHouseholdDataGridViewTextBoxColumn.HeaderText = "Head Of Household";
-            this.headOfHouseholdDataGridViewTextBoxColumn.Name = "headOfHouseholdDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.patient_NameListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.houseHoldBindingSource, "Patient Name", true));
+            this.patient_NameListBox.FormattingEnabled = true;
+            this.patient_NameListBox.ItemHeight = 16;
+            this.patient_NameListBox.Location = new System.Drawing.Point(133, 193);
+            this.patient_NameListBox.Name = "patient_NameListBox";
+            this.patient_NameListBox.Size = new System.Drawing.Size(320, 196);
+            this.patient_NameListBox.TabIndex = 47;
             // 
             // frmHousehold
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 429);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(585, 540);
+            this.Controls.Add(patient_NameLabel);
+            this.Controls.Add(this.patient_NameListBox);
             this.Controls.Add(head_Of_HouseholdLabel);
             this.Controls.Add(this.head_Of_HouseholdTextBox);
             this.Controls.Add(houseHold_NumberLabel);
@@ -506,6 +493,7 @@
             this.Controls.Add(this.houseHoldBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnAccept);
             this.Name = "frmHousehold";
             this.Text = "Household";
             this.Load += new System.EventHandler(this.frmHousehold_Load);
@@ -516,14 +504,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingNavigator)).EndInit();
             this.houseHoldBindingNavigator.ResumeLayout(false);
             this.houseHoldBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -563,10 +550,6 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox houseHold_NumberTextBox;
         private System.Windows.Forms.TextBox head_Of_HouseholdTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource houseHoldBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn houseHoldNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn headOfHouseholdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListBox patient_NameListBox;
     }
 }
