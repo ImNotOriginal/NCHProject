@@ -157,10 +157,5 @@ namespace NCH_Project
 
             }
         }
-
-        private void btnAccept_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

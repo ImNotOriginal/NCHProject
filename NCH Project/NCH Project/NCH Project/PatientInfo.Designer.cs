@@ -169,15 +169,6 @@
             emailLabel.TabIndex = 66;
             emailLabel.Text = "Email:";
             // 
-            // raceLabel
-            // 
-            raceLabel.AutoSize = true;
-            raceLabel.Location = new System.Drawing.Point(24, 256);
-            raceLabel.Name = "raceLabel";
-            raceLabel.Size = new System.Drawing.Size(45, 17);
-            raceLabel.TabIndex = 71;
-            raceLabel.Text = "Race:";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label15);
@@ -188,7 +179,7 @@
             this.groupBox2.Controls.Add(this.txtPolicyName);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.txtInsComp);
-            this.groupBox2.Location = new System.Drawing.Point(447, 151);
+            this.groupBox2.Location = new System.Drawing.Point(433, 205);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 268);
             this.groupBox2.TabIndex = 51;
@@ -575,6 +566,15 @@
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(263, 22);
             this.emailTextBox.TabIndex = 67;
+            // 
+            // raceLabel
+            // 
+            raceLabel.AutoSize = true;
+            raceLabel.Location = new System.Drawing.Point(24, 256);
+            raceLabel.Name = "raceLabel";
+            raceLabel.Size = new System.Drawing.Size(45, 17);
+            raceLabel.TabIndex = 71;
+            raceLabel.Text = "Race:";
             // 
             // raceTextBox
             // 

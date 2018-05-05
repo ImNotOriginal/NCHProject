@@ -34,9 +34,12 @@
             System.Windows.Forms.Label providerNumIDLabel;
             System.Windows.Forms.Label providerNameLabel;
             System.Windows.Forms.Label claim_NumberLabel;
-            System.Windows.Forms.Label phoneLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProviderReport));
+<<<<<<< HEAD
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
+=======
+            System.Windows.Forms.Label phoneLabel;
+>>>>>>> parent of 4f428bb... abv
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,23 +60,39 @@
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
 =======
+=======
+            this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+>>>>>>> parent of 4f428bb... abv
             this.providerNumIDTextBox = new System.Windows.Forms.TextBox();
             this.providerNameTextBox = new System.Windows.Forms.TextBox();
             this.claim_NumberTextBox = new System.Windows.Forms.TextBox();
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             this.providersDataGridView = new System.Windows.Forms.DataGridView();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.providersTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.ProvidersTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
@@ -124,23 +143,19 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+=======
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+>>>>>>> parent of 4f428bb... abv
             providerNumIDLabel = new System.Windows.Forms.Label();
             providerNameLabel = new System.Windows.Forms.Label();
             claim_NumberLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
+            this.patientsBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
-            this.menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.appointment_DataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
             // providerNumIDLabel
@@ -170,6 +185,7 @@
             claim_NumberLabel.TabIndex = 73;
             claim_NumberLabel.Text = "Claim Number:";
             // 
+<<<<<<< HEAD
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
@@ -180,6 +196,8 @@
             phoneLabel.Text = "Phone:";
             // 
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
+=======
+>>>>>>> parent of 4f428bb... abv
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -335,8 +353,135 @@
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // providersBindingSource
 =======
+=======
+            // patientsBindingNavigator
+            // 
+            this.patientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.patientsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.patientsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.patientsBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.patientsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.patientsBindingNavigatorSaveItem});
+            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.patientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.patientsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.patientsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.patientsBindingNavigator.Name = "patientsBindingNavigator";
+            this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(860, 27);
+            this.patientsBindingNavigator.TabIndex = 69;
+            this.patientsBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // patientsBindingNavigatorSaveItem
+            // 
+            this.patientsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.patientsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("patientsBindingNavigatorSaveItem.Image")));
+            this.patientsBindingNavigatorSaveItem.Name = "patientsBindingNavigatorSaveItem";
+            this.patientsBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.patientsBindingNavigatorSaveItem.Text = "Save Data";
+            this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
+            // 
+>>>>>>> parent of 4f428bb... abv
             // providerNumIDTextBox
             // 
             this.providerNumIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "ProviderNumID", true));
@@ -373,24 +518,6 @@
             this.providersDataGridView.Size = new System.Drawing.Size(618, 220);
             this.providersDataGridView.TabIndex = 75;
             // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(401, 137);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
-            this.phoneTextBox.TabIndex = 76;
-            // 
-            // providersBindingSource
-            // 
-            this.providersBindingSource.DataMember = "Providers";
-            this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // systemsDataBase2DataSet
-            // 
-            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
-            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ProviderNumID";
@@ -415,6 +542,16 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataMember = "Providers";
+            this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // providersTableAdapter
             // 
             this.providersTableAdapter.ClearBeforeFill = true;
@@ -437,6 +574,7 @@
             this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Visit_InfoTableAdapter = null;
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             // menuStrip2
@@ -676,89 +814,24 @@
             this.toolStripButton1.Text = "Add new";
             // 
             // toolStripLabel1
+=======
+            // phoneLabel
+>>>>>>> parent of 4f428bb... abv
             // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(45, 24);
-            this.toolStripLabel1.Text = "of {0}";
-            this.toolStripLabel1.ToolTipText = "Total number of items";
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(342, 140);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 75;
+            phoneLabel.Text = "Phone:";
             // 
-            // toolStripButton2
+            // phoneTextBox
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "Delete";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "Move first";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton4.Text = "Move previous";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "Move next";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "Move last";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton7.Text = "Save Data";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(401, 137);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneTextBox.TabIndex = 76;
             // 
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             // frmProviderReport
@@ -770,8 +843,6 @@
             this.Controls.Add(this.providersDataGridView);
 =======
             this.ClientSize = new System.Drawing.Size(860, 537);
-            this.Controls.Add(this.menuStrip2);
-            this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(phoneLabel);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.providersDataGridView);
@@ -781,7 +852,11 @@
             this.Controls.Add(this.providerNameTextBox);
             this.Controls.Add(providerNumIDLabel);
             this.Controls.Add(this.providerNumIDTextBox);
+<<<<<<< HEAD
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
+=======
+            this.Controls.Add(this.patientsBindingNavigator);
+>>>>>>> parent of 4f428bb... abv
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmProviderReport";
@@ -789,6 +864,7 @@
             this.Load += new System.EventHandler(this.frmProviderReport_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+<<<<<<< HEAD
 <<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
@@ -809,6 +885,14 @@
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
+            this.patientsBindingNavigator.ResumeLayout(false);
+            this.patientsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
+>>>>>>> parent of 4f428bb... abv
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -835,6 +919,19 @@
         private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource providersBindingSource;
         private SystemsDataBase2DataSetTableAdapters.ProvidersTableAdapter providersTableAdapter;
@@ -847,6 +944,7 @@
 <<<<<<< HEAD
 =======
         private System.Windows.Forms.TextBox phoneTextBox;
+<<<<<<< HEAD
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -890,5 +988,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
 >>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
+=======
+>>>>>>> parent of 4f428bb... abv
     }
 }
