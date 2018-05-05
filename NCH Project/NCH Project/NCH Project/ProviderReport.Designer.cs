@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+<<<<<<< HEAD
+=======
+            System.Windows.Forms.Label providerNumIDLabel;
+            System.Windows.Forms.Label providerNameLabel;
+            System.Windows.Forms.Label claim_NumberLabel;
+            System.Windows.Forms.Label phoneLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProviderReport));
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,21 +56,130 @@
             this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
+=======
+            this.providerNumIDTextBox = new System.Windows.Forms.TextBox();
+            this.providerNameTextBox = new System.Windows.Forms.TextBox();
+            this.claim_NumberTextBox = new System.Windows.Forms.TextBox();
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             this.providersDataGridView = new System.Windows.Forms.DataGridView();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.providersTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.ProvidersTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+<<<<<<< HEAD
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+=======
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemsDataBase2DataSet1 = new NCH_Project.SystemsDataBase2DataSet();
+            this.mTDChargesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mTDChargesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter();
+            this.mTDPaymentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mTDPaymentsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.MTDPaymentsTableAdapter();
+            this.systemsDataBase2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager1 = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
+            this.houseHoldTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter();
+            this.houseHoldBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appointment_DataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.appointment_DataTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter();
+            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            providerNumIDLabel = new System.Windows.Forms.Label();
+            providerNameLabel = new System.Windows.Forms.Label();
+            claim_NumberLabel = new System.Windows.Forms.Label();
+            phoneLabel = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
+            this.menuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointment_DataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // providerNumIDLabel
+            // 
+            providerNumIDLabel.AutoSize = true;
+            providerNumIDLabel.Location = new System.Drawing.Point(35, 93);
+            providerNumIDLabel.Name = "providerNumIDLabel";
+            providerNumIDLabel.Size = new System.Drawing.Size(115, 17);
+            providerNumIDLabel.TabIndex = 69;
+            providerNumIDLabel.Text = "Provider Num ID:";
+            // 
+            // providerNameLabel
+            // 
+            providerNameLabel.AutoSize = true;
+            providerNameLabel.Location = new System.Drawing.Point(289, 93);
+            providerNameLabel.Name = "providerNameLabel";
+            providerNameLabel.Size = new System.Drawing.Size(106, 17);
+            providerNameLabel.TabIndex = 70;
+            providerNameLabel.Text = "Provider Name:";
+            // 
+            // claim_NumberLabel
+            // 
+            claim_NumberLabel.AutoSize = true;
+            claim_NumberLabel.Location = new System.Drawing.Point(50, 146);
+            claim_NumberLabel.Name = "claim_NumberLabel";
+            claim_NumberLabel.Size = new System.Drawing.Size(100, 17);
+            claim_NumberLabel.TabIndex = 73;
+            claim_NumberLabel.Text = "Claim Number:";
+            // 
+            // phoneLabel
+            // 
+            phoneLabel.AutoSize = true;
+            phoneLabel.Location = new System.Drawing.Point(342, 140);
+            phoneLabel.Name = "phoneLabel";
+            phoneLabel.Size = new System.Drawing.Size(53, 17);
+            phoneLabel.TabIndex = 75;
+            phoneLabel.Text = "Phone:";
+            // 
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -217,7 +334,20 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+<<<<<<< HEAD
             // providersBindingSource
+=======
+            // providerNumIDTextBox
+            // 
+            this.providerNumIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "ProviderNumID", true));
+            this.providerNumIDTextBox.Location = new System.Drawing.Point(156, 90);
+            this.providerNumIDTextBox.Name = "providerNumIDTextBox";
+            this.providerNumIDTextBox.Size = new System.Drawing.Size(100, 22);
+            this.providerNumIDTextBox.TabIndex = 70;
+            this.providerNumIDTextBox.TextChanged += new System.EventHandler(this.providerNumIDTextBox_TextChanged);
+            // 
+            // providerNameTextBox
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             // 
             this.providersBindingSource.DataMember = "Providers";
             this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
@@ -242,6 +372,24 @@
             this.providersDataGridView.RowTemplate.Height = 24;
             this.providersDataGridView.Size = new System.Drawing.Size(618, 220);
             this.providersDataGridView.TabIndex = 75;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "Phone", true));
+            this.phoneTextBox.Location = new System.Drawing.Point(401, 137);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
+            this.phoneTextBox.TabIndex = 76;
+            // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataMember = "Providers";
+            this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -289,12 +437,351 @@
             this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Visit_InfoTableAdapter = null;
             // 
+<<<<<<< HEAD
+=======
+            // menuStrip2
+            // 
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem8,
+            this.toolStripMenuItem12});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 55);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(860, 28);
+            this.menuStrip2.TabIndex = 77;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(62, 24);
+            this.toolStripMenuItem1.Text = "Home";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(96, 24);
+            this.toolStripMenuItem2.Text = "Patient Info";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(220, 26);
+            this.toolStripMenuItem3.Text = "Add/Edit Patient";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(220, 26);
+            this.toolStripMenuItem4.Text = "Add/Edit Household";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7});
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(63, 24);
+            this.toolStripMenuItem5.Text = "Billing";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuItem6.Text = "General Ledger";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(214, 26);
+            this.toolStripMenuItem7.Text = "Account Receivable";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem9,
+            this.toolStripMenuItem10,
+            this.toolStripMenuItem11});
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(109, 24);
+            this.toolStripMenuItem8.Text = "Appointment";
+            // 
+            // toolStripMenuItem9
+            // 
+            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(128, 26);
+            this.toolStripMenuItem9.Text = "Make";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(128, 26);
+            this.toolStripMenuItem10.Text = "Edit";
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(128, 26);
+            this.toolStripMenuItem11.Text = "Delete";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem13,
+            this.toolStripMenuItem14,
+            this.toolStripMenuItem15,
+            this.toolStripMenuItem16,
+            this.toolStripMenuItem17});
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(72, 24);
+            this.toolStripMenuItem12.Text = "Reports";
+            // 
+            // toolStripMenuItem13
+            // 
+            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(195, 26);
+            this.toolStripMenuItem13.Text = "Appointment list";
+            // 
+            // toolStripMenuItem14
+            // 
+            this.toolStripMenuItem14.Name = "toolStripMenuItem14";
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(195, 26);
+            this.toolStripMenuItem14.Text = "Call List";
+            // 
+            // toolStripMenuItem15
+            // 
+            this.toolStripMenuItem15.Name = "toolStripMenuItem15";
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(195, 26);
+            this.toolStripMenuItem15.Text = "Provider";
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(195, 26);
+            this.toolStripMenuItem16.Text = "MTD Payment";
+            // 
+            // toolStripMenuItem17
+            // 
+            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(195, 26);
+            this.toolStripMenuItem17.Text = "Postcard";
+            // 
+            // systemsDataBase2DataSet1
+            // 
+            this.systemsDataBase2DataSet1.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mTDChargesBindingSource
+            // 
+            this.mTDChargesBindingSource.DataMember = "MTDCharges";
+            this.mTDChargesBindingSource.DataSource = this.systemsDataBase2DataSet1;
+            // 
+            // mTDChargesTableAdapter
+            // 
+            this.mTDChargesTableAdapter.ClearBeforeFill = true;
+            // 
+            // mTDPaymentsBindingSource
+            // 
+            this.mTDPaymentsBindingSource.DataMember = "MTDPayments";
+            this.mTDPaymentsBindingSource.DataSource = this.systemsDataBase2DataSet1;
+            // 
+            // mTDPaymentsTableAdapter
+            // 
+            this.mTDPaymentsTableAdapter.ClearBeforeFill = true;
+            // 
+            // systemsDataBase2DataSetBindingSource
+            // 
+            this.systemsDataBase2DataSetBindingSource.DataSource = this.systemsDataBase2DataSet1;
+            this.systemsDataBase2DataSetBindingSource.Position = 0;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.Appointment_DataTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Complete_Service_DataTableAdapter = null;
+            this.tableAdapterManager1.Cpt_CodesTableAdapter = null;
+            this.tableAdapterManager1.HouseHoldTableAdapter = this.houseHoldTableAdapter;
+            this.tableAdapterManager1.InsurancecompaniesTableAdapter = null;
+            this.tableAdapterManager1.MTDChargesTableAdapter = this.mTDChargesTableAdapter;
+            this.tableAdapterManager1.MTDPaymentsTableAdapter = this.mTDPaymentsTableAdapter;
+            this.tableAdapterManager1.PatientsTableAdapter = null;
+            this.tableAdapterManager1.Pending_Insurance_ClaimsTableAdapter = null;
+            this.tableAdapterManager1.PostCardTableAdapter = null;
+            this.tableAdapterManager1.ProvidersTableAdapter = null;
+            this.tableAdapterManager1.RacesTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.Visit_InfoTableAdapter = null;
+            // 
+            // houseHoldTableAdapter
+            // 
+            this.houseHoldTableAdapter.ClearBeforeFill = true;
+            // 
+            // houseHoldBindingSource
+            // 
+            this.houseHoldBindingSource.DataMember = "HouseHold";
+            this.houseHoldBindingSource.DataSource = this.systemsDataBase2DataSet1;
+            // 
+            // appointment_DataBindingSource
+            // 
+            this.appointment_DataBindingSource.DataMember = "Appointment Data";
+            this.appointment_DataBindingSource.DataSource = this.systemsDataBase2DataSet1;
+            // 
+            // appointment_DataTableAdapter
+            // 
+            this.appointment_DataTableAdapter.ClearBeforeFill = true;
+            // 
+            // bindingNavigator1
+            // 
+            this.bindingNavigator1.AddNewItem = this.toolStripButton1;
+            this.bindingNavigator1.CountItem = this.toolStripLabel1;
+            this.bindingNavigator1.DeleteItem = this.toolStripButton2;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton7});
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 28);
+            this.bindingNavigator1.MoveFirstItem = this.toolStripButton3;
+            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
+            this.bindingNavigator1.MoveNextItem = this.toolStripButton5;
+            this.bindingNavigator1.MovePreviousItem = this.toolStripButton4;
+            this.bindingNavigator1.Name = "bindingNavigator1";
+            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
+            this.bindingNavigator1.Size = new System.Drawing.Size(860, 27);
+            this.bindingNavigator1.TabIndex = 78;
+            this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "Add new";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(45, 24);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "Delete";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Text = "Move first";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton4.Text = "Move previous";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton5.Text = "Move next";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton6.Text = "Move last";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton7.Text = "Save Data";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            // 
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             // frmProviderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(660, 351);
             this.Controls.Add(this.providersDataGridView);
+=======
+            this.ClientSize = new System.Drawing.Size(860, 537);
+            this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(phoneLabel);
+            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.providersDataGridView);
+            this.Controls.Add(claim_NumberLabel);
+            this.Controls.Add(this.claim_NumberTextBox);
+            this.Controls.Add(providerNameLabel);
+            this.Controls.Add(this.providerNameTextBox);
+            this.Controls.Add(providerNumIDLabel);
+            this.Controls.Add(this.providerNumIDTextBox);
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmProviderReport";
@@ -302,9 +789,26 @@
             this.Load += new System.EventHandler(this.frmProviderReport_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.providersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDChargesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mTDPaymentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.houseHoldBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.appointment_DataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +844,51 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem15;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem16;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem17;
+        private SystemsDataBase2DataSet systemsDataBase2DataSet1;
+        private System.Windows.Forms.BindingSource mTDChargesBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.MTDChargesTableAdapter mTDChargesTableAdapter;
+        private System.Windows.Forms.BindingSource mTDPaymentsBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.MTDPaymentsTableAdapter mTDPaymentsTableAdapter;
+        private System.Windows.Forms.BindingSource systemsDataBase2DataSetBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter houseHoldTableAdapter;
+        private System.Windows.Forms.BindingSource houseHoldBindingSource;
+        private System.Windows.Forms.BindingSource appointment_DataBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter appointment_DataTableAdapter;
+        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+>>>>>>> 4f428bbd7580435a694359bc59807a3986e851a5
     }
 }

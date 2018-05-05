@@ -1002,6 +1002,7 @@ namespace NCH_Project {
                 this.columnAppointment_Number.Unique = true;
                 this._columnDate_TIme.MaxLength = 20;
                 this.columnVisit_Information.MaxLength = 30;
+                this.columnAppointment_Completed.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5167,13 +5168,7 @@ namespace NCH_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Appointment_Completed {
                 get {
-                    try {
-                        return ((bool)(this[this.tableAppointment_Data.Appointment_CompletedColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Appointment Completed\' in table \'Appointment Data\' is DBNul" +
-                                "l.", e);
-                    }
+                    return ((bool)(this[this.tableAppointment_Data.Appointment_CompletedColumn]));
                 }
                 set {
                     this[this.tableAppointment_Data.Appointment_CompletedColumn] = value;
@@ -5261,18 +5256,6 @@ namespace NCH_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetProvider_NumberNull() {
                 this[this.tableAppointment_Data.Provider_NumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsAppointment_CompletedNull() {
-                return this.IsNull(this.tableAppointment_Data.Appointment_CompletedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetAppointment_CompletedNull() {
-                this[this.tableAppointment_Data.Appointment_CompletedColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
