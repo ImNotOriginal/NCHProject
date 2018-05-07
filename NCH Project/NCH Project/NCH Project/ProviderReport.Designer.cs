@@ -20,12 +20,15 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+<<<<<<< HEAD
+=======
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -1024,37 +1027,16 @@
 >>>>>>> parent of af5820a... Working provider
             this.ResumeLayout(false);
             this.PerformLayout();
+>>>>>>> 4865ca9fb68d402454a9febf10a6868cd81f5db6
 
-        }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientInfoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEditPatientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEdietHouseholdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem billingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generalLedgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accoubntReceivableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem makeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem callListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lstProvider;
-        private System.Windows.Forms.TextBox txtMTD;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtYTD;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
+        private SystemsDataBase2DataSet systemsDataBase2DataSet;
+        private System.Windows.Forms.BindingSource providersBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.ProvidersTableAdapter providersTableAdapter;
+        private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator providersBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -1066,6 +1048,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripButton providersBindingNavigatorSaveItem;
+=======
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1073,11 +1058,16 @@
         private System.Windows.Forms.BindingSource providersBindingSource;
         private SystemsDataBase2DataSetTableAdapters.ProvidersTableAdapter providersTableAdapter;
         private SystemsDataBase2DataSetTableAdapters.TableAdapterManager tableAdapterManager;
+>>>>>>> 4865ca9fb68d402454a9febf10a6868cd81f5db6
         private System.Windows.Forms.DataGridView providersDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+<<<<<<< HEAD
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+=======
 <<<<<<< HEAD
 =======
         private System.Windows.Forms.TextBox phoneTextBox;
@@ -1131,5 +1121,6 @@
 >>>>>>> parent of af5820a... Working provider
 =======
 >>>>>>> parent of af5820a... Working provider
+>>>>>>> 4865ca9fb68d402454a9febf10a6868cd81f5db6
     }
 }

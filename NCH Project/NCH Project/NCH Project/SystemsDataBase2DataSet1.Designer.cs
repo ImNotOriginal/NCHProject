@@ -68,10 +68,6 @@ namespace NCH_Project {
         
         private global::System.Data.DataRelation relationPatientsPostCard;
         
-        private global::System.Data.DataRelation relationCpt_CodesProviders;
-        
-        private global::System.Data.DataRelation relationMTDChargesProviders;
-        
         private global::System.Data.DataRelation relationPending_Insurance_ClaimsProviders;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -515,8 +511,6 @@ namespace NCH_Project {
             this.relationHouseHoldPending_Insurance_Claims = this.Relations["HouseHoldPending Insurance Claims"];
             this.relationInsurancecompaniesPending_Insurance_Claims = this.Relations["InsurancecompaniesPending Insurance Claims"];
             this.relationPatientsPostCard = this.Relations["PatientsPostCard"];
-            this.relationCpt_CodesProviders = this.Relations["Cpt CodesProviders"];
-            this.relationMTDChargesProviders = this.Relations["MTDChargesProviders"];
             this.relationPending_Insurance_ClaimsProviders = this.Relations["Pending Insurance ClaimsProviders"];
         }
         
@@ -590,14 +584,6 @@ namespace NCH_Project {
                         this.tablePatients.Patient_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tablePostCard.Patient_NumberColumn}, false);
             this.Relations.Add(this.relationPatientsPostCard);
-            this.relationCpt_CodesProviders = new global::System.Data.DataRelation("Cpt CodesProviders", new global::System.Data.DataColumn[] {
-                        this.tableCpt_Codes.Cpt_codeColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProviders.Cpt_codesColumn}, false);
-            this.Relations.Add(this.relationCpt_CodesProviders);
-            this.relationMTDChargesProviders = new global::System.Data.DataRelation("MTDChargesProviders", new global::System.Data.DataColumn[] {
-                        this.tableMTDCharges.ChargesNumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableProviders.ChargesMTDColumn}, false);
-            this.Relations.Add(this.relationMTDChargesProviders);
             this.relationPending_Insurance_ClaimsProviders = new global::System.Data.DataRelation("Pending Insurance ClaimsProviders", new global::System.Data.DataColumn[] {
                         this.tablePending_Insurance_Claims.Claim_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableProviders.Claim_NumberColumn}, false);
@@ -4242,10 +4228,6 @@ namespace NCH_Project {
             
             private global::System.Data.DataColumn columnProviderName;
             
-            private global::System.Data.DataColumn columnChargesMTD;
-            
-            private global::System.Data.DataColumn columnCpt_codes;
-            
             private global::System.Data.DataColumn columnClaim_Number;
             
             private global::System.Data.DataColumn columnPhone;
@@ -4296,22 +4278,6 @@ namespace NCH_Project {
             public global::System.Data.DataColumn ProviderNameColumn {
                 get {
                     return this.columnProviderName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ChargesMTDColumn {
-                get {
-                    return this.columnChargesMTD;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Cpt_codesColumn {
-                get {
-                    return this.columnCpt_codes;
                 }
             }
             
@@ -4368,23 +4334,15 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProvidersRow AddProvidersRow(string ProviderName, MTDChargesRow parentMTDChargesRowByMTDChargesProviders, Cpt_CodesRow parentCpt_CodesRowByCpt_CodesProviders, Pending_Insurance_ClaimsRow parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders, int Phone) {
+            public ProvidersRow AddProvidersRow(string ProviderName, Pending_Insurance_ClaimsRow parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders, string Phone) {
                 ProvidersRow rowProvidersRow = ((ProvidersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         ProviderName,
                         null,
-                        null,
-                        null,
                         Phone};
-                if ((parentMTDChargesRowByMTDChargesProviders != null)) {
-                    columnValuesArray[2] = parentMTDChargesRowByMTDChargesProviders[0];
-                }
-                if ((parentCpt_CodesRowByCpt_CodesProviders != null)) {
-                    columnValuesArray[3] = parentCpt_CodesRowByCpt_CodesProviders[0];
-                }
                 if ((parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders != null)) {
-                    columnValuesArray[4] = parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders[0];
+                    columnValuesArray[2] = parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders[0];
                 }
                 rowProvidersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProvidersRow);
@@ -4417,8 +4375,6 @@ namespace NCH_Project {
             internal void InitVars() {
                 this.columnProviderNumID = base.Columns["ProviderNumID"];
                 this.columnProviderName = base.Columns["ProviderName"];
-                this.columnChargesMTD = base.Columns["ChargesMTD"];
-                this.columnCpt_codes = base.Columns["Cpt codes"];
                 this.columnClaim_Number = base.Columns["Claim Number"];
                 this.columnPhone = base.Columns["Phone"];
             }
@@ -4430,13 +4386,9 @@ namespace NCH_Project {
                 base.Columns.Add(this.columnProviderNumID);
                 this.columnProviderName = new global::System.Data.DataColumn("ProviderName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProviderName);
-                this.columnChargesMTD = new global::System.Data.DataColumn("ChargesMTD", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnChargesMTD);
-                this.columnCpt_codes = new global::System.Data.DataColumn("Cpt codes", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCpt_codes);
                 this.columnClaim_Number = new global::System.Data.DataColumn("Claim Number", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClaim_Number);
-                this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhone);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProviderNumID}, true));
@@ -5519,17 +5471,6 @@ namespace NCH_Project {
                     return ((MTDPaymentsRow[])(base.GetChildRows(this.Table.ChildRelations["Cpt CodesMTDPayments"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProvidersRow[] GetProvidersRows() {
-                if ((this.Table.ChildRelations["Cpt CodesProviders"] == null)) {
-                    return new ProvidersRow[0];
-                }
-                else {
-                    return ((ProvidersRow[])(base.GetChildRows(this.Table.ChildRelations["Cpt CodesProviders"])));
-                }
-            }
         }
         
         /// <summary>
@@ -6206,17 +6147,6 @@ namespace NCH_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPatient_NumberNull() {
                 this[this.tableMTDCharges.Patient_NumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProvidersRow[] GetProvidersRows() {
-                if ((this.Table.ChildRelations["MTDChargesProviders"] == null)) {
-                    return new ProvidersRow[0];
-                }
-                else {
-                    return ((ProvidersRow[])(base.GetChildRows(this.Table.ChildRelations["MTDChargesProviders"])));
-                }
             }
         }
         
@@ -7225,38 +7155,6 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ChargesMTD {
-                get {
-                    try {
-                        return ((int)(this[this.tableProviders.ChargesMTDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ChargesMTD\' in table \'Providers\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProviders.ChargesMTDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Cpt_codes {
-                get {
-                    try {
-                        return ((int)(this[this.tableProviders.Cpt_codesColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Cpt codes\' in table \'Providers\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProviders.Cpt_codesColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Claim_Number {
                 get {
                     try {
@@ -7273,10 +7171,10 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Phone {
+            public string Phone {
                 get {
                     try {
-                        return ((int)(this[this.tableProviders.PhoneColumn]));
+                        return ((string)(this[this.tableProviders.PhoneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Phone\' in table \'Providers\' is DBNull.", e);
@@ -7284,28 +7182,6 @@ namespace NCH_Project {
                 }
                 set {
                     this[this.tableProviders.PhoneColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Cpt_CodesRow Cpt_CodesRow {
-                get {
-                    return ((Cpt_CodesRow)(this.GetParentRow(this.Table.ParentRelations["Cpt CodesProviders"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Cpt CodesProviders"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MTDChargesRow MTDChargesRow {
-                get {
-                    return ((MTDChargesRow)(this.GetParentRow(this.Table.ParentRelations["MTDChargesProviders"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["MTDChargesProviders"]);
                 }
             }
             
@@ -7330,30 +7206,6 @@ namespace NCH_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetProviderNameNull() {
                 this[this.tableProviders.ProviderNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsChargesMTDNull() {
-                return this.IsNull(this.tableProviders.ChargesMTDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetChargesMTDNull() {
-                this[this.tableProviders.ChargesMTDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCpt_codesNull() {
-                return this.IsNull(this.tableProviders.Cpt_codesColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCpt_codesNull() {
-                this[this.tableProviders.Cpt_codesColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12853,56 +12705,46 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             tableMapping.DataSetTable = "Providers";
             tableMapping.ColumnMappings.Add("ProviderNumID", "ProviderNumID");
             tableMapping.ColumnMappings.Add("ProviderName", "ProviderName");
-            tableMapping.ColumnMappings.Add("ChargesMTD", "ChargesMTD");
-            tableMapping.ColumnMappings.Add("Cpt codes", "Cpt codes");
             tableMapping.ColumnMappings.Add("Claim Number", "Claim Number");
             tableMapping.ColumnMappings.Add("Phone", "Phone");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Providers` WHERE ((`ProviderNumID` = ?) AND ((? = 1 AND `ProviderName` IS NULL) OR (`ProviderName` = ?)) AND ((? = 1 AND `ChargesMTD` IS NULL) OR (`ChargesMTD` = ?)) AND ((? = 1 AND `Cpt codes` IS NULL) OR (`Cpt codes` = ?)) AND ((? = 1 AND `Claim Number` IS NULL) OR (`Claim Number` = ?)) AND ((? = 1 AND `Phone` IS NULL) OR (`Phone` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Providers` WHERE ((`ProviderNumID` = ?) AND ((? = 1 AND `ProviderNam" +
+                "e` IS NULL) OR (`ProviderName` = ?)) AND ((? = 1 AND `Claim Number` IS NULL) OR " +
+                "(`Claim Number` = ?)) AND ((? = 1 AND `Phone` IS NULL) OR (`Phone` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ProviderNumID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderNumID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ProviderName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ProviderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Providers` (`ProviderName`, `ChargesMTD`, `Cpt codes`, `Claim Number" +
-                "`, `Phone`) VALUES (?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Providers` (`ProviderNumID`, `ProviderName`, `Claim Number`, `Phone`" +
+                ") VALUES (?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ProviderNumID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderNumID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ProviderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Providers` SET `ProviderName` = ?, `ChargesMTD` = ?, `Cpt codes` = ?, `Claim Number` = ?, `Phone` = ? WHERE ((`ProviderNumID` = ?) AND ((? = 1 AND `ProviderName` IS NULL) OR (`ProviderName` = ?)) AND ((? = 1 AND `ChargesMTD` IS NULL) OR (`ChargesMTD` = ?)) AND ((? = 1 AND `Cpt codes` IS NULL) OR (`Cpt codes` = ?)) AND ((? = 1 AND `Claim Number` IS NULL) OR (`Claim Number` = ?)) AND ((? = 1 AND `Phone` IS NULL) OR (`Phone` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Providers` SET `ProviderNumID` = ?, `ProviderName` = ?, `Claim Number` = ?, `Phone` = ? WHERE ((`ProviderNumID` = ?) AND ((? = 1 AND `ProviderName` IS NULL) OR (`ProviderName` = ?)) AND ((? = 1 AND `Claim Number` IS NULL) OR (`Claim Number` = ?)) AND ((? = 1 AND `Phone` IS NULL) OR (`Phone` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ProviderNumID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderNumID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ProviderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ProviderNumID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderNumID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ProviderName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ProviderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ProviderName", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ChargesMTD", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ChargesMTD", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Cpt_codes", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cpt codes", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Claim_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Claim Number", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Phone", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Phone", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Phone", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12918,8 +12760,7 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProviderNumID, ProviderName, ChargesMTD, [Cpt codes], [Claim Number], Phon" +
-                "e FROM Providers";
+            this._commandCollection[0].CommandText = "SELECT ProviderNumID, ProviderName, [Claim Number], Phone FROM Providers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12980,7 +12821,7 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ProviderNumID, string Original_ProviderName, global::System.Nullable<int> Original_ChargesMTD, global::System.Nullable<int> Original_Cpt_codes, global::System.Nullable<int> Original_Claim_Number, global::System.Nullable<int> Original_Phone) {
+        public virtual int Delete(int Original_ProviderNumID, string Original_ProviderName, global::System.Nullable<int> Original_Claim_Number, string Original_Phone) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ProviderNumID));
             if ((Original_ProviderName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -12990,37 +12831,21 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ProviderName));
             }
-            if ((Original_ChargesMTD.HasValue == true)) {
+            if ((Original_Claim_Number.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_ChargesMTD.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Claim_Number.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Cpt_codes.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Cpt_codes.Value));
-            }
-            else {
+            if ((Original_Phone == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_Claim_Number.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Claim_Number.Value));
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Phone.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Phone.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Phone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13042,36 +12867,25 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ProviderName, global::System.Nullable<int> ChargesMTD, global::System.Nullable<int> Cpt_codes, global::System.Nullable<int> Claim_Number, global::System.Nullable<int> Phone) {
+        public virtual int Insert(int ProviderNumID, string ProviderName, global::System.Nullable<int> Claim_Number, string Phone) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ProviderNumID));
             if ((ProviderName == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ProviderName));
-            }
-            if ((ChargesMTD.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ChargesMTD.Value));
-            }
-            else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Cpt_codes.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Cpt_codes.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ProviderName));
+            }
+            if ((Claim_Number.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Claim_Number.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Claim_Number.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Claim_Number.Value));
-            }
-            else {
+            if ((Phone == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Phone.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Phone.Value));
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Phone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13093,77 +12907,50 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ProviderName, global::System.Nullable<int> ChargesMTD, global::System.Nullable<int> Cpt_codes, global::System.Nullable<int> Claim_Number, global::System.Nullable<int> Phone, int Original_ProviderNumID, string Original_ProviderName, global::System.Nullable<int> Original_ChargesMTD, global::System.Nullable<int> Original_Cpt_codes, global::System.Nullable<int> Original_Claim_Number, global::System.Nullable<int> Original_Phone) {
+        public virtual int Update(int ProviderNumID, string ProviderName, global::System.Nullable<int> Claim_Number, string Phone, int Original_ProviderNumID, string Original_ProviderName, global::System.Nullable<int> Original_Claim_Number, string Original_Phone) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ProviderNumID));
             if ((ProviderName == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ProviderName));
-            }
-            if ((ChargesMTD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ChargesMTD.Value));
-            }
-            else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Cpt_codes.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Cpt_codes.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ProviderName));
+            }
+            if ((Claim_Number.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Claim_Number.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Claim_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Claim_Number.Value));
-            }
-            else {
+            if ((Phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Phone.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Phone.Value));
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Phone));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_ProviderNumID));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ProviderNumID));
             if ((Original_ProviderName == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_ProviderName));
-            }
-            if ((Original_ChargesMTD.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_ChargesMTD.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Cpt_codes.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Cpt_codes.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_ProviderName));
             }
             if ((Original_Claim_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Claim_Number.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Claim_Number.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_Phone.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_Phone.Value));
+            if ((Original_Phone == null)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Phone));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13179,6 +12966,14 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string ProviderName, global::System.Nullable<int> Claim_Number, string Phone, int Original_ProviderNumID, string Original_ProviderName, global::System.Nullable<int> Original_Claim_Number, string Original_Phone) {
+            return this.Update(Original_ProviderNumID, ProviderName, Claim_Number, Phone, Original_ProviderNumID, Original_ProviderName, Original_Claim_Number, Original_Phone);
         }
     }
     
@@ -14184,15 +13979,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cpt_CodesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cpt_CodesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._houseHoldTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.HouseHold.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -14211,12 +13997,12 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._mTDChargesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cpt_CodesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._mTDChargesTableAdapter.Update(updatedRows));
+                    result = (result + this._cpt_CodesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -14235,6 +14021,15 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._complete_Service_DataTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._mTDChargesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._mTDChargesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -14309,14 +14104,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cpt_CodesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cpt_CodesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._houseHoldTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.HouseHold.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -14333,11 +14120,11 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._mTDChargesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cpt_CodesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._mTDChargesTableAdapter.Update(addedRows));
+                    result = (result + this._cpt_CodesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14354,6 +14141,14 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._complete_Service_DataTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._mTDChargesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._mTDChargesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14447,6 +14242,14 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._mTDChargesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._mTDChargesTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._complete_Service_DataTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Complete_Service_Data.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -14463,11 +14266,11 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._mTDChargesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MTDCharges.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cpt_CodesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._mTDChargesTableAdapter.Update(deletedRows));
+                    result = (result + this._cpt_CodesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -14484,14 +14287,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._houseHoldTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cpt_CodesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Cpt_Codes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cpt_CodesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
