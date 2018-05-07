@@ -33,6 +33,7 @@ namespace NCH_Project
         //Code used on the Forms Load
         private void frmHousehold_Load(object sender, EventArgs e)
         {
+           
             // TODO: This line of code loads data into the 'systemsDataBase2DataSet.HouseHold' table. You can move, or remove it, as needed.
             this.houseHoldTableAdapter.Fill(this.systemsDataBase2DataSet.HouseHold);
             //ToolStrip - FormLoad

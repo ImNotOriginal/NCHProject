@@ -2260,7 +2260,7 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InsurancecompaniesRow AddInsurancecompaniesRow(string InsuranceCompName, string CompanyPhone, string CompanyAddress, int Claim_Number) {
+            public InsurancecompaniesRow AddInsurancecompaniesRow(string InsuranceCompName, string CompanyPhone, string CompanyAddress, uint Claim_Number) {
                 InsurancecompaniesRow rowInsurancecompaniesRow = ((InsurancecompaniesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2315,7 +2315,7 @@ namespace NCH_Project {
                 base.Columns.Add(this.columnCompanyPhone);
                 this.columnCompanyAddress = new global::System.Data.DataColumn("CompanyAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCompanyAddress);
-                this.columnClaim_Number = new global::System.Data.DataColumn("Claim Number", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnClaim_Number = new global::System.Data.DataColumn("Claim Number", typeof(uint), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnClaim_Number);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCompID}, true));
@@ -4334,10 +4334,10 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProvidersRow AddProvidersRow(string ProviderName, Pending_Insurance_ClaimsRow parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders, string Phone) {
+            public ProvidersRow AddProvidersRow(string ProviderNumID, string ProviderName, Pending_Insurance_ClaimsRow parentPending_Insurance_ClaimsRowByPending_Insurance_ClaimsProviders, string Phone) {
                 ProvidersRow rowProvidersRow = ((ProvidersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        ProviderNumID,
                         ProviderName,
                         null,
                         Phone};
@@ -4351,7 +4351,7 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProvidersRow FindByProviderNumID(int ProviderNumID) {
+            public ProvidersRow FindByProviderNumID(string ProviderNumID) {
                 return ((ProvidersRow)(this.Rows.Find(new object[] {
                             ProviderNumID})));
             }
@@ -4382,7 +4382,7 @@ namespace NCH_Project {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnProviderNumID = new global::System.Data.DataColumn("ProviderNumID", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnProviderNumID = new global::System.Data.DataColumn("ProviderNumID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProviderNumID);
                 this.columnProviderName = new global::System.Data.DataColumn("ProviderName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProviderName);
@@ -4392,7 +4392,6 @@ namespace NCH_Project {
                 base.Columns.Add(this.columnPhone);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProviderNumID}, true));
-                this.columnProviderNumID.AutoIncrement = true;
                 this.columnProviderNumID.AutoIncrementSeed = -1;
                 this.columnProviderNumID.AutoIncrementStep = -1;
                 this.columnProviderNumID.AllowDBNull = false;
@@ -5916,10 +5915,10 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Claim_Number {
+            public uint Claim_Number {
                 get {
                     try {
-                        return ((int)(this[this.tableInsurancecompanies.Claim_NumberColumn]));
+                        return ((uint)(this[this.tableInsurancecompanies.Claim_NumberColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Claim Number\' in table \'Insurancecompanies\' is DBNull.", e);
@@ -7128,9 +7127,9 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ProviderNumID {
+            public string ProviderNumID {
                 get {
-                    return ((int)(this[this.tableProviders.ProviderNumIDColumn]));
+                    return ((string)(this[this.tableProviders.ProviderNumIDColumn]));
                 }
                 set {
                     this[this.tableProviders.ProviderNumIDColumn] = value;

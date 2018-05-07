@@ -55,6 +55,8 @@
             this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.houseHoldBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.houseHoldBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -69,14 +71,12 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.houseHold_NumberTextBox = new System.Windows.Forms.TextBox();
             this.head_Of_HouseholdTextBox = new System.Windows.Forms.TextBox();
-            this.houseHoldBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.houseHoldTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.HouseHoldTableAdapter();
             this.tableAdapterManager = new NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager();
-            this.houseHoldDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.houseHoldDataGridView = new System.Windows.Forms.DataGridView();
             addressLabel = new System.Windows.Forms.Label();
             houseHold_NumberLabel = new System.Windows.Forms.Label();
             head_Of_HouseholdLabel = new System.Windows.Forms.Label();
@@ -319,6 +319,16 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
+            // houseHoldBindingSource
+            // 
+            this.houseHoldBindingSource.DataMember = "HouseHold";
+            this.houseHoldBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // systemsDataBase2DataSet
+            // 
+            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
+            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
@@ -428,16 +438,6 @@
             this.head_Of_HouseholdTextBox.Size = new System.Drawing.Size(100, 22);
             this.head_Of_HouseholdTextBox.TabIndex = 46;
             // 
-            // houseHoldBindingSource
-            // 
-            this.houseHoldBindingSource.DataMember = "HouseHold";
-            this.houseHoldBindingSource.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // systemsDataBase2DataSet
-            // 
-            this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
-            this.systemsDataBase2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // houseHoldTableAdapter
             // 
             this.houseHoldTableAdapter.ClearBeforeFill = true;
@@ -460,6 +460,24 @@
             this.tableAdapterManager.UpdateOrder = NCH_Project.SystemsDataBase2DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.Visit_InfoTableAdapter = null;
             // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Head Of Household";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Head Of Household";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "HouseHold Number";
+            this.dataGridViewTextBoxColumn1.HeaderText = "HouseHold Number";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
             // houseHoldDataGridView
             // 
             this.houseHoldDataGridView.AutoGenerateColumns = false;
@@ -474,24 +492,6 @@
             this.houseHoldDataGridView.RowTemplate.Height = 24;
             this.houseHoldDataGridView.Size = new System.Drawing.Size(496, 200);
             this.houseHoldDataGridView.TabIndex = 46;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "HouseHold Number";
-            this.dataGridViewTextBoxColumn1.HeaderText = "HouseHold Number";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Head Of Household";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Head Of Household";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Address";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // frmHousehold
             // 
@@ -566,9 +566,9 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox houseHold_NumberTextBox;
         private System.Windows.Forms.TextBox head_Of_HouseholdTextBox;
-        private System.Windows.Forms.DataGridView houseHoldDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridView houseHoldDataGridView;
     }
 }
