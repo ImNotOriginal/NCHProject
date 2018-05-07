@@ -1093,7 +1093,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Claim_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnClaim_Number" msprop:Generator_ColumnPropNameInRow="Claim_Number" msprop:Generator_ColumnPropNameInTable="Claim_NumberColumn" msprop:Generator_UserColumnName="Claim Number" type="xs:int" minOccurs="0" />
+              <xs:element name="Claim_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnClaim_Number" msprop:Generator_ColumnPropNameInRow="Claim_Number" msprop:Generator_ColumnPropNameInTable="Claim_NumberColumn" msprop:Generator_UserColumnName="Claim Number" type="xs:unsignedInt" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1226,7 +1226,7 @@
         <xs:element name="Providers" msprop:Generator_TableClassName="ProvidersDataTable" msprop:Generator_TableVarName="tableProviders" msprop:Generator_RowChangedName="ProvidersRowChanged" msprop:Generator_TablePropName="Providers" msprop:Generator_RowDeletingName="ProvidersRowDeleting" msprop:Generator_RowChangingName="ProvidersRowChanging" msprop:Generator_RowEvHandlerName="ProvidersRowChangeEventHandler" msprop:Generator_RowDeletedName="ProvidersRowDeleted" msprop:Generator_RowClassName="ProvidersRow" msprop:Generator_UserTableName="Providers" msprop:Generator_RowEvArgName="ProvidersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ProviderNumID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProviderNumID" msprop:Generator_ColumnPropNameInRow="ProviderNumID" msprop:Generator_ColumnPropNameInTable="ProviderNumIDColumn" msprop:Generator_UserColumnName="ProviderNumID" type="xs:int" />
+              <xs:element name="ProviderNumID" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProviderNumID" msprop:Generator_ColumnPropNameInRow="ProviderNumID" msprop:Generator_ColumnPropNameInTable="ProviderNumIDColumn" msprop:Generator_UserColumnName="ProviderNumID" type="xs:string" />
               <xs:element name="ProviderName" msprop:Generator_ColumnVarNameInTable="columnProviderName" msprop:Generator_ColumnPropNameInRow="ProviderName" msprop:Generator_ColumnPropNameInTable="ProviderNameColumn" msprop:Generator_UserColumnName="ProviderName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
