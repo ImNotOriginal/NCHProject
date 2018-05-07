@@ -35,28 +35,21 @@
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label emailLabel;
-            System.Windows.Forms.Label raceLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtHolderSOC = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtHolderDOB = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtPolicyName = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtInsComp = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.Label raceLabel1;
+            System.Windows.Forms.Label compIDLabel;
+            System.Windows.Forms.Label insuranceCompNameLabel;
+            System.Windows.Forms.Label companyPhoneLabel;
+            System.Windows.Forms.Label companyAddressLabel;
+            System.Windows.Forms.Label birthdateLabel;
             this.label17 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdoOther = new System.Windows.Forms.RadioButton();
             this.rdoAsain = new System.Windows.Forms.RadioButton();
             this.rdoNativeAmerican = new System.Windows.Forms.RadioButton();
             this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
             this.rdoHispanic = new System.Windows.Forms.RadioButton();
             this.rdoWhite = new System.Windows.Forms.RadioButton();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +79,6 @@
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.raceTextBox = new System.Windows.Forms.TextBox();
             this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -100,19 +92,34 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.raceComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.insurancecompaniesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.insurancecompaniesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.InsurancecompaniesTableAdapter();
+            this.compIDTextBox = new System.Windows.Forms.TextBox();
+            this.insuranceCompNameTextBox = new System.Windows.Forms.TextBox();
+            this.companyPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.companyAddressTextBox = new System.Windows.Forms.TextBox();
+            this.birthdateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             patient_NumberLabel = new System.Windows.Forms.Label();
             household_NumberLabel = new System.Windows.Forms.Label();
             patient_NameLabel = new System.Windows.Forms.Label();
             addressLabel = new System.Windows.Forms.Label();
             phoneLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            raceLabel = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            raceLabel1 = new System.Windows.Forms.Label();
+            compIDLabel = new System.Windows.Forms.Label();
+            insuranceCompNameLabel = new System.Windows.Forms.Label();
+            companyPhoneLabel = new System.Windows.Forms.Label();
+            companyAddressLabel = new System.Windows.Forms.Label();
+            birthdateLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
             this.patientsBindingNavigator.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancecompaniesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // patient_NumberLabel
@@ -127,7 +134,7 @@
             // household_NumberLabel
             // 
             household_NumberLabel.AutoSize = true;
-            household_NumberLabel.Location = new System.Drawing.Point(245, 74);
+            household_NumberLabel.Location = new System.Drawing.Point(309, 71);
             household_NumberLabel.Name = "household_NumberLabel";
             household_NumberLabel.Size = new System.Drawing.Size(134, 17);
             household_NumberLabel.TabIndex = 62;
@@ -145,7 +152,7 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(18, 151);
+            addressLabel.Location = new System.Drawing.Point(9, 195);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(64, 17);
             addressLabel.TabIndex = 64;
@@ -154,7 +161,7 @@
             // phoneLabel
             // 
             phoneLabel.AutoSize = true;
-            phoneLabel.Location = new System.Drawing.Point(22, 185);
+            phoneLabel.Location = new System.Drawing.Point(13, 229);
             phoneLabel.Name = "phoneLabel";
             phoneLabel.Size = new System.Drawing.Size(53, 17);
             phoneLabel.TabIndex = 65;
@@ -163,92 +170,11 @@
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new System.Drawing.Point(129, 185);
+            emailLabel.Location = new System.Drawing.Point(120, 229);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(46, 17);
             emailLabel.TabIndex = 66;
             emailLabel.Text = "Email:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txtHolderSOC);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtHolderDOB);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.txtPolicyName);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.txtInsComp);
-            this.groupBox2.Location = new System.Drawing.Point(433, 205);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 268);
-            this.groupBox2.TabIndex = 51;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Medical Info";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(5, 206);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 17);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Policy Holder Soc";
-            // 
-            // txtHolderSOC
-            // 
-            this.txtHolderSOC.Location = new System.Drawing.Point(4, 232);
-            this.txtHolderSOC.Name = "txtHolderSOC";
-            this.txtHolderSOC.Size = new System.Drawing.Size(188, 22);
-            this.txtHolderSOC.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 146);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 17);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Policy Holder D.O.B";
-            // 
-            // txtHolderDOB
-            // 
-            this.txtHolderDOB.Location = new System.Drawing.Point(5, 172);
-            this.txtHolderDOB.Name = "txtHolderDOB";
-            this.txtHolderDOB.Size = new System.Drawing.Size(188, 22);
-            this.txtHolderDOB.TabIndex = 4;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 82);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 17);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Policy Holder Name";
-            // 
-            // txtPolicyName
-            // 
-            this.txtPolicyName.Location = new System.Drawing.Point(5, 108);
-            this.txtPolicyName.Name = "txtPolicyName";
-            this.txtPolicyName.Size = new System.Drawing.Size(188, 22);
-            this.txtPolicyName.TabIndex = 2;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(133, 17);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Insurance Company";
-            // 
-            // txtInsComp
-            // 
-            this.txtInsComp.Location = new System.Drawing.Point(6, 48);
-            this.txtInsComp.Name = "txtInsComp";
-            this.txtInsComp.Size = new System.Drawing.Size(188, 22);
-            this.txtInsComp.TabIndex = 0;
             // 
             // label17
             // 
@@ -263,14 +189,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 22);
             this.txtEmail.TabIndex = 70;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
-            this.groupBox3.TabIndex = 69;
-            this.groupBox3.TabStop = false;
             // 
             // rdoOther
             // 
@@ -314,28 +232,9 @@
             this.rdoWhite.Size = new System.Drawing.Size(104, 24);
             this.rdoWhite.TabIndex = 0;
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(43, 474);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(79, 25);
-            this.btnAccept.TabIndex = 55;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(158, 474);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(79, 25);
-            this.btnClear.TabIndex = 56;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(284, 474);
+            this.btnExit.Location = new System.Drawing.Point(236, 451);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(79, 25);
             this.btnExit.TabIndex = 57;
@@ -354,7 +253,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(673, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(576, 28);
             this.menuStrip1.TabIndex = 60;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -530,7 +429,7 @@
             // household_NumberTextBox
             // 
             this.household_NumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Household Number", true));
-            this.household_NumberTextBox.Location = new System.Drawing.Point(384, 71);
+            this.household_NumberTextBox.Location = new System.Drawing.Point(449, 68);
             this.household_NumberTextBox.Name = "household_NumberTextBox";
             this.household_NumberTextBox.Size = new System.Drawing.Size(100, 22);
             this.household_NumberTextBox.TabIndex = 63;
@@ -546,7 +445,7 @@
             // addressTextBox
             // 
             this.addressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Address", true));
-            this.addressTextBox.Location = new System.Drawing.Point(88, 148);
+            this.addressTextBox.Location = new System.Drawing.Point(79, 192);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(274, 22);
             this.addressTextBox.TabIndex = 65;
@@ -554,7 +453,7 @@
             // phoneTextBox
             // 
             this.phoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Phone", true));
-            this.phoneTextBox.Location = new System.Drawing.Point(21, 205);
+            this.phoneTextBox.Location = new System.Drawing.Point(12, 249);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(100, 22);
             this.phoneTextBox.TabIndex = 66;
@@ -562,27 +461,10 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(134, 205);
+            this.emailTextBox.Location = new System.Drawing.Point(125, 249);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(263, 22);
             this.emailTextBox.TabIndex = 67;
-            // 
-            // raceLabel
-            // 
-            raceLabel.AutoSize = true;
-            raceLabel.Location = new System.Drawing.Point(24, 256);
-            raceLabel.Name = "raceLabel";
-            raceLabel.Size = new System.Drawing.Size(45, 17);
-            raceLabel.TabIndex = 71;
-            raceLabel.Text = "Race:";
-            // 
-            // raceTextBox
-            // 
-            this.raceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
-            this.raceTextBox.Location = new System.Drawing.Point(75, 253);
-            this.raceTextBox.Name = "raceTextBox";
-            this.raceTextBox.Size = new System.Drawing.Size(100, 22);
-            this.raceTextBox.TabIndex = 72;
             // 
             // patientsBindingNavigator
             // 
@@ -611,7 +493,7 @@
             this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patientsBindingNavigator.Name = "patientsBindingNavigator";
             this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patientsBindingNavigator.Size = new System.Drawing.Size(673, 27);
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(576, 27);
             this.patientsBindingNavigator.TabIndex = 73;
             this.patientsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -709,14 +591,150 @@
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
+            // raceLabel1
+            // 
+            raceLabel1.AutoSize = true;
+            raceLabel1.Location = new System.Drawing.Point(28, 153);
+            raceLabel1.Name = "raceLabel1";
+            raceLabel1.Size = new System.Drawing.Size(45, 17);
+            raceLabel1.TabIndex = 73;
+            raceLabel1.Text = "Race:";
+            // 
+            // raceComboBox
+            // 
+            this.raceComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
+            this.raceComboBox.FormattingEnabled = true;
+            this.raceComboBox.Items.AddRange(new object[] {
+            "White ",
+            "African American",
+            "Hispanic",
+            "Other"});
+            this.raceComboBox.Location = new System.Drawing.Point(79, 150);
+            this.raceComboBox.Name = "raceComboBox";
+            this.raceComboBox.Size = new System.Drawing.Size(171, 24);
+            this.raceComboBox.TabIndex = 74;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(companyAddressLabel);
+            this.groupBox2.Controls.Add(this.companyAddressTextBox);
+            this.groupBox2.Controls.Add(companyPhoneLabel);
+            this.groupBox2.Controls.Add(this.companyPhoneTextBox);
+            this.groupBox2.Controls.Add(insuranceCompNameLabel);
+            this.groupBox2.Controls.Add(this.insuranceCompNameTextBox);
+            this.groupBox2.Controls.Add(compIDLabel);
+            this.groupBox2.Controls.Add(this.compIDTextBox);
+            this.groupBox2.Location = new System.Drawing.Point(3, 304);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(501, 133);
+            this.groupBox2.TabIndex = 51;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Medical Info";
+            // 
+            // insurancecompaniesBindingSource
+            // 
+            this.insurancecompaniesBindingSource.DataMember = "Insurancecompanies";
+            this.insurancecompaniesBindingSource.DataSource = this.systemsDataBase2DataSet;
+            // 
+            // insurancecompaniesTableAdapter
+            // 
+            this.insurancecompaniesTableAdapter.ClearBeforeFill = true;
+            // 
+            // compIDLabel
+            // 
+            compIDLabel.AutoSize = true;
+            compIDLabel.Location = new System.Drawing.Point(6, 18);
+            compIDLabel.Name = "compIDLabel";
+            compIDLabel.Size = new System.Drawing.Size(65, 17);
+            compIDLabel.TabIndex = 0;
+            compIDLabel.Text = "Comp ID:";
+            // 
+            // compIDTextBox
+            // 
+            this.compIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompID", true));
+            this.compIDTextBox.Location = new System.Drawing.Point(9, 38);
+            this.compIDTextBox.Name = "compIDTextBox";
+            this.compIDTextBox.Size = new System.Drawing.Size(189, 22);
+            this.compIDTextBox.TabIndex = 1;
+            // 
+            // insuranceCompNameLabel
+            // 
+            insuranceCompNameLabel.AutoSize = true;
+            insuranceCompNameLabel.Location = new System.Drawing.Point(285, 18);
+            insuranceCompNameLabel.Name = "insuranceCompNameLabel";
+            insuranceCompNameLabel.Size = new System.Drawing.Size(155, 17);
+            insuranceCompNameLabel.TabIndex = 2;
+            insuranceCompNameLabel.Text = "Insurance Comp Name:";
+            // 
+            // insuranceCompNameTextBox
+            // 
+            this.insuranceCompNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "InsuranceCompName", true));
+            this.insuranceCompNameTextBox.Location = new System.Drawing.Point(288, 38);
+            this.insuranceCompNameTextBox.Name = "insuranceCompNameTextBox";
+            this.insuranceCompNameTextBox.Size = new System.Drawing.Size(189, 22);
+            this.insuranceCompNameTextBox.TabIndex = 3;
+            // 
+            // companyPhoneLabel
+            // 
+            companyPhoneLabel.AutoSize = true;
+            companyPhoneLabel.Location = new System.Drawing.Point(6, 82);
+            companyPhoneLabel.Name = "companyPhoneLabel";
+            companyPhoneLabel.Size = new System.Drawing.Size(116, 17);
+            companyPhoneLabel.TabIndex = 4;
+            companyPhoneLabel.Text = "Company Phone:";
+            // 
+            // companyPhoneTextBox
+            // 
+            this.companyPhoneTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompanyPhone", true));
+            this.companyPhoneTextBox.Location = new System.Drawing.Point(9, 102);
+            this.companyPhoneTextBox.Name = "companyPhoneTextBox";
+            this.companyPhoneTextBox.Size = new System.Drawing.Size(189, 22);
+            this.companyPhoneTextBox.TabIndex = 5;
+            // 
+            // companyAddressLabel
+            // 
+            companyAddressLabel.AutoSize = true;
+            companyAddressLabel.Location = new System.Drawing.Point(285, 82);
+            companyAddressLabel.Name = "companyAddressLabel";
+            companyAddressLabel.Size = new System.Drawing.Size(127, 17);
+            companyAddressLabel.TabIndex = 6;
+            companyAddressLabel.Text = "Company Address:";
+            // 
+            // companyAddressTextBox
+            // 
+            this.companyAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompanyAddress", true));
+            this.companyAddressTextBox.Location = new System.Drawing.Point(288, 102);
+            this.companyAddressTextBox.Name = "companyAddressTextBox";
+            this.companyAddressTextBox.Size = new System.Drawing.Size(189, 22);
+            this.companyAddressTextBox.TabIndex = 7;
+            // 
+            // birthdateLabel
+            // 
+            birthdateLabel.AutoSize = true;
+            birthdateLabel.Location = new System.Drawing.Point(278, 152);
+            birthdateLabel.Name = "birthdateLabel";
+            birthdateLabel.Size = new System.Drawing.Size(69, 17);
+            birthdateLabel.TabIndex = 74;
+            birthdateLabel.Text = "Birthdate:";
+            // 
+            // birthdateDateTimePicker
+            // 
+            this.birthdateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.patientsBindingSource, "Birthdate", true));
+            this.birthdateDateTimePicker.Location = new System.Drawing.Point(353, 148);
+            this.birthdateDateTimePicker.Name = "birthdateDateTimePicker";
+            this.birthdateDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.birthdateDateTimePicker.TabIndex = 75;
+            // 
             // frmPatientInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 530);
+            this.ClientSize = new System.Drawing.Size(576, 496);
+            this.Controls.Add(birthdateLabel);
+            this.Controls.Add(this.birthdateDateTimePicker);
+            this.Controls.Add(raceLabel1);
+            this.Controls.Add(this.raceComboBox);
             this.Controls.Add(this.patientsBindingNavigator);
-            this.Controls.Add(raceLabel);
-            this.Controls.Add(this.raceTextBox);
             this.Controls.Add(emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(phoneLabel);
@@ -731,17 +749,12 @@
             this.Controls.Add(this.patient_NumberTextBox);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnAccept);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmPatientInfo";
             this.Text = " PatientInfo";
             this.Load += new System.EventHandler(this.frmPatientInfo_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
@@ -749,34 +762,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
             this.patientsBindingNavigator.ResumeLayout(false);
             this.patientsBindingNavigator.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.insurancecompaniesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtPolicyName;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtInsComp;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtHolderSOC;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtHolderDOB;
 
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rdoOther;
         private System.Windows.Forms.RadioButton rdoAsain;
         private System.Windows.Forms.RadioButton rdoNativeAmerican;
         private System.Windows.Forms.RadioButton rdoAfricanAmerican;
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoWhite;
-
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
@@ -806,7 +809,6 @@
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox raceTextBox;
         private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -820,5 +822,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton patientsBindingNavigatorSaveItem;
+        private System.Windows.Forms.ComboBox raceComboBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.BindingSource insurancecompaniesBindingSource;
+        private SystemsDataBase2DataSetTableAdapters.InsurancecompaniesTableAdapter insurancecompaniesTableAdapter;
+        private System.Windows.Forms.TextBox companyAddressTextBox;
+        private System.Windows.Forms.TextBox companyPhoneTextBox;
+        private System.Windows.Forms.TextBox insuranceCompNameTextBox;
+        private System.Windows.Forms.TextBox compIDTextBox;
+        private System.Windows.Forms.DateTimePicker birthdateDateTimePicker;
     }
 }
