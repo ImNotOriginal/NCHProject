@@ -37,8 +37,8 @@
             System.Windows.Forms.Label appointment_TimeLabel;
             System.Windows.Forms.Label end_TimeLabel;
             System.Windows.Forms.Label visit_InformationLabel;
-            System.Windows.Forms.Label providerNameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApptInfo));
+            System.Windows.Forms.Label providerNameLabel;
             this.label12 = new System.Windows.Forms.Label();
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.appointmentDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -167,15 +167,6 @@
             visit_InformationLabel.Size = new System.Drawing.Size(112, 17);
             visit_InformationLabel.TabIndex = 88;
             visit_InformationLabel.Text = "Visit Information:";
-            // 
-            // providerNameLabel
-            // 
-            providerNameLabel.AutoSize = true;
-            providerNameLabel.Location = new System.Drawing.Point(9, 150);
-            providerNameLabel.Name = "providerNameLabel";
-            providerNameLabel.Size = new System.Drawing.Size(106, 17);
-            providerNameLabel.TabIndex = 89;
-            providerNameLabel.Text = "Provider Name:";
             // 
             // label12
             // 
@@ -447,9 +438,18 @@
             this.visit_InformationTextBox.Size = new System.Drawing.Size(170, 22);
             this.visit_InformationTextBox.TabIndex = 89;
             // 
+            // providerNameLabel
+            // 
+            providerNameLabel.AutoSize = true;
+            providerNameLabel.Location = new System.Drawing.Point(12, 155);
+            providerNameLabel.Name = "providerNameLabel";
+            providerNameLabel.Size = new System.Drawing.Size(106, 17);
+            providerNameLabel.TabIndex = 89;
+            providerNameLabel.Text = "Provider Name:";
+            // 
             // providerNameComboBox
             // 
-            this.providerNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "ProviderName", true));
+            this.providerNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "ProviderName", true));
             this.providerNameComboBox.FormattingEnabled = true;
             this.providerNameComboBox.Items.AddRange(new object[] {
             "Stacy Smith",
@@ -461,11 +461,10 @@
             "Hector Potter",
             "Juan Jose",
             "Austin Burbach"});
-            this.providerNameComboBox.Location = new System.Drawing.Point(12, 170);
+            this.providerNameComboBox.Location = new System.Drawing.Point(15, 175);
             this.providerNameComboBox.Name = "providerNameComboBox";
             this.providerNameComboBox.Size = new System.Drawing.Size(121, 24);
             this.providerNameComboBox.TabIndex = 90;
-            this.providerNameComboBox.SelectedIndexChanged += new System.EventHandler(this.providerNameComboBox_SelectedIndexChanged);
             // 
             // frmApptInfo
             // 
