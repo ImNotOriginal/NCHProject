@@ -189,5 +189,13 @@ namespace NCH_Project
 
             }
         }
+
+        private void providerNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.houseHoldBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.systemsDataBase2DataSet);
+
+        }
     }
 }

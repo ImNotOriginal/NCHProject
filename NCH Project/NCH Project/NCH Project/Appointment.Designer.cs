@@ -33,12 +33,12 @@
             System.Windows.Forms.Label patient_NumberLabel;
             System.Windows.Forms.Label houseHold_NumberLabel;
             System.Windows.Forms.Label appointment_NumberLabel;
-            System.Windows.Forms.Label providerNameLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApptInfo));
             System.Windows.Forms.Label patient_NameLabel;
             System.Windows.Forms.Label appointment_TimeLabel;
             System.Windows.Forms.Label end_TimeLabel;
             System.Windows.Forms.Label visit_InformationLabel;
+            System.Windows.Forms.Label providerNameLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApptInfo));
             this.label12 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -78,7 +78,6 @@
             this.houseHold_NumberTextBox = new System.Windows.Forms.TextBox();
             this.appointment_NumberTextBox = new System.Windows.Forms.TextBox();
             this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.providerNameCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.patientsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -96,15 +95,16 @@
             this.appointment_TimeTextBox = new System.Windows.Forms.TextBox();
             this.end_TimeTextBox = new System.Windows.Forms.TextBox();
             this.visit_InformationTextBox = new System.Windows.Forms.TextBox();
+            this.providerNameComboBox = new System.Windows.Forms.ComboBox();
             phoneLabel = new System.Windows.Forms.Label();
             patient_NumberLabel = new System.Windows.Forms.Label();
             houseHold_NumberLabel = new System.Windows.Forms.Label();
             appointment_NumberLabel = new System.Windows.Forms.Label();
-            providerNameLabel = new System.Windows.Forms.Label();
             patient_NameLabel = new System.Windows.Forms.Label();
             appointment_TimeLabel = new System.Windows.Forms.Label();
             end_TimeLabel = new System.Windows.Forms.Label();
             visit_InformationLabel = new System.Windows.Forms.Label();
+            providerNameLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).BeginInit();
@@ -153,13 +153,49 @@
             appointment_NumberLabel.TabIndex = 78;
             appointment_NumberLabel.Text = "Appointment Number:";
             // 
+            // patient_NameLabel
+            // 
+            patient_NameLabel.AutoSize = true;
+            patient_NameLabel.Location = new System.Drawing.Point(164, 153);
+            patient_NameLabel.Name = "patient_NameLabel";
+            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
+            patient_NameLabel.TabIndex = 84;
+            patient_NameLabel.Text = "Patient Name:";
+            // 
+            // appointment_TimeLabel
+            // 
+            appointment_TimeLabel.AutoSize = true;
+            appointment_TimeLabel.Location = new System.Drawing.Point(13, 269);
+            appointment_TimeLabel.Name = "appointment_TimeLabel";
+            appointment_TimeLabel.Size = new System.Drawing.Size(126, 17);
+            appointment_TimeLabel.TabIndex = 85;
+            appointment_TimeLabel.Text = "Appointment Time:";
+            // 
+            // end_TimeLabel
+            // 
+            end_TimeLabel.AutoSize = true;
+            end_TimeLabel.Location = new System.Drawing.Point(167, 269);
+            end_TimeLabel.Name = "end_TimeLabel";
+            end_TimeLabel.Size = new System.Drawing.Size(72, 17);
+            end_TimeLabel.TabIndex = 86;
+            end_TimeLabel.Text = "End Time:";
+            // 
+            // visit_InformationLabel
+            // 
+            visit_InformationLabel.AutoSize = true;
+            visit_InformationLabel.Location = new System.Drawing.Point(351, 269);
+            visit_InformationLabel.Name = "visit_InformationLabel";
+            visit_InformationLabel.Size = new System.Drawing.Size(112, 17);
+            visit_InformationLabel.TabIndex = 88;
+            visit_InformationLabel.Text = "Visit Information:";
+            // 
             // providerNameLabel
             // 
             providerNameLabel.AutoSize = true;
-            providerNameLabel.Location = new System.Drawing.Point(13, 128);
+            providerNameLabel.Location = new System.Drawing.Point(9, 150);
             providerNameLabel.Name = "providerNameLabel";
             providerNameLabel.Size = new System.Drawing.Size(106, 17);
-            providerNameLabel.TabIndex = 79;
+            providerNameLabel.TabIndex = 89;
             providerNameLabel.Text = "Provider Name:";
             // 
             // label12
@@ -324,7 +360,7 @@
             this.reportsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(612, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(726, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -439,25 +475,6 @@
             this.providersBindingSource.DataMember = "Providers";
             this.providersBindingSource.DataSource = this.systemsDataBase2DataSet;
             // 
-            // providerNameCheckedListBox
-            // 
-            this.providerNameCheckedListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.providersBindingSource, "ProviderName", true));
-            this.providerNameCheckedListBox.FormattingEnabled = true;
-            this.providerNameCheckedListBox.Items.AddRange(new object[] {
-            "Stacy Smith",
-            "Kacy Kepler",
-            "Steven Jackson",
-            "Justin Stalin",
-            "Micheal Denner",
-            "Alex Blob",
-            "Hector Potter",
-            "Juan Jose",
-            "Austin Burbach"});
-            this.providerNameCheckedListBox.Location = new System.Drawing.Point(7, 153);
-            this.providerNameCheckedListBox.Name = "providerNameCheckedListBox";
-            this.providerNameCheckedListBox.Size = new System.Drawing.Size(154, 89);
-            this.providerNameCheckedListBox.TabIndex = 80;
-            // 
             // patientsBindingNavigator
             // 
             this.patientsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -485,7 +502,7 @@
             this.patientsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.patientsBindingNavigator.Name = "patientsBindingNavigator";
             this.patientsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.patientsBindingNavigator.Size = new System.Drawing.Size(612, 27);
+            this.patientsBindingNavigator.Size = new System.Drawing.Size(726, 27);
             this.patientsBindingNavigator.TabIndex = 84;
             this.patientsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -583,15 +600,6 @@
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
-            // patient_NameLabel
-            // 
-            patient_NameLabel.AutoSize = true;
-            patient_NameLabel.Location = new System.Drawing.Point(164, 153);
-            patient_NameLabel.Name = "patient_NameLabel";
-            patient_NameLabel.Size = new System.Drawing.Size(97, 17);
-            patient_NameLabel.TabIndex = 84;
-            patient_NameLabel.Text = "Patient Name:";
-            // 
             // patient_NameTextBox
             // 
             this.patient_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Patient Name", true));
@@ -599,15 +607,6 @@
             this.patient_NameTextBox.Name = "patient_NameTextBox";
             this.patient_NameTextBox.Size = new System.Drawing.Size(100, 22);
             this.patient_NameTextBox.TabIndex = 85;
-            // 
-            // appointment_TimeLabel
-            // 
-            appointment_TimeLabel.AutoSize = true;
-            appointment_TimeLabel.Location = new System.Drawing.Point(13, 269);
-            appointment_TimeLabel.Name = "appointment_TimeLabel";
-            appointment_TimeLabel.Size = new System.Drawing.Size(126, 17);
-            appointment_TimeLabel.TabIndex = 85;
-            appointment_TimeLabel.Text = "Appointment Time:";
             // 
             // appointment_TimeTextBox
             // 
@@ -617,15 +616,6 @@
             this.appointment_TimeTextBox.Size = new System.Drawing.Size(124, 22);
             this.appointment_TimeTextBox.TabIndex = 86;
             // 
-            // end_TimeLabel
-            // 
-            end_TimeLabel.AutoSize = true;
-            end_TimeLabel.Location = new System.Drawing.Point(167, 269);
-            end_TimeLabel.Name = "end_TimeLabel";
-            end_TimeLabel.Size = new System.Drawing.Size(72, 17);
-            end_TimeLabel.TabIndex = 86;
-            end_TimeLabel.Text = "End Time:";
-            // 
             // end_TimeTextBox
             // 
             this.end_TimeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.appointmentDataBindingSource, "End Time", true));
@@ -633,15 +623,6 @@
             this.end_TimeTextBox.Name = "end_TimeTextBox";
             this.end_TimeTextBox.Size = new System.Drawing.Size(133, 22);
             this.end_TimeTextBox.TabIndex = 87;
-            // 
-            // visit_InformationLabel
-            // 
-            visit_InformationLabel.AutoSize = true;
-            visit_InformationLabel.Location = new System.Drawing.Point(351, 269);
-            visit_InformationLabel.Name = "visit_InformationLabel";
-            visit_InformationLabel.Size = new System.Drawing.Size(112, 17);
-            visit_InformationLabel.TabIndex = 88;
-            visit_InformationLabel.Text = "Visit Information:";
             // 
             // visit_InformationTextBox
             // 
@@ -651,9 +632,31 @@
             this.visit_InformationTextBox.Size = new System.Drawing.Size(170, 22);
             this.visit_InformationTextBox.TabIndex = 89;
             // 
+            // providerNameComboBox
+            // 
+            this.providerNameComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.providersBindingSource, "ProviderName", true));
+            this.providerNameComboBox.FormattingEnabled = true;
+            this.providerNameComboBox.Items.AddRange(new object[] {
+            "Stacy Smith",
+            "Kacy Kepler",
+            "Steven Jackson",
+            "Justin Stalin",
+            "Micheal Denner",
+            "Alex Blob",
+            "Hector Potter",
+            "Juan Jose",
+            "Austin Burbach"});
+            this.providerNameComboBox.Location = new System.Drawing.Point(12, 170);
+            this.providerNameComboBox.Name = "providerNameComboBox";
+            this.providerNameComboBox.Size = new System.Drawing.Size(121, 24);
+            this.providerNameComboBox.TabIndex = 90;
+            this.providerNameComboBox.SelectedIndexChanged += new System.EventHandler(this.providerNameComboBox_SelectedIndexChanged);
+            // 
             // frmApptInfo
             // 
-            this.ClientSize = new System.Drawing.Size(612, 417);
+            this.ClientSize = new System.Drawing.Size(726, 417);
+            this.Controls.Add(providerNameLabel);
+            this.Controls.Add(this.providerNameComboBox);
             this.Controls.Add(visit_InformationLabel);
             this.Controls.Add(this.visit_InformationTextBox);
             this.Controls.Add(end_TimeLabel);
@@ -663,8 +666,6 @@
             this.Controls.Add(patient_NameLabel);
             this.Controls.Add(this.patient_NameTextBox);
             this.Controls.Add(this.patientsBindingNavigator);
-            this.Controls.Add(providerNameLabel);
-            this.Controls.Add(this.providerNameCheckedListBox);
             this.Controls.Add(appointment_NumberLabel);
             this.Controls.Add(this.appointment_NumberTextBox);
             this.Controls.Add(houseHold_NumberLabel);
@@ -747,7 +748,6 @@
         private System.Windows.Forms.TextBox houseHold_NumberTextBox;
         private System.Windows.Forms.TextBox appointment_NumberTextBox;
         private System.Windows.Forms.BindingSource providersBindingSource;
-        private System.Windows.Forms.CheckedListBox providerNameCheckedListBox;
         private System.Windows.Forms.BindingNavigator patientsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -765,6 +765,7 @@
         private System.Windows.Forms.TextBox appointment_TimeTextBox;
         private System.Windows.Forms.TextBox end_TimeTextBox;
         private System.Windows.Forms.TextBox visit_InformationTextBox;
+        private System.Windows.Forms.ComboBox providerNameComboBox;
     }
 }
 
