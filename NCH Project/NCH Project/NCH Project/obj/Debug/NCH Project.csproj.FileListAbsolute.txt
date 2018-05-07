@@ -40,11 +40,9 @@ C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Projec
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmApptInfo.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmCallList.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmApptList.resources
-C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.Form1.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmMTDPayments.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmGeneralLedger.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmPostCard.resources
-C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmHomePage.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmHousehold.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmPatientInfo.resources
 C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.Properties.Resources.resources
@@ -94,3 +92,4 @@ C:\Users\NECC.ECHT133LPT-5384\Documents\GitHub\NCHProject\NCH Project\NCH Projec
 C:\Users\NECC.ECHT133LPT-5384\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH Project.csproj.GenerateResource.Cache
 C:\Users\NECC.ECHT133LPT-5384\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH Project.exe
 C:\Users\NECC.ECHT133LPT-5384\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH Project.pdb
+C:\Users\NECC.ECHT133LPT-5375\Documents\GitHub\NCHProject\NCH Project\NCH Project\NCH Project\obj\Debug\NCH_Project.frmMain.resources

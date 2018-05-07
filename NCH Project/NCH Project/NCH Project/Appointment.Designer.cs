@@ -40,26 +40,6 @@
             System.Windows.Forms.Label providerNameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmApptInfo));
             this.label12 = new System.Windows.Forms.Label();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEditPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEdietHouseholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.billingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generalLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accoubntReceivableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.callListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.providerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.appointmentDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.appointment_DataTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter();
@@ -105,7 +85,6 @@
             end_TimeLabel = new System.Windows.Forms.Label();
             visit_InformationLabel = new System.Windows.Forms.Label();
             providerNameLabel = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -208,169 +187,6 @@
             this.label12.TabIndex = 14;
             this.label12.Text = "EX: xxx-xxx-xxxx";
             // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(16, 362);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(74, 35);
-            this.btnAccept.TabIndex = 21;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(136, 366);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(84, 31);
-            this.btnExit.TabIndex = 22;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
-            // 
-            // patientInfoToolStripMenuItem
-            // 
-            this.patientInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEditPatientToolStripMenuItem,
-            this.addEdietHouseholdToolStripMenuItem});
-            this.patientInfoToolStripMenuItem.Name = "patientInfoToolStripMenuItem";
-            this.patientInfoToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.patientInfoToolStripMenuItem.Text = "Patient Info";
-            // 
-            // addEditPatientToolStripMenuItem
-            // 
-            this.addEditPatientToolStripMenuItem.Name = "addEditPatientToolStripMenuItem";
-            this.addEditPatientToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.addEditPatientToolStripMenuItem.Text = "Add/Edit Patient";
-            this.addEditPatientToolStripMenuItem.Click += new System.EventHandler(this.addEditPatientToolStripMenuItem_Click);
-            // 
-            // addEdietHouseholdToolStripMenuItem
-            // 
-            this.addEdietHouseholdToolStripMenuItem.Name = "addEdietHouseholdToolStripMenuItem";
-            this.addEdietHouseholdToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.addEdietHouseholdToolStripMenuItem.Text = "Add/Edit Household";
-            this.addEdietHouseholdToolStripMenuItem.Click += new System.EventHandler(this.addEdietHouseholdToolStripMenuItem_Click);
-            // 
-            // billingToolStripMenuItem
-            // 
-            this.billingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalLedgerToolStripMenuItem,
-            this.accoubntReceivableToolStripMenuItem});
-            this.billingToolStripMenuItem.Name = "billingToolStripMenuItem";
-            this.billingToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.billingToolStripMenuItem.Text = "Billing";
-            // 
-            // generalLedgerToolStripMenuItem
-            // 
-            this.generalLedgerToolStripMenuItem.Name = "generalLedgerToolStripMenuItem";
-            this.generalLedgerToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.generalLedgerToolStripMenuItem.Text = "General Ledger";
-            this.generalLedgerToolStripMenuItem.Click += new System.EventHandler(this.generalLedgerToolStripMenuItem_Click);
-            // 
-            // accoubntReceivableToolStripMenuItem
-            // 
-            this.accoubntReceivableToolStripMenuItem.Name = "accoubntReceivableToolStripMenuItem";
-            this.accoubntReceivableToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.accoubntReceivableToolStripMenuItem.Text = "Account Receivable";
-            this.accoubntReceivableToolStripMenuItem.Click += new System.EventHandler(this.accoubntReceivableToolStripMenuItem_Click);
-            // 
-            // appointmentToolStripMenuItem
-            // 
-            this.appointmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makeToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.appointmentToolStripMenuItem.Text = "Appointment";
-            // 
-            // makeToolStripMenuItem
-            // 
-            this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.makeToolStripMenuItem.Text = "Make";
-            this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.appointmentListToolStripMenuItem,
-            this.callListToolStripMenuItem,
-            this.providerToolStripMenuItem,
-            this.mTDPaymentToolStripMenuItem,
-            this.postcardToolStripMenuItem});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
-            // appointmentListToolStripMenuItem
-            // 
-            this.appointmentListToolStripMenuItem.Name = "appointmentListToolStripMenuItem";
-            this.appointmentListToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.appointmentListToolStripMenuItem.Text = "Appointment list";
-            this.appointmentListToolStripMenuItem.Click += new System.EventHandler(this.appointmentListToolStripMenuItem_Click);
-            // 
-            // callListToolStripMenuItem
-            // 
-            this.callListToolStripMenuItem.Name = "callListToolStripMenuItem";
-            this.callListToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.callListToolStripMenuItem.Text = "Call List";
-            this.callListToolStripMenuItem.Click += new System.EventHandler(this.callListToolStripMenuItem_Click);
-            // 
-            // providerToolStripMenuItem
-            // 
-            this.providerToolStripMenuItem.Name = "providerToolStripMenuItem";
-            this.providerToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.providerToolStripMenuItem.Text = "Provider";
-            this.providerToolStripMenuItem.Click += new System.EventHandler(this.providerToolStripMenuItem_Click);
-            // 
-            // mTDPaymentToolStripMenuItem
-            // 
-            this.mTDPaymentToolStripMenuItem.Name = "mTDPaymentToolStripMenuItem";
-            this.mTDPaymentToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.mTDPaymentToolStripMenuItem.Text = "MTD Payment";
-            this.mTDPaymentToolStripMenuItem.Click += new System.EventHandler(this.mTDPaymentToolStripMenuItem_Click);
-            // 
-            // postcardToolStripMenuItem
-            // 
-            this.postcardToolStripMenuItem.Name = "postcardToolStripMenuItem";
-            this.postcardToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.postcardToolStripMenuItem.Text = "Postcard";
-            this.postcardToolStripMenuItem.Click += new System.EventHandler(this.postcardToolStripMenuItem_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.patientInfoToolStripMenuItem,
-            this.billingToolStripMenuItem,
-            this.appointmentToolStripMenuItem,
-            this.reportsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(726, 28);
-            this.menuStrip1.TabIndex = 23;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.homeToolStripMenuItem.Text = "Home";
-            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
-            // 
             // systemsDataBase2DataSet
             // 
             this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
@@ -408,7 +224,6 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.Appointment_DataTableAdapter = this.appointment_DataTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
             this.tableAdapterManager.Cpt_CodesTableAdapter = null;
@@ -495,7 +310,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.patientsBindingNavigatorSaveItem});
-            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.patientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.patientsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.patientsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -655,6 +470,7 @@
             // frmApptInfo
             // 
             this.ClientSize = new System.Drawing.Size(726, 417);
+            this.ControlBox = false;
             this.Controls.Add(providerNameLabel);
             this.Controls.Add(this.providerNameComboBox);
             this.Controls.Add(visit_InformationLabel);
@@ -674,16 +490,10 @@
             this.Controls.Add(this.patient_NumberTextBox);
             this.Controls.Add(phoneLabel);
             this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmApptInfo";
             this.Text = "Appointment Info";
             this.Load += new System.EventHandler(this.frmApptInfo_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.appointmentDataBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -710,26 +520,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.ToolStripMenuItem patientInfoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEditPatientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEdietHouseholdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem billingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generalLedgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accoubntReceivableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem makeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem callListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource appointmentDataBindingSource;
         private SystemsDataBase2DataSetTableAdapters.Appointment_DataTableAdapter appointment_DataTableAdapter;

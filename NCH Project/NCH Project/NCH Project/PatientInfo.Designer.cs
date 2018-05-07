@@ -35,13 +35,13 @@
             System.Windows.Forms.Label addressLabel;
             System.Windows.Forms.Label phoneLabel;
             System.Windows.Forms.Label emailLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
             System.Windows.Forms.Label raceLabel1;
             System.Windows.Forms.Label compIDLabel;
             System.Windows.Forms.Label insuranceCompNameLabel;
             System.Windows.Forms.Label companyPhoneLabel;
             System.Windows.Forms.Label companyAddressLabel;
             System.Windows.Forms.Label birthdateLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientInfo));
             this.label17 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.rdoOther = new System.Windows.Forms.RadioButton();
@@ -50,25 +50,6 @@
             this.rdoAfricanAmerican = new System.Windows.Forms.RadioButton();
             this.rdoHispanic = new System.Windows.Forms.RadioButton();
             this.rdoWhite = new System.Windows.Forms.RadioButton();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEditPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addEdietHouseholdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.billingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generalLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accoubntReceivableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.callListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.providerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mTDPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.postcardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemsDataBase2DataSet = new NCH_Project.SystemsDataBase2DataSet();
             this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientsTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter();
@@ -94,12 +75,12 @@
             this.patientsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.raceComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.insurancecompaniesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.insurancecompaniesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.InsurancecompaniesTableAdapter();
-            this.compIDTextBox = new System.Windows.Forms.TextBox();
-            this.insuranceCompNameTextBox = new System.Windows.Forms.TextBox();
-            this.companyPhoneTextBox = new System.Windows.Forms.TextBox();
             this.companyAddressTextBox = new System.Windows.Forms.TextBox();
+            this.insurancecompaniesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.companyPhoneTextBox = new System.Windows.Forms.TextBox();
+            this.insuranceCompNameTextBox = new System.Windows.Forms.TextBox();
+            this.compIDTextBox = new System.Windows.Forms.TextBox();
+            this.insurancecompaniesTableAdapter = new NCH_Project.SystemsDataBase2DataSetTableAdapters.InsurancecompaniesTableAdapter();
             this.birthdateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             patient_NumberLabel = new System.Windows.Forms.Label();
             household_NumberLabel = new System.Windows.Forms.Label();
@@ -113,7 +94,6 @@
             companyPhoneLabel = new System.Windows.Forms.Label();
             companyAddressLabel = new System.Windows.Forms.Label();
             birthdateLabel = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).BeginInit();
@@ -176,6 +156,60 @@
             emailLabel.TabIndex = 66;
             emailLabel.Text = "Email:";
             // 
+            // raceLabel1
+            // 
+            raceLabel1.AutoSize = true;
+            raceLabel1.Location = new System.Drawing.Point(28, 153);
+            raceLabel1.Name = "raceLabel1";
+            raceLabel1.Size = new System.Drawing.Size(45, 17);
+            raceLabel1.TabIndex = 73;
+            raceLabel1.Text = "Race:";
+            // 
+            // compIDLabel
+            // 
+            compIDLabel.AutoSize = true;
+            compIDLabel.Location = new System.Drawing.Point(6, 18);
+            compIDLabel.Name = "compIDLabel";
+            compIDLabel.Size = new System.Drawing.Size(65, 17);
+            compIDLabel.TabIndex = 0;
+            compIDLabel.Text = "Comp ID:";
+            // 
+            // insuranceCompNameLabel
+            // 
+            insuranceCompNameLabel.AutoSize = true;
+            insuranceCompNameLabel.Location = new System.Drawing.Point(285, 18);
+            insuranceCompNameLabel.Name = "insuranceCompNameLabel";
+            insuranceCompNameLabel.Size = new System.Drawing.Size(155, 17);
+            insuranceCompNameLabel.TabIndex = 2;
+            insuranceCompNameLabel.Text = "Insurance Comp Name:";
+            // 
+            // companyPhoneLabel
+            // 
+            companyPhoneLabel.AutoSize = true;
+            companyPhoneLabel.Location = new System.Drawing.Point(6, 82);
+            companyPhoneLabel.Name = "companyPhoneLabel";
+            companyPhoneLabel.Size = new System.Drawing.Size(116, 17);
+            companyPhoneLabel.TabIndex = 4;
+            companyPhoneLabel.Text = "Company Phone:";
+            // 
+            // companyAddressLabel
+            // 
+            companyAddressLabel.AutoSize = true;
+            companyAddressLabel.Location = new System.Drawing.Point(285, 82);
+            companyAddressLabel.Name = "companyAddressLabel";
+            companyAddressLabel.Size = new System.Drawing.Size(127, 17);
+            companyAddressLabel.TabIndex = 6;
+            companyAddressLabel.Text = "Company Address:";
+            // 
+            // birthdateLabel
+            // 
+            birthdateLabel.AutoSize = true;
+            birthdateLabel.Location = new System.Drawing.Point(278, 152);
+            birthdateLabel.Name = "birthdateLabel";
+            birthdateLabel.Size = new System.Drawing.Size(69, 17);
+            birthdateLabel.TabIndex = 74;
+            birthdateLabel.Text = "Birthdate:";
+            // 
             // label17
             // 
             this.label17.Location = new System.Drawing.Point(0, 0);
@@ -232,160 +266,6 @@
             this.rdoWhite.Size = new System.Drawing.Size(104, 24);
             this.rdoWhite.TabIndex = 0;
             // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(236, 451);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(79, 25);
-            this.btnExit.TabIndex = 57;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.homeToolStripMenuItem,
-            this.patientInfoToolStripMenuItem,
-            this.billingToolStripMenuItem,
-            this.appointmentToolStripMenuItem,
-            this.reportsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(576, 28);
-            this.menuStrip1.TabIndex = 60;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // homeToolStripMenuItem
-            // 
-            this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.homeToolStripMenuItem.Text = "Home";
-            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
-            // 
-            // patientInfoToolStripMenuItem
-            // 
-            this.patientInfoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEditPatientToolStripMenuItem,
-            this.addEdietHouseholdToolStripMenuItem});
-            this.patientInfoToolStripMenuItem.Name = "patientInfoToolStripMenuItem";
-            this.patientInfoToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
-            this.patientInfoToolStripMenuItem.Text = "Patient Info";
-            // 
-            // addEditPatientToolStripMenuItem
-            // 
-            this.addEditPatientToolStripMenuItem.Name = "addEditPatientToolStripMenuItem";
-            this.addEditPatientToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.addEditPatientToolStripMenuItem.Text = "Add/Edit Patient";
-            this.addEditPatientToolStripMenuItem.Click += new System.EventHandler(this.addEditPatientToolStripMenuItem_Click);
-            // 
-            // addEdietHouseholdToolStripMenuItem
-            // 
-            this.addEdietHouseholdToolStripMenuItem.Name = "addEdietHouseholdToolStripMenuItem";
-            this.addEdietHouseholdToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
-            this.addEdietHouseholdToolStripMenuItem.Text = "Add/Edit Household";
-            this.addEdietHouseholdToolStripMenuItem.Click += new System.EventHandler(this.addEdietHouseholdToolStripMenuItem_Click);
-            // 
-            // billingToolStripMenuItem
-            // 
-            this.billingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalLedgerToolStripMenuItem,
-            this.accoubntReceivableToolStripMenuItem});
-            this.billingToolStripMenuItem.Name = "billingToolStripMenuItem";
-            this.billingToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
-            this.billingToolStripMenuItem.Text = "Billing";
-            // 
-            // generalLedgerToolStripMenuItem
-            // 
-            this.generalLedgerToolStripMenuItem.Name = "generalLedgerToolStripMenuItem";
-            this.generalLedgerToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.generalLedgerToolStripMenuItem.Text = "General Ledger";
-            this.generalLedgerToolStripMenuItem.Click += new System.EventHandler(this.generalLedgerToolStripMenuItem_Click);
-            // 
-            // accoubntReceivableToolStripMenuItem
-            // 
-            this.accoubntReceivableToolStripMenuItem.Name = "accoubntReceivableToolStripMenuItem";
-            this.accoubntReceivableToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
-            this.accoubntReceivableToolStripMenuItem.Text = "Account Receivable";
-            this.accoubntReceivableToolStripMenuItem.Click += new System.EventHandler(this.accoubntReceivableToolStripMenuItem_Click);
-            // 
-            // appointmentToolStripMenuItem
-            // 
-            this.appointmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.makeToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
-            this.appointmentToolStripMenuItem.Text = "Appointment";
-            // 
-            // makeToolStripMenuItem
-            // 
-            this.makeToolStripMenuItem.Name = "makeToolStripMenuItem";
-            this.makeToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.makeToolStripMenuItem.Text = "Make";
-            this.makeToolStripMenuItem.Click += new System.EventHandler(this.makeToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.appointmentListToolStripMenuItem,
-            this.callListToolStripMenuItem,
-            this.providerToolStripMenuItem,
-            this.mTDPaymentToolStripMenuItem,
-            this.postcardToolStripMenuItem});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
-            this.reportsToolStripMenuItem.Text = "Reports";
-            // 
-            // appointmentListToolStripMenuItem
-            // 
-            this.appointmentListToolStripMenuItem.Name = "appointmentListToolStripMenuItem";
-            this.appointmentListToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.appointmentListToolStripMenuItem.Text = "Appointment list";
-            this.appointmentListToolStripMenuItem.Click += new System.EventHandler(this.appointmentListToolStripMenuItem_Click);
-            // 
-            // callListToolStripMenuItem
-            // 
-            this.callListToolStripMenuItem.Name = "callListToolStripMenuItem";
-            this.callListToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.callListToolStripMenuItem.Text = "Call List";
-            this.callListToolStripMenuItem.Click += new System.EventHandler(this.callListToolStripMenuItem_Click);
-            // 
-            // providerToolStripMenuItem
-            // 
-            this.providerToolStripMenuItem.Name = "providerToolStripMenuItem";
-            this.providerToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.providerToolStripMenuItem.Text = "Provider";
-            this.providerToolStripMenuItem.Click += new System.EventHandler(this.providerToolStripMenuItem_Click);
-            // 
-            // mTDPaymentToolStripMenuItem
-            // 
-            this.mTDPaymentToolStripMenuItem.Name = "mTDPaymentToolStripMenuItem";
-            this.mTDPaymentToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.mTDPaymentToolStripMenuItem.Text = "MTD Payment";
-            this.mTDPaymentToolStripMenuItem.Click += new System.EventHandler(this.mTDPaymentToolStripMenuItem_Click);
-            // 
-            // postcardToolStripMenuItem
-            // 
-            this.postcardToolStripMenuItem.Name = "postcardToolStripMenuItem";
-            this.postcardToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.postcardToolStripMenuItem.Text = "Postcard";
-            this.postcardToolStripMenuItem.Click += new System.EventHandler(this.postcardToolStripMenuItem_Click);
-            // 
             // systemsDataBase2DataSet
             // 
             this.systemsDataBase2DataSet.DataSetName = "SystemsDataBase2DataSet";
@@ -402,7 +282,6 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.Appointment_DataTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Complete_Service_DataTableAdapter = null;
             this.tableAdapterManager.Cpt_CodesTableAdapter = null;
@@ -486,7 +365,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.patientsBindingNavigatorSaveItem});
-            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 28);
+            this.patientsBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.patientsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.patientsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.patientsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -591,15 +470,6 @@
             this.patientsBindingNavigatorSaveItem.Text = "Save Data";
             this.patientsBindingNavigatorSaveItem.Click += new System.EventHandler(this.patientsBindingNavigatorSaveItem_Click);
             // 
-            // raceLabel1
-            // 
-            raceLabel1.AutoSize = true;
-            raceLabel1.Location = new System.Drawing.Point(28, 153);
-            raceLabel1.Name = "raceLabel1";
-            raceLabel1.Size = new System.Drawing.Size(45, 17);
-            raceLabel1.TabIndex = 73;
-            raceLabel1.Text = "Race:";
-            // 
             // raceComboBox
             // 
             this.raceComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientsBindingSource, "Race", true));
@@ -631,57 +501,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Medical Info";
             // 
+            // companyAddressTextBox
+            // 
+            this.companyAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompanyAddress", true));
+            this.companyAddressTextBox.Location = new System.Drawing.Point(288, 102);
+            this.companyAddressTextBox.Name = "companyAddressTextBox";
+            this.companyAddressTextBox.Size = new System.Drawing.Size(189, 22);
+            this.companyAddressTextBox.TabIndex = 7;
+            // 
             // insurancecompaniesBindingSource
             // 
             this.insurancecompaniesBindingSource.DataMember = "Insurancecompanies";
             this.insurancecompaniesBindingSource.DataSource = this.systemsDataBase2DataSet;
-            // 
-            // insurancecompaniesTableAdapter
-            // 
-            this.insurancecompaniesTableAdapter.ClearBeforeFill = true;
-            // 
-            // compIDLabel
-            // 
-            compIDLabel.AutoSize = true;
-            compIDLabel.Location = new System.Drawing.Point(6, 18);
-            compIDLabel.Name = "compIDLabel";
-            compIDLabel.Size = new System.Drawing.Size(65, 17);
-            compIDLabel.TabIndex = 0;
-            compIDLabel.Text = "Comp ID:";
-            // 
-            // compIDTextBox
-            // 
-            this.compIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompID", true));
-            this.compIDTextBox.Location = new System.Drawing.Point(9, 38);
-            this.compIDTextBox.Name = "compIDTextBox";
-            this.compIDTextBox.Size = new System.Drawing.Size(189, 22);
-            this.compIDTextBox.TabIndex = 1;
-            // 
-            // insuranceCompNameLabel
-            // 
-            insuranceCompNameLabel.AutoSize = true;
-            insuranceCompNameLabel.Location = new System.Drawing.Point(285, 18);
-            insuranceCompNameLabel.Name = "insuranceCompNameLabel";
-            insuranceCompNameLabel.Size = new System.Drawing.Size(155, 17);
-            insuranceCompNameLabel.TabIndex = 2;
-            insuranceCompNameLabel.Text = "Insurance Comp Name:";
-            // 
-            // insuranceCompNameTextBox
-            // 
-            this.insuranceCompNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "InsuranceCompName", true));
-            this.insuranceCompNameTextBox.Location = new System.Drawing.Point(288, 38);
-            this.insuranceCompNameTextBox.Name = "insuranceCompNameTextBox";
-            this.insuranceCompNameTextBox.Size = new System.Drawing.Size(189, 22);
-            this.insuranceCompNameTextBox.TabIndex = 3;
-            // 
-            // companyPhoneLabel
-            // 
-            companyPhoneLabel.AutoSize = true;
-            companyPhoneLabel.Location = new System.Drawing.Point(6, 82);
-            companyPhoneLabel.Name = "companyPhoneLabel";
-            companyPhoneLabel.Size = new System.Drawing.Size(116, 17);
-            companyPhoneLabel.TabIndex = 4;
-            companyPhoneLabel.Text = "Company Phone:";
             // 
             // companyPhoneTextBox
             // 
@@ -691,31 +522,25 @@
             this.companyPhoneTextBox.Size = new System.Drawing.Size(189, 22);
             this.companyPhoneTextBox.TabIndex = 5;
             // 
-            // companyAddressLabel
+            // insuranceCompNameTextBox
             // 
-            companyAddressLabel.AutoSize = true;
-            companyAddressLabel.Location = new System.Drawing.Point(285, 82);
-            companyAddressLabel.Name = "companyAddressLabel";
-            companyAddressLabel.Size = new System.Drawing.Size(127, 17);
-            companyAddressLabel.TabIndex = 6;
-            companyAddressLabel.Text = "Company Address:";
+            this.insuranceCompNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "InsuranceCompName", true));
+            this.insuranceCompNameTextBox.Location = new System.Drawing.Point(288, 38);
+            this.insuranceCompNameTextBox.Name = "insuranceCompNameTextBox";
+            this.insuranceCompNameTextBox.Size = new System.Drawing.Size(189, 22);
+            this.insuranceCompNameTextBox.TabIndex = 3;
             // 
-            // companyAddressTextBox
+            // compIDTextBox
             // 
-            this.companyAddressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompanyAddress", true));
-            this.companyAddressTextBox.Location = new System.Drawing.Point(288, 102);
-            this.companyAddressTextBox.Name = "companyAddressTextBox";
-            this.companyAddressTextBox.Size = new System.Drawing.Size(189, 22);
-            this.companyAddressTextBox.TabIndex = 7;
+            this.compIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.insurancecompaniesBindingSource, "CompID", true));
+            this.compIDTextBox.Location = new System.Drawing.Point(9, 38);
+            this.compIDTextBox.Name = "compIDTextBox";
+            this.compIDTextBox.Size = new System.Drawing.Size(189, 22);
+            this.compIDTextBox.TabIndex = 1;
             // 
-            // birthdateLabel
+            // insurancecompaniesTableAdapter
             // 
-            birthdateLabel.AutoSize = true;
-            birthdateLabel.Location = new System.Drawing.Point(278, 152);
-            birthdateLabel.Name = "birthdateLabel";
-            birthdateLabel.Size = new System.Drawing.Size(69, 17);
-            birthdateLabel.TabIndex = 74;
-            birthdateLabel.Text = "Birthdate:";
+            this.insurancecompaniesTableAdapter.ClearBeforeFill = true;
             // 
             // birthdateDateTimePicker
             // 
@@ -729,7 +554,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 496);
+            this.ClientSize = new System.Drawing.Size(576, 457);
+            this.ControlBox = false;
             this.Controls.Add(birthdateLabel);
             this.Controls.Add(this.birthdateDateTimePicker);
             this.Controls.Add(raceLabel1);
@@ -747,16 +573,12 @@
             this.Controls.Add(this.household_NumberTextBox);
             this.Controls.Add(patient_NumberLabel);
             this.Controls.Add(this.patient_NumberTextBox);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmPatientInfo";
             this.Text = " PatientInfo";
             this.Load += new System.EventHandler(this.frmPatientInfo_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.systemsDataBase2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingNavigator)).EndInit();
@@ -780,25 +602,6 @@
         private System.Windows.Forms.RadioButton rdoAfricanAmerican;
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoWhite;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientInfoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEditPatientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addEdietHouseholdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem billingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem generalLedgerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accoubntReceivableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem makeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem appointmentListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem callListToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem providerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mTDPaymentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem postcardToolStripMenuItem;
         private SystemsDataBase2DataSet systemsDataBase2DataSet;
         private System.Windows.Forms.BindingSource patientsBindingSource;
         private SystemsDataBase2DataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;

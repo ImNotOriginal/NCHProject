@@ -16,7 +16,7 @@ namespace NCH_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHomePage());
+            Application.Run(new frmMain());
         }
     }
 }

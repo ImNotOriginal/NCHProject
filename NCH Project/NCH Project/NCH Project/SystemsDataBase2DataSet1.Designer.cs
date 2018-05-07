@@ -70,6 +70,8 @@ namespace NCH_Project {
         
         private global::System.Data.DataRelation relationPending_Insurance_ClaimsProviders;
         
+        private global::System.Data.DataRelation relationHouseHoldMTDCharges;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -512,6 +514,7 @@ namespace NCH_Project {
             this.relationInsurancecompaniesPending_Insurance_Claims = this.Relations["InsurancecompaniesPending Insurance Claims"];
             this.relationPatientsPostCard = this.Relations["PatientsPostCard"];
             this.relationPending_Insurance_ClaimsProviders = this.Relations["Pending Insurance ClaimsProviders"];
+            this.relationHouseHoldMTDCharges = this.Relations["HouseHoldMTDCharges"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -588,6 +591,10 @@ namespace NCH_Project {
                         this.tablePending_Insurance_Claims.Claim_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableProviders.Claim_NumberColumn}, false);
             this.Relations.Add(this.relationPending_Insurance_ClaimsProviders);
+            this.relationHouseHoldMTDCharges = new global::System.Data.DataRelation("HouseHoldMTDCharges", new global::System.Data.DataColumn[] {
+                        this.tableHouseHold.HouseHold_NumberColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMTDCharges.Household_NumberColumn}, false);
+            this.Relations.Add(this.relationHouseHoldMTDCharges);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -785,6 +792,8 @@ namespace NCH_Project {
             
             private global::System.Data.DataColumn columnAppointment_Completed;
             
+            private global::System.Data.DataColumn columnProviderName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Appointment_DataDataTable() {
@@ -884,6 +893,14 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ProviderNameColumn {
+                get {
+                    return this.columnProviderName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -919,7 +936,7 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Appointment_DataRow AddAppointment_DataRow(System.DateTime Appointment_Time, string _Date_TIme, string Visit_Information, System.DateTime End_Time, PatientsRow parentPatientsRowByPatientsAppointment_Data, int Provider_Number, bool Appointment_Completed) {
+            public Appointment_DataRow AddAppointment_DataRow(System.DateTime Appointment_Time, string _Date_TIme, string Visit_Information, System.DateTime End_Time, PatientsRow parentPatientsRowByPatientsAppointment_Data, int Provider_Number, bool Appointment_Completed, string ProviderName) {
                 Appointment_DataRow rowAppointment_DataRow = ((Appointment_DataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -929,7 +946,8 @@ namespace NCH_Project {
                         End_Time,
                         null,
                         Provider_Number,
-                        Appointment_Completed};
+                        Appointment_Completed,
+                        ProviderName};
                 if ((parentPatientsRowByPatientsAppointment_Data != null)) {
                     columnValuesArray[5] = parentPatientsRowByPatientsAppointment_Data[0];
                 }
@@ -970,6 +988,7 @@ namespace NCH_Project {
                 this.columnPatient_Number = base.Columns["Patient Number"];
                 this.columnProvider_Number = base.Columns["Provider Number"];
                 this.columnAppointment_Completed = base.Columns["Appointment Completed"];
+                this.columnProviderName = base.Columns["ProviderName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -993,6 +1012,8 @@ namespace NCH_Project {
                 base.Columns.Add(this.columnProvider_Number);
                 this.columnAppointment_Completed = new global::System.Data.DataColumn("Appointment Completed", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAppointment_Completed);
+                this.columnProviderName = new global::System.Data.DataColumn("ProviderName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProviderName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnAppointment_Number}, true));
                 this.columnAppointment_Number.AutoIncrement = true;
@@ -1002,6 +1023,7 @@ namespace NCH_Project {
                 this.columnAppointment_Number.Unique = true;
                 this._columnDate_TIme.MaxLength = 20;
                 this.columnVisit_Information.MaxLength = 30;
+                this.columnProviderName.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2580,14 +2602,17 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MTDChargesRow AddMTDChargesRow(int Household_Number, Cpt_CodesRow parentCpt_CodesRowByCpt_CodesMTDCharges, int Appointment_Number, PatientsRow parentPatientsRowByPatientsMTDCharges) {
+            public MTDChargesRow AddMTDChargesRow(HouseHoldRow parentHouseHoldRowByHouseHoldMTDCharges, Cpt_CodesRow parentCpt_CodesRowByCpt_CodesMTDCharges, int Appointment_Number, PatientsRow parentPatientsRowByPatientsMTDCharges) {
                 MTDChargesRow rowMTDChargesRow = ((MTDChargesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Household_Number,
+                        null,
                         null,
                         Appointment_Number,
                         null};
+                if ((parentHouseHoldRowByHouseHoldMTDCharges != null)) {
+                    columnValuesArray[1] = parentHouseHoldRowByHouseHoldMTDCharges[0];
+                }
                 if ((parentCpt_CodesRowByCpt_CodesMTDCharges != null)) {
                     columnValuesArray[2] = parentCpt_CodesRowByCpt_CodesMTDCharges[0];
                 }
@@ -5181,6 +5206,22 @@ namespace NCH_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ProviderName {
+                get {
+                    try {
+                        return ((string)(this[this.tableAppointment_Data.ProviderNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ProviderName\' in table \'Appointment Data\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAppointment_Data.ProviderNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PatientsRow PatientsRow {
                 get {
                     return ((PatientsRow)(this.GetParentRow(this.Table.ParentRelations["PatientsAppointment Data"])));
@@ -5272,6 +5313,18 @@ namespace NCH_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetAppointment_CompletedNull() {
                 this[this.tableAppointment_Data.Appointment_CompletedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsProviderNameNull() {
+                return this.IsNull(this.tableAppointment_Data.ProviderNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetProviderNameNull() {
+                this[this.tableAppointment_Data.ProviderNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5837,6 +5890,17 @@ namespace NCH_Project {
                     return ((Pending_Insurance_ClaimsRow[])(base.GetChildRows(this.Table.ChildRelations["HouseHoldPending Insurance Claims"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MTDChargesRow[] GetMTDChargesRows() {
+                if ((this.Table.ChildRelations["HouseHoldMTDCharges"] == null)) {
+                    return new MTDChargesRow[0];
+                }
+                else {
+                    return ((MTDChargesRow[])(base.GetChildRows(this.Table.ChildRelations["HouseHoldMTDCharges"])));
+                }
+            }
         }
         
         /// <summary>
@@ -6097,6 +6161,17 @@ namespace NCH_Project {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["PatientsMTDCharges"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public HouseHoldRow HouseHoldRow {
+                get {
+                    return ((HouseHoldRow)(this.GetParentRow(this.Table.ParentRelations["HouseHoldMTDCharges"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["HouseHoldMTDCharges"]);
                 }
             }
             
@@ -7859,65 +7934,8 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Patient Number", "Patient Number");
             tableMapping.ColumnMappings.Add("Provider Number", "Provider Number");
             tableMapping.ColumnMappings.Add("Appointment Completed", "Appointment Completed");
+            tableMapping.ColumnMappings.Add("ProviderName", "ProviderName");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Appointment Data` WHERE ((`Appointment Number` = ?) AND ((? = 1 AND `Appointment Time` IS NULL) OR (`Appointment Time` = ?)) AND ((? = 1 AND `Date/TIme` IS NULL) OR (`Date/TIme` = ?)) AND ((? = 1 AND `Visit Information` IS NULL) OR (`Visit Information` = ?)) AND ((? = 1 AND `End Time` IS NULL) OR (`End Time` = ?)) AND ((? = 1 AND `Patient Number` IS NULL) OR (`Patient Number` = ?)) AND ((? = 1 AND `Provider Number` IS NULL) OR (`Provider Number` = ?)) AND ((? = 1 AND `Appointment Completed` IS NULL) OR (`Appointment Completed` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Appointment_Time", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date/TIme", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date/TIme", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Visit_Information", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Visit_Information", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_End_Time", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_End_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Appointment_Completed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Completed", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Appointment Data` (`Appointment Time`, `Date/TIme`, `Visit Informati" +
-                "on`, `End Time`, `Patient Number`, `Provider Number`, `Appointment Completed`) V" +
-                "ALUES (?, ?, ?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Appointment_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date/TIme", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visit_Information", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("End_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Appointment_Completed", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Appointment Data` SET `Appointment Time` = ?, `Date/TIme` = ?, `Visit Information` = ?, `End Time` = ?, `Patient Number` = ?, `Provider Number` = ?, `Appointment Completed` = ? WHERE ((`Appointment Number` = ?) AND ((? = 1 AND `Appointment Time` IS NULL) OR (`Appointment Time` = ?)) AND ((? = 1 AND `Date/TIme` IS NULL) OR (`Date/TIme` = ?)) AND ((? = 1 AND `Visit Information` IS NULL) OR (`Visit Information` = ?)) AND ((? = 1 AND `End Time` IS NULL) OR (`End Time` = ?)) AND ((? = 1 AND `Patient Number` IS NULL) OR (`Patient Number` = ?)) AND ((? = 1 AND `Provider Number` IS NULL) OR (`Provider Number` = ?)) AND ((? = 1 AND `Appointment Completed` IS NULL) OR (`Appointment Completed` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Appointment_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Date/TIme", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Visit_Information", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("End_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Appointment_Completed", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Appointment_Time", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Date/TIme", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Date/TIme", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Date/TIme", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Visit_Information", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Visit_Information", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Visit Information", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_End_Time", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_End_Time", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "End Time", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Patient_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Patient Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Provider_Number", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Provider Number", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Appointment_Completed", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Appointment_Completed", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Appointment Completed", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7933,9 +7951,10 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Appointment Number], [Appointment Time], [Date/TIme], [Visit Information]" +
-                ", [End Time], [Patient Number], [Provider Number], [Appointment Completed] FROM " +
-                "[Appointment Data]";
+            this._commandCollection[0].CommandText = @"SELECT [Appointment Data].[Appointment Number], [Appointment Data].[Appointment Time], [Appointment Data].[Date/TIme], [Appointment Data].[Visit Information], [Appointment Data].[End Time], [Appointment Data].[Patient Number], 
+                  [Appointment Data].[Provider Number], [Appointment Data].[Appointment Completed], Providers.ProviderName
+FROM     ([Appointment Data] INNER JOIN
+                  Providers ON [Appointment Data].[Provider Number] = Providers.ProviderNumID)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7961,274 +7980,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             SystemsDataBase2DataSet.Appointment_DataDataTable dataTable = new SystemsDataBase2DataSet.Appointment_DataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SystemsDataBase2DataSet.Appointment_DataDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SystemsDataBase2DataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Appointment Data");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Appointment_Number, global::System.Nullable<global::System.DateTime> Original_Appointment_Time, string _Original_Date_TIme, string Original_Visit_Information, global::System.Nullable<global::System.DateTime> Original_End_Time, global::System.Nullable<int> Original_Patient_Number, global::System.Nullable<int> Original_Provider_Number, bool Original_Appointment_Completed) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Appointment_Number));
-            if ((Original_Appointment_Time.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Appointment_Time.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((_Original_Date_TIme == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(_Original_Date_TIme));
-            }
-            if ((Original_Visit_Information == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Visit_Information));
-            }
-            if ((Original_End_Time.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_End_Time.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Patient_Number.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_Patient_Number.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Provider_Number.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_Provider_Number.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_Appointment_Completed));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> Appointment_Time, string _Date_TIme, string Visit_Information, global::System.Nullable<global::System.DateTime> End_Time, global::System.Nullable<int> Patient_Number, global::System.Nullable<int> Provider_Number, bool Appointment_Completed) {
-            if ((Appointment_Time.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Appointment_Time.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((_Date_TIme == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(_Date_TIme));
-            }
-            if ((Visit_Information == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Visit_Information));
-            }
-            if ((End_Time.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(End_Time.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Patient_Number.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(Patient_Number.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Provider_Number.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Provider_Number.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(Appointment_Completed));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Appointment_Time, string _Date_TIme, string Visit_Information, global::System.Nullable<global::System.DateTime> End_Time, global::System.Nullable<int> Patient_Number, global::System.Nullable<int> Provider_Number, bool Appointment_Completed, int Original_Appointment_Number, global::System.Nullable<global::System.DateTime> Original_Appointment_Time, string _Original_Date_TIme, string Original_Visit_Information, global::System.Nullable<global::System.DateTime> Original_End_Time, global::System.Nullable<int> Original_Patient_Number, global::System.Nullable<int> Original_Provider_Number, bool Original_Appointment_Completed) {
-            if ((Appointment_Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Appointment_Time.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((_Date_TIme == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(_Date_TIme));
-            }
-            if ((Visit_Information == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Visit_Information));
-            }
-            if ((End_Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(End_Time.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Patient_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Patient_Number.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Provider_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Provider_Number.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(Appointment_Completed));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Appointment_Number));
-            if ((Original_Appointment_Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_Appointment_Time.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            if ((_Original_Date_TIme == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(_Original_Date_TIme));
-            }
-            if ((Original_Visit_Information == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Visit_Information));
-            }
-            if ((Original_End_Time.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_End_Time.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Patient_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_Patient_Number.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Provider_Number.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_Provider_Number.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(Original_Appointment_Completed));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
         }
     }
     
@@ -13603,8 +13354,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private Appointment_DataTableAdapter _appointment_DataTableAdapter;
-        
         private Complete_Service_DataTableAdapter _complete_Service_DataTableAdapter;
         
         private Cpt_CodesTableAdapter _cpt_CodesTableAdapter;
@@ -13641,20 +13390,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             }
             set {
                 this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public Appointment_DataTableAdapter Appointment_DataTableAdapter {
-            get {
-                return this._appointment_DataTableAdapter;
-            }
-            set {
-                this._appointment_DataTableAdapter = value;
             }
         }
         
@@ -13845,10 +13580,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._appointment_DataTableAdapter != null) 
-                            && (this._appointment_DataTableAdapter.Connection != null))) {
-                    return this._appointment_DataTableAdapter.Connection;
-                }
                 if (((this._complete_Service_DataTableAdapter != null) 
                             && (this._complete_Service_DataTableAdapter.Connection != null))) {
                     return this._complete_Service_DataTableAdapter.Connection;
@@ -13910,9 +13641,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._appointment_DataTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._complete_Service_DataTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -13966,15 +13694,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._patientsTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._appointment_DataTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Appointment_Data.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._appointment_DataTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -14092,14 +13811,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._patientsTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._appointment_DataTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Appointment_Data.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._appointment_DataTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -14289,14 +14000,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._appointment_DataTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Appointment_Data.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._appointment_DataTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._patientsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Patients.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -14343,11 +14046,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
-            }
-            if (((this._appointment_DataTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._appointment_DataTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
             }
             if (((this._complete_Service_DataTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._complete_Service_DataTableAdapter.Connection) == false))) {
@@ -14441,15 +14139,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._appointment_DataTableAdapter != null)) {
-                    revertConnections.Add(this._appointment_DataTableAdapter, this._appointment_DataTableAdapter.Connection);
-                    this._appointment_DataTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._appointment_DataTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._appointment_DataTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._appointment_DataTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._appointment_DataTableAdapter.Adapter);
-                    }
-                }
                 if ((this._complete_Service_DataTableAdapter != null)) {
                     revertConnections.Add(this._complete_Service_DataTableAdapter, this._complete_Service_DataTableAdapter.Connection);
                     this._complete_Service_DataTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
@@ -14615,10 +14304,6 @@ namespace NCH_Project.SystemsDataBase2DataSetTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
-                }
-                if ((this._appointment_DataTableAdapter != null)) {
-                    this._appointment_DataTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._appointment_DataTableAdapter]));
-                    this._appointment_DataTableAdapter.Transaction = null;
                 }
                 if ((this._complete_Service_DataTableAdapter != null)) {
                     this._complete_Service_DataTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._complete_Service_DataTableAdapter]));

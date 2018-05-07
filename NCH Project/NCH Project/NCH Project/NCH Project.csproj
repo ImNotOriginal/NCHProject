@@ -70,11 +70,11 @@
     <Compile Include="AccountsRevivable.Designer.cs">
       <DependentUpon>AccountsRevivable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="ProviderReport.cs">
       <SubType>Form</SubType>
@@ -99,12 +99,6 @@
     </Compile>
     <Compile Include="PostCard.Designer.cs">
       <DependentUpon>PostCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HomePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Household.cs">
       <SubType>Form</SubType>
@@ -140,8 +134,8 @@
     <EmbeddedResource Include="ApptList.resx">
       <DependentUpon>ApptList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GeneralLedger.resx">
       <DependentUpon>GeneralLedger.cs</DependentUpon>
@@ -151,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Household.resx">
       <DependentUpon>Household.cs</DependentUpon>
